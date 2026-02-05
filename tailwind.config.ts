@@ -13,6 +13,10 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        mono: ["JetBrains Mono", "Fira Code", "monospace"],
+        sans: ["Plus Jakarta Sans", "inter", "sans-serif"],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -64,6 +68,13 @@ export default {
           neutral: "hsl(var(--portfolio-neutral))",
           light: "hsl(var(--portfolio-light))",
           muted: "hsl(var(--portfolio-muted))",
+          code: {
+            keyword: "#ff79c6",
+            string: "#f1fa8c",
+            function: "#50fa7b",
+            comment: "#6272a4",
+            variable: "#bd93f9",
+          }
         },
       },
       borderRadius: {

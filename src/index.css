@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -47,9 +48,21 @@ All colors MUST be HSL.
     --portfolio-muted: 215 20% 65%;
 
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(200 98% 39%), hsl(185 100% 42%));
-    --gradient-secondary: linear-gradient(135deg, hsl(220 90% 56%), hsl(200 98% 39%));
-    --gradient-hero: linear-gradient(135deg, hsl(200 98% 39% / 0.95), hsl(185 100% 42% / 0.95));
+    --gradient-primary: linear-gradient(
+      135deg,
+      hsl(200 98% 39%),
+      hsl(185 100% 42%)
+    );
+    --gradient-secondary: linear-gradient(
+      135deg,
+      hsl(220 90% 56%),
+      hsl(200 98% 39%)
+    );
+    --gradient-hero: linear-gradient(
+      135deg,
+      hsl(200 98% 39% / 0.95),
+      hsl(185 100% 42% / 0.95)
+    );
     --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(210 40% 98%));
 
     /* Shadows */
@@ -125,8 +138,24 @@ All colors MUST be HSL.
   }
 
   body {
-    font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    font-family:
+      var(--font-sans), "Plus Jakarta Sans", ui-sans-serif, system-ui;
     @apply bg-background text-foreground antialiased;
+  }
+}
+
+@layer components {
+  .code-font {
+    @apply font-mono;
+  }
+
+  .code-card {
+    @apply relative border border-portfolio-primary/10 bg-white/50 dark:bg-slate-900/50 backdrop-blur-sm rounded-2xl overflow-hidden;
+  }
+
+  .code-card::before {
+    content: "";
+    @apply absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-portfolio-primary to-portfolio-secondary;
   }
 }
 
@@ -148,14 +177,21 @@ html {
 }
 
 .shimmer-bg {
-  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.6) 50%, rgba(255,255,255,0) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.6) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
   background-size: 200% 100%;
   animation: shimmer 2s linear infinite;
 }
 
 /* Subtle grid/noise background */
 .bg-grid {
-  background-image: linear-gradient(to right, rgba(0,0,0,0.04) 1px, transparent 1px), linear-gradient(to bottom, rgba(0,0,0,0.04) 1px, transparent 1px);
+  background-image:
+    linear-gradient(to right, rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
   background-size: 24px 24px;
 }
 

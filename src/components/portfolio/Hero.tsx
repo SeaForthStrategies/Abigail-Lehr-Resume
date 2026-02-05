@@ -12,6 +12,32 @@ const candidateHeadshots: string[] = [
   "/headshot.PNG",
 ];
 
+const TypingText = ({ text }: { text: string }) => {
+  return (
+    <motion.span
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      className="font-mono text-portfolio-primary dark:text-portfolio-secondary"
+    >
+      {text.split("").map((char, i) => (
+        <motion.span
+          key={i}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: i * 0.03, duration: 0.1 }}
+        >
+          {char}
+        </motion.span>
+      ))}
+      <motion.span
+        animate={{ opacity: [0, 1, 0] }}
+        transition={{ repeat: Infinity, duration: 0.8 }}
+        className="inline-block w-2 h-5 bg-portfolio-primary ml-1 align-middle"
+      />
+    </motion.span>
+  );
+};
+
 const Hero = () => {
   const [imgIndex, setImgIndex] = useState(0);
   const scrollToSection = (sectionId: string) => {
@@ -85,15 +111,12 @@ const Hero = () => {
             </div>
 
             <motion.p
-              className="text-xl text-portfolio-muted leading-relaxed max-w-2xl mx-auto"
+              className="text-xl leading-relaxed max-w-2xl mx-auto mb-8 h-20"
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
             >
-              Building high-performance, aesthetically pleasing web applications
-              with a focus on modern frameworks and AI-assisted development.
-              Specialized in creating seamless user experiences through "Vibe
-              Coding."
+              <TypingText text="Building high-performance, aesthetically pleasing web applications with a focus on modern frameworks and AI-assisted build." />
             </motion.p>
 
             <motion.div
@@ -143,7 +166,7 @@ const Hero = () => {
               />
               <ImgWithFallback
                 alt="Abigail Lehr headshot"
-                className="relative w-full h-full object-cover object-[center_30%] lg:object-[center_35%] shadow-[var(--shadow-medium)] border border-portfolio-primary/10 rounded-[2rem] bg-portfolio-light"
+                className="relative w-full h-full object-cover object-top shadow-[var(--shadow-medium)] border border-portfolio-primary/10 rounded-[2rem] bg-portfolio-light"
               />
               <div
                 className="absolute -bottom-4 -left-4 w-20 h-20 rounded-full blur-2xl opacity-30"

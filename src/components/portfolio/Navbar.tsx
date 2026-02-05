@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "./ThemeToggle";
 
 const links = [
   { href: "#about", label: "About" },
@@ -27,16 +28,23 @@ const Navbar = () => {
         <a href="#" className="font-bold text-portfolio-neutral">Abigail <span className="text-gradient-primary">Lehr</span></a>
         <nav className="hidden md:flex items-center gap-6">
           {links.map((link) => (
-            <a key={link.href} href={link.href} className="text-portfolio-muted hover:text-portfolio-neutral transition-colors">
+            <a
+              key={link.href}
+              href={link.href}
+              className="text-portfolio-muted hover:text-portfolio-primary transition-colors text-sm font-medium"
+            >
               {link.label}
             </a>
           ))}
-        </nav>
-        <div className="hidden md:block">
-          <Button size="sm" variant="primary" onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}>
-            Get in touch
+          <ThemeToggle />
+          <Button
+            variant="primary"
+            size="sm"
+            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+          >
+            Let's Talk
           </Button>
-        </div>
+        </nav>
       </div>
     </header>
   );

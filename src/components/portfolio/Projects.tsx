@@ -1,4 +1,4 @@
-import { ExternalLink, Calendar, Tag } from "lucide-react";
+import { ExternalLink, Calendar, Tag, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { useMemo } from "react";
