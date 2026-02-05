@@ -27,7 +27,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-portfolio-light/30">
+    <section id="about" className="py-20 bg-portfolio-light/30 dark:bg-zinc-950/30">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
           {/* Section Header */}
@@ -38,12 +38,12 @@ const About = () => {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl lg:text-5xl font-bold text-portfolio-neutral mb-6">
+            <h2 className="text-4xl lg:text-5xl font-bold text-portfolio-neutral dark:text-white mb-6">
               About Me
             </h2>
-            <p className="text-xl text-portfolio-muted max-w-2xl mx-auto">
-              A software engineer and UI/UX designer dedicated to building high-performance, 
-              aesthetically pleasing digital products through "Vibe Coding."
+            <p className="text-xl text-portfolio-muted dark:text-zinc-400 max-w-2xl mx-auto">
+              A technical founder and developer specializing in bridging the gap between
+              sophisticated design and scalable web architecture.
             </p>
           </motion.div>
 
@@ -57,30 +57,29 @@ const About = () => {
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.6 }}
             >
-              <h3 className="text-2xl font-semibold text-portfolio-neutral">
-                My Story
+              <h3 className="text-2xl font-semibold text-portfolio-neutral dark:text-white">
+                Work Experience
               </h3>
-              <div className="space-y-4 text-portfolio-muted">
-                <p className="leading-relaxed">
-                  Based in California, I've transitioned from a background in data-driven digital marketing 
-                  to technical product execution. I specialize in the "Vibe Coding" movement—leveraging AI 
-                  to bridge the gap between creative vision and high-quality build.
-                </p>
-                <p className="leading-relaxed">
-                  I typically vibe code, which allows me to build complex applications and solve technical 
-                  problems effectively. While I have a basic understanding of various coding languages 
-                  and am continuing to deepen my knowledge, my strength lies in using modern tools to 
-                  ship products quickly and beautifully.
-                </p>
-                <p className="leading-relaxed">
-                  My work focuses on the modern web stack, primarily React, Next.js, and Tailwind CSS. I believe 
-                  software should not only function perfectly but also look and feel premium, providing users with 
-                  a seamless and delightful experience.
-                </p>
+              <div className="space-y-6 text-portfolio-muted dark:text-zinc-400">
+                <div>
+                  <h4 className="font-bold text-portfolio-neutral dark:text-white">Technical Founder & Lead Developer — SeaForth Strategies</h4>
+                  <p className="text-xs italic">Sept 2021–Present</p>
+                  <p className="mt-2 text-sm">Architecting high-performance web applications and design systems for technical product execution.</p>
+                </div>
+                <div>
+                  <h4 className="font-bold text-portfolio-neutral dark:text-white">Marketing Coordinator — 1031 Capital Solutions</h4>
+                  <p className="text-xs italic">June 2024–June 2025</p>
+                  <p className="mt-2 text-sm">Led digital initiatives and built automated outreach workflows to improve business development efficiency.</p>
+                </div>
+                <div>
+                  <h4 className="font-bold text-portfolio-neutral dark:text-white">Marketing & Event Manager — Toothpicks Catering</h4>
+                  <p className="text-xs italic">2015–Sept 2025</p>
+                  <p className="mt-2 text-sm">Managed end-to-end digital presence and planned major events for 500+ guests.</p>
+                </div>
               </div>
             </motion.div>
 
-            {/* Highlights */}
+            {/* Highlights / Skills */}
             <motion.div
               className="space-y-8"
               initial="hidden"
@@ -88,65 +87,32 @@ const About = () => {
               viewport={{ once: true, amount: 0.2 }}
               variants={{ visible: { transition: { staggerChildren: 0.1 } } }}
             >
-              <h3 className="text-2xl font-semibold text-portfolio-neutral">
-                What I Bring
+              <h3 className="text-2xl font-semibold text-portfolio-neutral dark:text-white">
+                Technical Mastery
               </h3>
-              <div className="space-y-6">
-                {highlights.map((highlight, index) => (
-                  <motion.div key={index} className="flex gap-4" variants={{ hidden: { opacity: 0, y: 12 }, visible: { opacity: 1, y: 0 } }}>
-                    <div className="flex-shrink-0">
-                      <div className="w-12 h-12 bg-gradient-to-br from-portfolio-primary to-portfolio-secondary rounded-xl flex items-center justify-center text-white">
-                        {highlight.icon}
-                      </div>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-portfolio-neutral mb-2">
-                        {highlight.title}
-                      </h4>
-                      <p className="text-portfolio-muted">
-                        {highlight.description}
-                      </p>
-                    </div>
+                {[
+                  { category: "Frontend", skills: "React, Next.js, TypeScript, Tailwind CSS" },
+                  { category: "Backend", skills: "Node.js, PostgreSQL, Supabase, REST APIs" },
+                  { category: "Tools", skills: "Git, Vercel, Figma, AI-Assisted Dev" },
+                  { category: "Marketing Tech", skills: "GA4, GTM, HubSpot, Zapier" },
+                ].map((item, index) => (
+                  <motion.div key={index} className="p-4 bg-white dark:bg-zinc-900 rounded-2xl border border-portfolio-primary/10 transition-colors" variants={{ hidden: { opacity: 0, scale: 0.95 }, visible: { opacity: 1, scale: 1 } }}>
+                    <div className="font-bold text-portfolio-primary mb-1 text-xs uppercase tracking-wider">{item.category}</div>
+                    <div className="text-portfolio-neutral dark:text-zinc-300 text-sm leading-relaxed">{item.skills}</div>
                   </motion.div>
                 ))}
-              </div>
+
+              <h3 className="text-2xl font-semibold text-portfolio-neutral dark:text-white pt-4">
+                Certifications
+              </h3>
+              <ul className="space-y-2 text-portfolio-muted dark:text-zinc-400 text-sm">
+                <li>• HubSpot Social Media Marketing (Feb 2023)</li>
+                <li>• Google Digital Garage Digital Skills (Feb 2023)</li>
+                <li>• AHLEI Guest Service Professional (Feb 2022)</li>
+                <li>• TripAdvisor® Reputation Mgmt (Feb 2022)</li>
+              </ul>
             </motion.div>
           </div>
-
-          {/* Skills */}
-          <motion.div
-            className="relative bg-white rounded-3xl p-8 shadow-sm border border-transparent"
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.6 }}
-          >
-            <div className="pointer-events-none absolute inset-0 rounded-3xl" style={{ padding: 1 }}>
-              <div className="h-full w-full rounded-3xl" style={{ background: 'linear-gradient(145deg, rgba(59,130,246,0.25), rgba(34,211,238,0.25))' }} />
-            </div>
-            <div className="absolute inset-[1px] rounded-3xl bg-white" />
-            <h3 className="text-2xl font-semibold text-portfolio-neutral mb-6 text-center">
-              Core Skills & Technologies
-            </h3>
-            <motion.div
-              className="relative flex flex-wrap gap-3 justify-center"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }}
-              variants={{ visible: { transition: { staggerChildren: 0.05 } } }}
-            >
-              {skills.map((skill, index) => (
-                <motion.div
-                  key={index}
-                  className="flex items-center gap-2 bg-portfolio-light px-4 py-2 rounded-full border border-portfolio-primary/10"
-                  variants={{ hidden: { opacity: 0, y: 8 }, visible: { opacity: 1, y: 0 } }}
-                >
-                  <CheckCircle className="w-4 h-4 text-portfolio-primary" />
-                  <span className="text-portfolio-neutral font-medium">{skill}</span>
-                </motion.div>
-              ))}
-            </motion.div>
-          </motion.div>
         </div>
       </div>
     </section>

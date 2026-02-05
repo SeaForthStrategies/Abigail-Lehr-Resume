@@ -19,13 +19,13 @@ const Contact = () => {
     {
       icon: <Globe className="w-6 h-6" />,
       label: "Website",
-      value: "seaforthstrategies.com",
+      value: "www.seaforthstrategies.com",
       href: "https://www.seaforthstrategies.com"
     },
     {
       icon: <MapPin className="w-6 h-6" />,
       label: "Location",
-      value: "California",
+      value: "Carlsbad, CA",
       href: null
     }
   ];
@@ -42,12 +42,12 @@ const Contact = () => {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl lg:text-5xl font-bold text-portfolio-neutral mb-6">
-              Let's Build Something Together
+            <h2 className="text-4xl lg:text-5xl font-bold text-portfolio-neutral dark:text-white mb-6">
+              Get In Touch
             </h2>
             <p className="text-xl text-portfolio-muted max-w-2xl mx-auto">
-              Ready to bring your next product idea to life?
-              Let's discuss how I can help you build high-performance web applications with a focus on UI/UX and clean code.
+              Interested in collaborating or have a question about my work?
+              I'm always open to discussing new opportunities and technical challenges.
             </p>
           </motion.div>
 
@@ -62,13 +62,13 @@ const Contact = () => {
               transition={{ duration: 0.6 }}
             >
               <div>
-                <h3 className="text-2xl font-semibold text-portfolio-neutral mb-6">
-                  Get In Touch
+                <h3 className="text-2xl font-semibold text-portfolio-neutral dark:text-white mb-6">
+                  Contact Information
                 </h3>
                 <p className="text-portfolio-muted leading-relaxed mb-8">
                   Whether you're looking to generate more qualified leads, increase your social media presence,
-                  or optimize your marketing campaigns for better ROI, I specialize in creating data-driven
-                  strategies that deliver measurable results.
+                  or optimize your technical workflows for better efficiency, I specialize in creating software
+                  solutions that deliver measurable results.
                 </p>
               </div>
 
@@ -90,7 +90,7 @@ const Contact = () => {
                       {info.href ? (
                         <a
                           href={info.href}
-                          className="text-portfolio-neutral font-medium hover:text-portfolio-primary transition-colors"
+                          className="text-portfolio-neutral dark:text-zinc-300 font-medium hover:text-portfolio-primary transition-colors"
                           target={info.href.startsWith('http') ? '_blank' : undefined}
                           rel={info.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                         >
@@ -143,19 +143,19 @@ const Contact = () => {
               />
 
               {/* Main card */}
-              <div className="relative bg-white rounded-3xl p-8 shadow-xl border border-portfolio-primary/10">
+              <div className="relative bg-white dark:bg-zinc-900 rounded-3xl p-8 shadow-xl border border-portfolio-primary/10">
                 <div className="text-center space-y-6">
                   <motion.div className="w-20 h-20 bg-gradient-to-br from-portfolio-primary to-portfolio-secondary rounded-full flex items-center justify-center text-white mx-auto" whileHover={{ scale: 1.05 }}>
                     <Linkedin className="w-10 h-10" />
                   </motion.div>
 
                   <div>
-                    <h3 className="text-2xl font-semibold text-portfolio-neutral mb-4">
-                      Ready to Build Your Vision?
+                    <h3 className="text-2xl font-semibold text-portfolio-neutral dark:text-white mb-4">
+                      Interested in Collaboration?
                     </h3>
-                    <p className="text-portfolio-muted leading-relaxed">
-                      Let's schedule a meeting to discuss your technical needs, design preferences,
-                      and how "Vibe Coding" can accelerate your development process.
+                    <p className="text-portfolio-muted dark:text-zinc-400 leading-relaxed">
+                      Let's connect to discuss potential roles, technical needs, or how my background
+                      in both development and strategy can add value to your team.
                     </p>
                   </div>
 
@@ -187,20 +187,6 @@ const Contact = () => {
             </motion.div>
           </div>
 
-          {/* Footer */}
-          <motion.div
-            className="mt-20 text-center"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.8 }}
-          >
-            <div className="border-t border-portfolio-primary/10 pt-8">
-              <p className="text-portfolio-muted">
-                © Abigail Lehr. Proudly working from California and beyond.
-              </p>
-            </div>
-          </motion.div>
         </div>
       </div>
     </section>

@@ -1,17 +1,20 @@
 import { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "./ThemeToggle";
 
 const links = [
-  { href: "#about", label: "About" },
-  { href: "#expertise", label: "Expertise" },
-  { href: "#platforms", label: "Platforms" },
-  { href: "#projects", label: "Projects" },
-  { href: "#contact", label: "Contact" },
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
+  { href: "/expertise", label: "Expertise" },
+  { href: "/platforms", label: "Platforms" },
+  { href: "/portfolio", label: "Portfolio" },
+  { href: "/contact", label: "Contact" },
 ];
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -22,28 +25,36 @@ const Navbar = () => {
 
   return (
     <header className={`fixed top-0 inset-x-0 z-50 transition-all ${
-      scrolled ? "backdrop-blur-md bg-white/70 border-b border-portfolio-primary/10" : "bg-transparent"
+      scrolled 
+        ? "backdrop-blur-md bg-white/70 dark:bg-zinc-950/70 border-b border-portfolio-primary/10" 
+        : "bg-transparent"
     }`}>
       <div className="container mx-auto px-6 h-16 flex items-center justify-between">
-        <a href="#" className="font-bold text-portfolio-neutral">Abigail <span className="text-gradient-primary">Lehr</span></a>
+        <Link to="/" className="font-bold text-portfolio-neutral dark:text-white">
+          Abigail <span className="text-gradient-primary">Lehr</span>
+        </Link>
         <nav className="hidden md:flex items-center gap-6">
           {links.map((link) => (
-            <a
+            <Link
               key={link.href}
-              href={link.href}
-              className="text-portfolio-muted hover:text-portfolio-primary transition-colors text-sm font-medium"
+              to={link.href}
+              className={`text-sm font-medium transition-colors ${
+                location.pathname === link.href
+                  ? "text-portfolio-primary dark:text-portfolio-secondary font-bold"
+                  : "text-portfolio-muted dark:text-zinc-400 hover:text-portfolio-primary dark:hover:text-white"
+              }`}
             >
               {link.label}
-            </a>
+            </Link>
           ))}
-          <ThemeToggle />
-          <Button
-            variant="primary"
-            size="sm"
-            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-          >
-            Let's Talk
-          </Button>
+          <Link to="/contact">
+            <Button
+              variant="primary"
+              size="sm"
+            >
+              Let's Talk
+            </Button>
+          </Link>
         </nav>
       </div>
     </header>

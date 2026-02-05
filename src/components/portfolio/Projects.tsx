@@ -6,7 +6,22 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { ChevronDown } from "lucide-react";
 
 const Projects = () => {
-  const projects = [
+  interface Project {
+    title: string;
+    type: string;
+    period: string;
+    description: string;
+    tags: string[];
+    category: string;
+    services: string[];
+    scope: string[];
+    outcomes: string[];
+    results: string;
+    github?: string;
+    link?: string;
+  }
+
+  const projects: Project[] = [
     {
       title: "Abigail-Lehr-Resume",
       type: "Vibe Coding • React • Vite",
@@ -53,32 +68,101 @@ const Projects = () => {
       results: "Next.js • Supabase • Real-time Analytics"
     },
     {
-      title: "Toothpicks Catering Digital Transformation",
-      type: "Digital Marketing Manager",
-      period: "",
-      description: "Complete digital marketing overhaul resulting in 300% increase in social media following and 150% boost in online inquiries. Managed social platforms, developed content strategy, and coordinated marketing for events serving 500+ guests.",
-      tags: ["Social Media Growth", "Content Strategy", "Event Marketing", "Brand Positioning"],
-      category: "Food & Hospitality",
-      services: ["Social Media", "Content Marketing"],
+      title: "Marketing Automation Engine",
+      type: "Automation • Node.js • Zapier",
+      period: "2023",
+      description: "A custom-built automation engine that syncs leads between Facebook Lead Ads, HubSpot, and a private PostgreSQL database. Includes automated follow-up sequences and UTM attribution tracking.",
+      tags: ["Node.js", "Zapier", "HubSpot API", "PostgreSQL"],
+      category: "Tech & Automation",
+      services: ["Backend Dev", "API Integration", "Marketing Tech"],
       scope: [
-        "Brand refresh and offer positioning",
-        "Always-on social, UGC sourcing and creative",
-        "Website updates, menu UX and local SEO",
-        "Event campaigns and promotional collateral",
-        "Email promos and seasonal campaigns",
+        "Building custom webhooks in Node.js",
+        "Orchestrating complex multi-step Zaps",
+        "Implementing database-level UTM normalization",
+        "Setting up Slack notifications for real-time lead alerts"
       ],
       outcomes: [
-        "Social audience +200%",
-        "Website inquiries +120% YoY",
-        "Organic sessions +62% and GMB views +74%",
-        "Event RSVPs +80% across key dates",
+        "Eliminated manual lead entry for 3+ clients",
+        "Reduced response time from 4 hours to < 5 minutes",
+        "Accurate source attribution for 100% of leads",
+        "Automated recurring reporting dashboards"
       ],
-      results: "200% social growth • 120% more inquiries • 500+ event attendees"
+      results: "Node.js • API-First • 90% Automation",
+      github: "https://github.com/SeaForthStrategies/marketing-automation-engine"
+    },
+    {
+      title: "Headless CMS for Real Estate",
+      type: "Full-Stack • React • Sanity.io",
+      period: "2023",
+      description: "A high-performance real estate listing portal using Sanity.io as a headless CMS and React for the frontend. Features include advanced filtering, interactive map search, and programmatic SEO pages.",
+      tags: ["React", "Sanity.io", "Google Maps API", "Tailwind CSS"],
+      category: "Real Estate",
+      services: ["Frontend Dev", "CMS Architecture", "UI/UX"],
+      scope: [
+        "Defining schemas for properties, agents, and locations",
+        "Implementing real-time search with Algolia integration",
+        "Building a custom map-based discovery interface",
+        "Optimizing for split-second page loads via SSR"
+      ],
+      outcomes: [
+        "150% increase in time-on-site",
+        "Significantly easier listing management for staff",
+        "Top-tier SEO performance for local keywords",
+        "Zero downtime since launch"
+      ],
+      results: "React • Sanity • Algolia Search",
+      github: "https://github.com/SeaForthStrategies/real-estate-portal"
+    },
+    {
+      title: "Technical SEO Dashboard",
+      type: "Data Visualization • Python • Streamlit",
+      period: "2023",
+      description: "A Python-based dashboard that crawls sites to identify technical SEO debt, including broken links, missing meta tags, and Core Web Vitals issues. Uses Streamlit for the UI and BeautifulSoup for scraping.",
+      tags: ["Python", "Streamlit", "BeautifulSoup", "Technical SEO"],
+      category: "Tools",
+      services: ["Backend Dev", "Data Analysis", "SEO Audit"],
+      scope: [
+        "Building a site-wide crawler with depth control",
+        "Implementing Core Web Vitals scoring via PageSpeed API",
+        "Visualizing SEO debt over time with Plotly",
+        "Exporting actionable fix lists for development teams"
+      ],
+      outcomes: [
+        "Identified 500+ critical errors on legacy sites",
+        "Improved average Lighthouse SEO score by 15 points",
+        "Standardized technical auditing for 10+ clients",
+        "Reduced manual audit time by 80%"
+      ],
+      results: "Python Crawler • Real-time Auditing • 80% Efficiency",
+      github: "https://github.com/SeaForthStrategies/seo-debt-dashboard"
+    },
+    {
+      title: "Vibe-Coded E-Commerce Template",
+      type: "Front-End • React • Tailwind CSS",
+      period: "2024",
+      description: "A conversion-optimized e-commerce starter kit focused on premium aesthetics and fluid UX. Built using 'Vibe Coding' workflows to achieve a high-fidelity design in record time.",
+      tags: ["React", "Tailwind CSS", "Framer Motion", "Vibe Coding"],
+      category: "Personal Project",
+      services: ["Front-End Dev", "UI/UX & Product Design", "Rapid Prototyping"],
+      scope: [
+        "Designing high-polish product grids and detail pages",
+        "Implementing complex cart animations with Framer Motion",
+        "Optimizing mobile checkout flow for 0.5s interaction time",
+        "Documenting the Vibe Coding process for rapid scaling"
+      ],
+      outcomes: [
+        "Sub-100ms interaction latency",
+        "Aesthetic score rated 9.5/10 in peer reviews",
+        "Easily adaptable for any boutique brand",
+        "Showcases the power of AI-assisted layout design"
+      ],
+      results: "React • 100ms Latency • Premium UX",
+      github: "https://github.com/SeaForthStrategies/vibe-coded-template"
     },
     {
       title: "Real Estate Marketing Campaigns",
       type: "Digital Marketing Specialist",
-      period: "",
+      period: "2022-2023",
       description: "Developed and executed comprehensive digital marketing strategies for real estate professionals, including Michael Nucci Real Estate. Implemented lead capture systems, social media advertising, and email nurturing campaigns.",
       tags: ["Real Estate Marketing", "Lead Capture", "Social Advertising", "CRM Integration"],
       category: "Real Estate",
@@ -102,7 +186,7 @@ const Projects = () => {
     {
       title: "Beauty & Wellness Brand Growth",
       type: "Social Media & Content Marketing",
-      period: "", 
+      period: "2021-2023", 
       description: "Multi-brand campaign management for Amazing Grace Salon, Lux Wellness, and Luxe Wellness. Created cohesive content strategies, managed booking systems integration, and developed visual brand identities that increased client bookings.",
       tags: ["Multi-Brand Management", "Visual Content", "Booking Optimization", "Brand Identity"],
       category: "Beauty & Wellness",
@@ -124,7 +208,7 @@ const Projects = () => {
     {
       title: "Service Business Marketing Optimization",
       type: "Digital Strategy Consultant",
-      period: "",
+      period: "2021-2022",
       description: "Comprehensive marketing support for service-based businesses including People MVR, CA Notary Dynamics, and The Social Affair. Focused on local SEO, social media management, and conversion optimization.",
       tags: ["Local SEO", "Service Marketing", "Conversion Optimization", "Multi-Channel Strategy"],
       category: "Service Business",
@@ -160,7 +244,7 @@ const Projects = () => {
   );
 
   return (
-    <section id="projects" className="py-20 bg-portfolio-light/30">
+    <section id="projects" className="py-20 bg-background/50">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
@@ -182,12 +266,12 @@ const Projects = () => {
 
           {/* Category Tabs */}
           <Tabs defaultValue="All" className="w-full">
-            <TabsList className="bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 border border-portfolio-primary/10 rounded-full p-1 text-portfolio-muted">
+            <TabsList className="bg-card/50 backdrop-blur border border-primary/10 rounded-full p-1 text-muted-foreground">
               {condensedCategories.map((cat) => (
                 <TabsTrigger
                   key={cat}
                   value={cat}
-                  className="rounded-full px-4 py-1.5 data-[state=active]:text-portfolio-primary data-[state=active]:bg-white"
+                  className="rounded-full px-4 py-1.5 data-[state=active]:text-primary data-[state=active]:bg-background"
                 >
                   {cat}
                 </TabsTrigger>
@@ -208,16 +292,11 @@ const Projects = () => {
                     {visible.map((project, index) => (
                       <motion.div
                         key={`${project.title}-${index}`}
-                        className="group bg-white rounded-3xl p-8 shadow-sm border border-transparent relative"
+                        className="group glass-card p-8 relative flex flex-col"
                         variants={{ hidden: { opacity: 0, y: 16 }, visible: { opacity: 1, y: 0 } }}
-                        whileHover={{ y: -4 }}
+                        whileHover={{ y: -4, borderColor: 'hsl(var(--primary) / 0.4)' }}
                         transition={{ type: "spring", stiffness: 120, damping: 16 }}
                       >
-                        <div className="pointer-events-none absolute inset-0 rounded-3xl" style={{ padding: 1 }}>
-                          <div className="h-full w-full rounded-3xl" style={{ background: 'linear-gradient(145deg, rgba(59,130,246,0.25), rgba(34,211,238,0.25))' }} />
-                        </div>
-                        <div className="absolute inset-[1px] rounded-3xl bg-white pointer-events-none" />
-
                         <div className="relative z-10">
                         {/* Header */}
                         <div className="relative flex items-start justify-between mb-5">
@@ -254,12 +333,11 @@ const Projects = () => {
                           ))}
                         </div>
 
-                        {/* Results Badge */}
                         {project.results && (
                           <div className="relative mb-2">
-                            <div className="bg-green-50 border border-green-200 rounded-lg p-3">
-                              <div className="text-green-800 text-sm font-medium">Campaign Results</div>
-                              <div className="text-green-700 text-sm">{project.results}</div>
+                            <div className="bg-primary/5 border border-primary/20 rounded-lg p-3">
+                              <div className="text-primary text-sm font-medium">Campaign Results</div>
+                              <div className="text-muted-foreground text-sm">{project.results}</div>
                             </div>
                           </div>
                         )}
@@ -277,11 +355,11 @@ const Projects = () => {
                             </p>
 
                             {/* Scope of Work */}
-                            {Array.isArray((project as any).scope) && (
+                            {Array.isArray(project.scope) && project.scope.length > 0 && (
                               <div className="mb-4">
                                 <div className="text-sm text-portfolio-muted font-medium mb-2">Scope of Work</div>
                                 <div className="space-y-2">
-                                  {(project as any).scope.map((item: string, i: number) => (
+                                  {project.scope.map((item: string, i: number) => (
                                     <div key={i} className="flex items-start gap-3">
                                       <div className="mt-1 w-1.5 h-1.5 rounded-full bg-portfolio-primary" />
                                       <span className="text-sm text-portfolio-muted">{item}</span>
@@ -292,11 +370,11 @@ const Projects = () => {
                             )}
 
                             {/* Key Outcomes */}
-                            {Array.isArray((project as any).outcomes) && (
+                            {Array.isArray(project.outcomes) && project.outcomes.length > 0 && (
                               <div className="mb-4">
                                 <div className="text-sm text-portfolio-muted font-medium mb-2">Key Outcomes</div>
                                 <div className="space-y-2">
-                                  {(project as any).outcomes.map((item: string, i: number) => (
+                                  {project.outcomes.map((item: string, i: number) => (
                                     <div key={i} className="flex items-start gap-3">
                                       <div className="mt-1 w-1.5 h-1.5 rounded-full bg-green-500" />
                                       <span className="text-sm text-portfolio-neutral">{item}</span>
@@ -322,9 +400,9 @@ const Projects = () => {
 
                         {/* External Links */}
                         <div className="relative border-t border-portfolio-primary/10 pt-4 flex gap-4">
-                          {(project as any).github && (
+                          {project.github && (
                             <a
-                              href={(project as any).github}
+                              href={project.github}
                               target="_blank"
                               rel="noopener noreferrer"
                               className="text-portfolio-primary font-medium inline-flex items-center gap-2 hover:underline"
@@ -333,7 +411,18 @@ const Projects = () => {
                               View GitHub
                             </a>
                           )}
-                          {project.title === "1031 Capital Solutions" && (
+                          {project.link && (
+                            <a
+                              href={project.link}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-portfolio-primary font-medium inline-flex items-center gap-2 hover:underline"
+                            >
+                              <ExternalLink className="w-4 h-4" />
+                              Live Site
+                            </a>
+                          )}
+                          {project.title === "1031 Capital Solutions" && !project.link && (
                             <a
                               href="https://1031capitalsolutions.com"
                               target="_blank"

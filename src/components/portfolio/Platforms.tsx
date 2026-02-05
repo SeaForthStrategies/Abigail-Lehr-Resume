@@ -26,34 +26,19 @@ import {
 const Platforms = () => {
   const categories = [
     {
-      title: "CRM / Marketing / Client Tools",
-      icon: <Mail className="w-5 h-5" />,
-      items: ["HubSpot", "Mailchimp", "Klaviyo", "Meta Business Suite", "Google Analytics 4 (GA4)", "Google Tag Manager", "Google Search Console", "Canva", "Hootsuite / Buffer", "Stripe"]
-    },
-    {
       title: "Web & Development",
       icon: <Code2 className="w-5 h-5" />,
-      items: ["GitHub", "Vercel", "Next.js", "React", "Tailwind CSS", "HTML5 / CSS3", "JavaScript", "Node.js", "WordPress", "REST APIs", "Supabase", "Continuing to learn new languages"]
+      items: ["Next.js", "React", "TypeScript", "Node.js", "Supabase", "GitHub", "Vercel"]
     },
     {
-      title: "AI / Productivity / Dev Assistants",
+      title: "Marketing Tech",
+      icon: <Mail className="w-5 h-5" />,
+      items: ["GA4", "GTM", "HubSpot", "Zapier", "Stripe", "Search Console"]
+    },
+    {
+      title: "AI & Tools",
       icon: <Brain className="w-5 h-5" />,
-      items: ["ChatGPT", "Cursor", "Claude", "GitHub Copilot", "Figma (AI features)"]
-    },
-    {
-      title: "Design / UX",
-      icon: <PenTool className="w-5 h-5" />,
-      items: ["Figma", "Adobe Photoshop", "Adobe Illustrator", "Canva"]
-    },
-    {
-      title: "Project Management / Collaboration",
-      icon: <Layers className="w-5 h-5" />,
-      items: ["Notion", "Trello", "Slack", "Google Workspace", "Zoom"]
-    },
-    {
-      title: "Deployment / Hosting / Tech Stack",
-      icon: <Server className="w-5 h-5" />,
-      items: ["Vercel", "Netlify", "DNS Management (GoDaddy / Cloudflare)", "Environment Variables & Production Workflows"]
+      items: ["Cursor", "Claude", "Figma", "Notion", "Slack"]
     }
   ];
 
@@ -69,12 +54,12 @@ const Platforms = () => {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl lg:text-5xl font-bold text-portfolio-neutral mb-6">
+            <h2 className="text-4xl lg:text-5xl font-bold text-portfolio-neutral dark:text-white mb-6">
               Platforms & Tools
             </h2>
             <p className="text-xl text-portfolio-muted max-w-3xl mx-auto">
-              A comprehensive list of the technologies and platforms I use to build, 
-              deploy, and manage modern digital products.
+              A professional suite of technologies and platforms I utilize to architect, 
+              engineer, and manage high-fidelity digital products.
             </p>
           </motion.div>
 
@@ -83,7 +68,7 @@ const Platforms = () => {
             {categories.map((category, idx) => (
               <motion.div
                 key={idx}
-                className="bg-white rounded-[2rem] p-8 shadow-sm border border-portfolio-primary/5 hover:shadow-md transition-shadow"
+                className="bg-white dark:bg-zinc-950 rounded-[2rem] p-8 shadow-sm border border-portfolio-primary/5 dark:border-white/10 hover:shadow-md transition-shadow"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -93,14 +78,14 @@ const Platforms = () => {
                   <div className="w-10 h-10 bg-gradient-to-br from-portfolio-primary/20 to-portfolio-secondary/20 rounded-xl flex items-center justify-center text-portfolio-primary">
                     {category.icon}
                   </div>
-                  <h3 className="text-lg font-semibold text-portfolio-neutral">{category.title}</h3>
+                  <h3 className="text-lg font-semibold text-portfolio-neutral dark:text-white">{category.title}</h3>
                 </div>
                 
                 <div className="flex flex-wrap gap-2">
                   {category.items.map((item, itemIdx) => (
                     <span 
                       key={itemIdx}
-                      className="px-3 py-1 bg-portfolio-light/50 text-portfolio-muted text-sm rounded-full border border-portfolio-primary/5"
+                      className="px-3 py-1 bg-portfolio-light/50 dark:bg-zinc-900 text-portfolio-muted dark:text-zinc-400 text-sm rounded-full border border-portfolio-primary/5 dark:border-white/10"
                     >
                       {item}
                     </span>

@@ -12,6 +12,8 @@ const candidateHeadshots: string[] = [
   "/headshot.PNG",
 ];
 
+import { useNavigate } from "react-router-dom";
+
 const TypingText = ({ text }: { text: string }) => {
   return (
     <motion.span
@@ -40,9 +42,21 @@ const TypingText = ({ text }: { text: string }) => {
 
 const Hero = () => {
   const [imgIndex, setImgIndex] = useState(0);
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    element?.scrollIntoView({ behavior: "smooth" });
+  const navigate = useNavigate();
+
+  const handleNav = (sectionId: string) => {
+    if (sectionId === "about") {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      } else {
+        navigate("/about");
+      }
+    } else if (sectionId === "contact") {
+      navigate("/contact");
+    } else if (sectionId === "projects") {
+      navigate("/portfolio");
+    }
   };
 
   return (
@@ -67,7 +81,7 @@ const Hero = () => {
         <div className="grid gap-12 lg:grid-cols-2 items-center">
           {/* Text Content */}
           <motion.div
-            className="space-y-8 text-center lg:text-left"
+            className="space-y-8 text-left"
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
@@ -79,7 +93,18 @@ const Hero = () => {
               </h1>
 
               <motion.div
-                className="flex flex-wrap justify-center gap-2 text-portfolio-muted text-lg"
+                className="flex flex-wrap justify-start gap-x-2 gap-y-1 text-portfolio-muted text-lg"
+                initial="hidden"
+                animate="visible"
+                variants={{
+                  hidden: {},
+                  visible: {
+                    transition: { staggerChildren: 0.08 },
+                  },
+                }}
+              >
+              <motion.div
+                className="flex flex-nowrap items-center justify-start gap-x-3 text-portfolio-muted text-base md:text-lg text-left whitespace-nowrap overflow-x-auto no-scrollbar"
                 initial="hidden"
                 animate="visible"
                 variants={{
@@ -92,9 +117,9 @@ const Hero = () => {
                 {[
                   "Software Engineer",
                   "•",
-                  "UI/UX Designer",
+                  "Full-Stack Developer",
                   "•",
-                  "Vibe Coder",
+                  "Marketing Strategist",
                 ].map((item, idx) => (
                   <motion.span
                     key={idx}
@@ -103,24 +128,26 @@ const Hero = () => {
                       visible: { opacity: 1, y: 0 },
                     }}
                     transition={{ duration: 0.4 }}
+                    className={item === "•" ? "opacity-50" : "font-medium"}
                   >
                     {item}
                   </motion.span>
                 ))}
               </motion.div>
+              </motion.div>
             </div>
 
             <motion.p
-              className="text-xl leading-relaxed max-w-2xl mx-auto mb-8 h-20"
+              className="text-xl leading-relaxed max-w-2xl text-left mb-8 h-20"
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
             >
-              <TypingText text="Building high-performance, aesthetically pleasing web applications with a focus on modern frameworks and AI-assisted build." />
+              <TypingText text="Passionate about building high-performance web applications with a focus on clean code, responsive design, and technical product execution." />
             </motion.p>
 
             <motion.div
-              className="flex flex-wrap gap-4 justify-center"
+              className="flex flex-wrap gap-4 justify-start"
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.35, duration: 0.5 }}
@@ -128,7 +155,7 @@ const Hero = () => {
               <Button
                 variant="primary"
                 size="lg"
-                onClick={() => scrollToSection("contact")}
+                onClick={() => handleNav("contact")}
                 className="group"
               >
                 <Mail className="w-5 h-5 mr-2" />
@@ -138,7 +165,7 @@ const Hero = () => {
               <Button
                 variant="outline"
                 size="lg"
-                onClick={() => scrollToSection("projects")}
+                onClick={() => handleNav("projects")}
                 className="group"
               >
                 View My Work
@@ -184,7 +211,7 @@ const Hero = () => {
           transition={{ delay: 0.8, duration: 0.6 }}
         >
           <button
-            onClick={() => scrollToSection("about")}
+            onClick={() => handleNav("about")}
             className="p-2 rounded-full bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-colors animate-bounce"
           >
             <ArrowDown className="w-6 h-6 text-portfolio-primary" />
