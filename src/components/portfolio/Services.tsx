@@ -1,4 +1,4 @@
-import { Code, Megaphone, PenTool, BarChart3, Globe, Users } from "lucide-react";
+import { Code, Megaphone, PenTool, BarChart3, Globe, Users, Zap } from "lucide-react";
 import { motion } from "framer-motion";
 
 const Services = () => {
