@@ -5,6 +5,7 @@ import Projects from "@/components/portfolio/Projects";
 import Contact from "@/components/portfolio/Contact";
 import Navbar from "@/components/portfolio/Navbar";
 import MyWork from "@/components/portfolio/MyWork";
+import Platforms from "@/components/portfolio/Platforms";
 
 const Index = () => {
   return (
@@ -13,6 +14,7 @@ const Index = () => {
       <Hero />
       <About />
       <Services />
+      <Platforms />
       <Projects />
       <MyWork />
       <Contact />

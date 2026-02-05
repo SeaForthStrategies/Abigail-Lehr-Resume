@@ -4,45 +4,45 @@ import { motion } from "framer-motion";
 const Services = () => {
   const services = [
     {
-      icon: <Megaphone className="w-8 h-8" />,
-      title: "Lead Generation Campaigns",
-      description: "Multi-channel outreach strategies that consistently deliver 10+ qualified prospect meetings per week through targeted campaigns.",
-      features: ["Email Marketing Automation", "LinkedIn Outreach", "Social Media Advertising", "Lead Scoring & Nurturing"]
-    },
-    {
-      icon: <BarChart3 className="w-8 h-8" />,
-      title: "Performance Analytics",
-      description: "Data-driven campaign optimization using advanced tracking, UTM parameters, and conversion analysis to maximize ROI.",
-      features: ["Google Analytics Setup", "UTM Campaign Tracking", "Conversion Rate Analysis", "Monthly Performance Reports"]
-    },
-    {
-      icon: <Users className="w-8 h-8" />,
-      title: "Social Media Management",
-      description: "Strategic social media campaigns that build brand awareness, engage audiences, and drive qualified traffic to your business.",
-      features: ["Content Strategy & Creation", "Community Management", "Paid Social Advertising", "Social Media Analytics"]
+      icon: <Code className="w-8 h-8" />,
+      title: "Full-Stack Web Development",
+      description: "Building modern, responsive web applications using the latest frameworks and best practices for performance and scalability.",
+      features: ["React & Next.js Implementation", "TypeScript & Type Safety", "Node.js & API Integration", "Supabase & Database Management"]
     },
     {
       icon: <PenTool className="w-8 h-8" />,
-      title: "Content Marketing",
-      description: "Compelling content that positions your brand as an industry leader while driving organic traffic and lead generation.",
-      features: ["Blog Content Strategy", "Email Newsletter Creation", "Marketing Copy & Messaging", "Content Calendar Planning"]
+      title: "UI/UX & Product Design",
+      description: "Designing beautiful, user-centric interfaces that elevate brand identity and ensure a premium digital experience.",
+      features: ["Figma Prototyping", "Design Systems & Tokens", "Tailwind CSS Styling", "Micro-animations & Interaction"]
+    },
+    {
+      icon: <Zap className="w-8 h-8" />,
+      title: "AI-Driven Development",
+      description: "Utilizing cutting-edge AI tools to accelerate the development lifecycle and deliver high-quality results faster.",
+      features: ["Cursor & Claude Workflows", "Prompt Engineering for Code", "GitHub Copilot Integration", "AI-Powered Productivity"]
+    },
+    {
+      icon: <BarChart3 className="w-8 h-8" />,
+      title: "Marketing Technology",
+      description: "Integrating technical solutions with marketing strategies to create powerful automation and tracking systems.",
+      features: ["HubSpot & CRM Integration", "GA4 & Tag Management", "Stripe Payment Workflows", "Marketing Automation"]
     },
     {
       icon: <Globe className="w-8 h-8" />,
-      title: "SEO & Local Search",
-      description: "Comprehensive search engine optimization to improve your visibility and attract high-intent prospects organically.",
-      features: ["On-page SEO Optimization", "Local Business Optimization", "Keyword Strategy", "Technical SEO Audits"]
+      title: "Performance & SEO",
+      description: "Optimizing web applications for speed, accessibility, and search engine visibility from the ground up.",
+      features: ["Core Web Vitals Optimization", "Technical SEO Audits", "Load Speed Performance", "Accessibility Standards"]
     },
     {
-      icon: <Code className="w-8 h-8" />,
-      title: "Marketing Technology",
-      description: "Strategic implementation of marketing tools and automation systems to streamline operations and improve campaign effectiveness.",
-      features: ["HubSpot CRM Integration", "Marketing Automation Setup", "Landing Page Development", "Conversion Tracking"]
+      icon: <Users className="w-8 h-8" />,
+      title: "Vibe Coding Strategy",
+      description: "Applying a creative-first approach to software development, focusing on the 'look and feel' of digital products.",
+      features: ["Rapid Prototyping", "Creative Tech Solutions", "Aesthetic Refinement", "Development-as-Design"]
     }
   ];
 
   return (
-    <section id="services" className="py-20 bg-background">
+    <section id="expertise" className="py-20 bg-background">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
@@ -54,11 +54,11 @@ const Services = () => {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-portfolio-neutral mb-6">
-              Services & Expertise
+              Expertise & Skills
             </h2>
             <p className="text-xl text-portfolio-muted max-w-3xl mx-auto">
-              Comprehensive digital marketing solutions that drive qualified leads, increase brand awareness,
-              and deliver measurable ROI for growing businesses.
+              Combining technical proficiency with creative design to build 
+              modern web solutions that deliver exceptional user experiences.
             </p>
           </motion.div>
 
@@ -127,9 +127,9 @@ const Services = () => {
             <div className="relative overflow-hidden rounded-3xl p-12 text-white">
               <div className="absolute inset-0" style={{ background: 'var(--gradient-primary)' }} />
               <div className="relative z-10">
-                <h3 className="text-3xl font-bold mb-4">Ready to Scale Your Digital Marketing?</h3>
+                <h3 className="text-3xl font-bold mb-4">Ready to Build Something Amazing?</h3>
                 <p className="text-xl mb-8 opacity-90">
-                  Let's create a data-driven marketing strategy that generates qualified leads and grows your business.
+                  Let's collaborate on your next technical project and bring your vision to life with high-quality code and design.
                 </p>
                 <button
                   onClick={() => {

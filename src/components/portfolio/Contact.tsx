@@ -7,8 +7,8 @@ const Contact = () => {
     {
       icon: <Mail className="w-6 h-6" />,
       label: "Email",
-      value: "abbyjane@gatorgleamagency.com",
-      href: "mailto:abbyjane@gatorgleamagency.com"
+      value: "abby@seaforthstrategies.com",
+      href: "mailto:abby@seaforthstrategies.com"
     },
     {
       icon: <Phone className="w-6 h-6" />,
@@ -19,13 +19,13 @@ const Contact = () => {
     {
       icon: <Globe className="w-6 h-6" />,
       label: "Website",
-      value: "gatorgleamagency.com",
-      href: "https://www.gatorgleamagency.com"
+      value: "seaforthstrategies.com",
+      href: "https://www.seaforthstrategies.com"
     },
     {
       icon: <MapPin className="w-6 h-6" />,
       label: "Location",
-      value: "Carlsbad, CA",
+      value: "California",
       href: null
     }
   ];
@@ -43,11 +43,11 @@ const Contact = () => {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-portfolio-neutral mb-6">
-              Let's Work Together
+              Let's Build Something Together
             </h2>
             <p className="text-xl text-portfolio-muted max-w-2xl mx-auto">
-              Ready to scale your business with proven digital marketing strategies?
-              Let's discuss how I can help generate qualified leads and grow your revenue.
+              Ready to bring your next product idea to life?
+              Let's discuss how I can help you build high-performance web applications with a focus on UI/UX and clean code.
             </p>
           </motion.div>
 
@@ -110,7 +110,7 @@ const Contact = () => {
                   variant="primary"
                   size="lg"
                   className="w-full"
-                  onClick={() => window.open('mailto:abbyjane@gatorgleamagency.com')}
+                  onClick={() => window.open('mailto:abby@seaforthstrategies.com')}
                 >
                   <Mail className="w-5 h-5 mr-2" />
                   Send Email
@@ -120,10 +120,10 @@ const Contact = () => {
                   variant="portfolio"
                   size="lg"
                   className="w-full"
-                  onClick={() => window.open('https://www.gatorgleamagency.com', '_blank')}
+                  onClick={() => window.open('https://www.seaforthstrategies.com', '_blank')}
                 >
                   <Globe className="w-5 h-5 mr-2" />
-                  Visit Agency Website
+                  Visit SeaForth Strategies
                 </Button>
               </div>
             </motion.div>
@@ -151,11 +151,11 @@ const Contact = () => {
 
                   <div>
                     <h3 className="text-2xl font-semibold text-portfolio-neutral mb-4">
-                      Ready to Scale Your Marketing?
+                      Ready to Build Your Vision?
                     </h3>
                     <p className="text-portfolio-muted leading-relaxed">
-                      Let's schedule a free consultation to discuss your marketing goals, current challenges,
-                      and how I can help you generate more qualified leads and grow your business.
+                      Let's schedule a meeting to discuss your technical needs, design preferences,
+                      and how "Vibe Coding" can accelerate your development process.
                     </p>
                   </div>
 
@@ -166,19 +166,19 @@ const Contact = () => {
                     <div className="grid grid-cols-1 gap-3 text-left">
                       <div className="flex items-center gap-3">
                         <div className="w-2 h-2 bg-portfolio-primary rounded-full" />
-                        <span className="text-sm text-portfolio-muted">Free marketing consultation</span>
+                        <span className="text-sm text-portfolio-muted">Custom UI/UX Design</span>
                       </div>
                       <div className="flex items-center gap-3">
                         <div className="w-2 h-2 bg-portfolio-primary rounded-full" />
-                        <span className="text-sm text-portfolio-muted">Custom campaign strategy</span>
+                        <span className="text-sm text-portfolio-muted">Full-Stack Development (React/Next.js)</span>
                       </div>
                       <div className="flex items-center gap-3">
                         <div className="w-2 h-2 bg-portfolio-primary rounded-full" />
-                        <span className="text-sm text-portfolio-muted">Performance tracking & reporting</span>
+                        <span className="text-sm text-portfolio-muted">AI-Assisted Workflows</span>
                       </div>
                       <div className="flex items-center gap-3">
                         <div className="w-2 h-2 bg-portfolio-primary rounded-full" />
-                        <span className="text-sm text-portfolio-muted">Ongoing optimization & support</span>
+                        <span className="text-sm text-portfolio-muted">Scalable Architecture</span>
                       </div>
                     </div>
                   </div>
@@ -197,7 +197,7 @@ const Contact = () => {
           >
             <div className="border-t border-portfolio-primary/10 pt-8">
               <p className="text-portfolio-muted">
-                © Abigail Lehr. Proudly serving clients from Carlsbad, CA and beyond.
+                © Abigail Lehr. Proudly working from California and beyond.
               </p>
             </div>
           </motion.div>

@@ -4,26 +4,26 @@ import { motion } from "framer-motion";
 const About = () => {
   const highlights = [
     {
-      icon: <Target className="w-6 h-6" />,
-      title: "Lead Generation",
-      description: "Multi-channel campaigns that consistently book 10+ qualified prospect meetings per week"
+      icon: <Zap className="w-6 h-6" />,
+      title: "Full-Stack Development",
+      description: "Building scalable web applications using React, Next.js, and Node.js with a focus on performance and SEO."
     },
     {
-      icon: <Zap className="w-6 h-6" />,
-      title: "Performance Analytics",
-      description: "Data-driven optimization using UTM tracking, Google Analytics, and conversion metrics"
+      icon: <Target className="w-6 h-6" />,
+      title: "UI/UX & Product Design",
+      description: "Crafting intuitive user interfaces and premium experiences using Figma and Tailwind CSS."
     },
     {
       icon: <Users className="w-6 h-6" />,
-      title: "Campaign Management",
-      description: "End-to-end digital marketing from strategy development through execution and reporting"
+      title: "Vibe Coding & AI",
+      description: "Leveraging AI-assisted tools like Cursor and Claude to accelerate development and focus on creative problem-solving."
     }
   ];
 
   const skills = [
-    "Digital Marketing Strategy", "Lead Generation Campaigns", "Social Media Management", 
-    "Google Analytics & UTM Tracking", "Email Marketing Automation", "Content Marketing",
-    "HubSpot CRM & Sales Funnels", "Paid Advertising (Social/Search)", "SEO & Local Search"
+    "React", "Next.js", "TypeScript", 
+    "Tailwind CSS", "Node.js", "Supabase",
+    "Figma", "AI-Driven Development", "Vibe Coding"
   ];
 
   return (
@@ -42,8 +42,8 @@ const About = () => {
               About Me
             </h2>
             <p className="text-xl text-portfolio-muted max-w-2xl mx-auto">
-              A results-driven digital marketing strategist who combines data analytics
-              with creative campaigns to drive measurable business growth.
+              A software engineer and UI/UX designer dedicated to building high-performance, 
+              aesthetically pleasing digital products through "Vibe Coding."
             </p>
           </motion.div>
 
@@ -62,18 +62,20 @@ const About = () => {
               </h3>
               <div className="space-y-4 text-portfolio-muted">
                 <p className="leading-relaxed">
-                  Based in Carlsbad, CA, I'm the founder of Gator Gleam Digital Marketing Agency,
-                  where I develop and execute comprehensive digital marketing strategies that drive
-                  qualified leads and measurable ROI for growing businesses.
+                  Based in California, I've transitioned from a background in data-driven digital marketing 
+                  to technical product execution. I specialize in the "Vibe Coding" movement—leveraging AI 
+                  to bridge the gap between creative vision and high-quality build.
                 </p>
                 <p className="leading-relaxed">
-                  At 1031 Capital Solutions, I consistently generate 10+ qualified prospect meetings per week
-                  through strategic lead outreach campaigns, cross-team communication, and performance-optimized
-                  marketing funnels that convert prospects into clients.
+                  I typically vibe code, which allows me to build complex applications and solve technical 
+                  problems effectively. While I have a basic understanding of various coding languages 
+                  and am continuing to deepen my knowledge, my strength lies in using modern tools to 
+                  ship products quickly and beautifully.
                 </p>
                 <p className="leading-relaxed">
-                  My approach combines data-driven insights with creative execution - from social media campaigns
-                  and email automation to SEO optimization and paid advertising that delivers results you can measure.
+                  My work focuses on the modern web stack, primarily React, Next.js, and Tailwind CSS. I believe 
+                  software should not only function perfectly but also look and feel premium, providing users with 
+                  a seamless and delightful experience.
                 </p>
               </div>
             </motion.div>

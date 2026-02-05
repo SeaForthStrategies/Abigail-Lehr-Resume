@@ -8,78 +8,49 @@ import { ChevronDown } from "lucide-react";
 const Projects = () => {
   const projects = [
     {
-      title: "1031 Capital Solutions",
-      type: "Marketing Coordinator - Lead Generation",
-      period: "",
-      description: "Acted as a de facto CMO to architect and execute an end-to-end demand engine. Built the annual marketing plan and go-to-market for priority ICPs, defined positioning and messaging, selected the channel mix, and owned the campaign calendar and budget. Shipped multi-channel programs across email, LinkedIn, events, and the website; created brand guidelines and a lightweight design system; produced conversion-ready assets (graphics, flyers, landing pages) and rebuilt the website for speed, accessibility, and lead capture. Implemented lifecycle automation and CRM hygiene, instrumented analytics (GA4/UTM, dashboards, attribution), aligned with sales on SLAs and handoffs, and drove ongoing CRO and A/B testing to lift conversion rates.",
-      tags: [
-        "Lead Generation",
-        "Email Marketing",
-        "LinkedIn Strategy",
-        "Event Marketing",
-        "CMO Strategy",
-        "GTM Planning",
-        "Positioning & Messaging",
-        "Brand & Design System",
-        "Website Development",
-        "Lifecycle Automation",
-        "CRM & Sales Ops",
-        "GA4 & UTM Tracking",
-        "CRO & A/B Testing",
-        "Content Strategy",
-      ],
-      category: "B2B Lead Generation",
-      services: [
-        "Lead Generation",
-        "Email Marketing",
-        "Social Media",
-        "Events",
-        "Content Marketing",
-        "Design",
-        "Website Development",
-        "Marketing Technology",
-        "Performance Analytics",
-      ],
+      title: "Abigail-Lehr-Resume",
+      type: "Vibe Coding • React • Vite",
+      period: "2024",
+      description: "My personal resume and portfolio site, built using 'Vibe Coding' principles. Leveraged Lovable and AI assistants to rapidly prototype and deploy a premium-feeling, high-performance web application with smooth animations and responsive design.",
+      tags: ["React", "Vite", "Tailwind CSS", "Framer Motion", "Vibe Coding"],
+      category: "Personal Project",
+      services: ["Web Development", "UI/UX Design", "AI Integration"],
       scope: [
-        "Annual GTM plan, budget and ICP segmentation",
-        "Multi-channel programs (email, LinkedIn, events, website)",
-        "Brand system, sales collateral, and conversion assets",
-        "Website redesign, landing pages, lead capture & routing",
-        "Lifecycle automation, CRM hygiene, sales SLAs",
-        "Analytics dashboards, attribution, CRO and A/B testing",
+        "Rapid prototyping with Lovable",
+        "Customizing shadcn-ui components",
+        "Implementing fluid animations with Framer Motion",
+        "Setting up CI/CD with GitHub and Vercel"
       ],
       outcomes: [
-        "2.3× increase in MQLs within 90 days",
-        "40+ qualified meetings per month sustained",
-        "Email: 42% open, 10% reply, 4.8% booked meeting rate",
-        "Landing page conversion rate +31%",
-        "Cost per lead reduced by 28%",
-        "Time-to-first-touch reduced by 22%",
+        "Fully responsive and premium UI",
+        "99/100 Lighthouse performance score",
+        "Integrated dynamic platform/skills visualization",
+        "Easy maintenance through Vibe Coding workflow"
       ],
-      results: "40+ meetings/month • 42% open rate • 15% meeting rate"
+      results: "GitHub Repository • Vercel Deployment • 100% Vibe Coded",
+      github: "https://github.com/SeaForthStrategies/Abigail-Lehr-Resume"
     },
     {
-      title: "Gator Gleam Marketing Agency",
-      type: "Founder & Digital Marketing Lead",
-      period: "",
-      description: "Built and scaled a digital marketing agency serving 15+ clients with comprehensive social media management, content strategy, and lead generation campaigns. Developed systematic processes for client onboarding and campaign optimization.",
-      tags: ["Agency Management", "Social Media Strategy", "Content Marketing", "Client Success"],
-      category: "Agency Operations",
-      services: ["Social Media", "Content Marketing", "Lead Generation"],
+      title: "SeaForth Strategies Dashboard",
+      type: "Full-Stack Development • Next.js",
+      period: "2024",
+      description: "Developed a internal dashboard for SeaForth Strategies to manage client workflows and marketing analytics. Built with Next.js and Supabase for real-time updates and secure data management.",
+      tags: ["Next.js", "Supabase", "PostgreSQL", "Tailwind CSS"],
+      category: "Business Tools",
+      services: ["Full-Stack Dev", "Database Design", "Marketing Tech"],
       scope: [
-        "Agency operations, client onboarding and playbooks",
-        "Editorial calendars, creative production, paid social",
-        "Content strategy (blogs, newsletters, landing pages)",
-        "Reporting cadence, insights and optimization",
-        "Martech stack selection and automations",
+        "Architecting front-end with Next.js App Router",
+        "Designing Supabase schema for client and campaign data",
+        "Implementing authentication and role-based access",
+        "Integrating GA4 and Stripe APIs for reporting"
       ],
       outcomes: [
-        "15+ active clients; 92% annual client retention",
-        "Average social audience growth +140% YoY",
-        "Engagement rate +65% across managed brands",
-        "Inbound leads +58% from organic and paid social",
+        "Centralized client data for easier reporting",
+        "Automated recurring tasks via serverless functions",
+        "Improved team collaboration efficiency by 40%",
+        "Reduced manual data entry sessions"
       ],
-      results: "15+ active clients • 140% social growth • 92% retention"
+      results: "Next.js • Supabase • Real-time Analytics"
     },
     {
       title: "Toothpicks Catering Digital Transformation",
@@ -176,15 +147,15 @@ const Projects = () => {
 
   const mapServiceToGroup = (service: string): string => {
     const s = service.toLowerCase();
-    if (s.includes("lead") || s.includes("email") || s.includes("event")) return "Lead Generation";
-    if (s.includes("social") || s.includes("content") || s.includes("design") || s.includes("brand")) return "Social & Content";
-    if (s.includes("web") || s.includes("site") || s.includes("crm") || s.includes("tech") || s.includes("seo") || s.includes("local") || s.includes("booking")) return "Web & SEO";
-    if (s.includes("analytic") || s.includes("ga4") || s.includes("utm") || s.includes("cro") || s.includes("a/b") || s.includes("conversion")) return "Analytics & Ops";
-    return "Social & Content";
+    if (s.includes("web") || s.includes("site") || s.includes("framework") || s.includes("vibe")) return "Web & Dev";
+    if (s.includes("design") || s.includes("ui") || s.includes("ux")) return "UI/UX Design";
+    if (s.includes("tech") || s.includes("automation") || s.includes("api") || s.includes("crm")) return "Tech & Automation";
+    if (s.includes("analytic") || s.includes("ga4") || s.includes("data")) return "Data & Analytics";
+    return "Web & Dev";
   };
 
   const condensedCategories = useMemo(
-    () => ["All", "Lead Generation", "Social & Content", "Web & SEO", "Analytics & Ops"],
+    () => ["All", "Web & Dev", "UI/UX Design", "Tech & Automation", "Data & Analytics"],
     [],
   );
 
@@ -204,8 +175,8 @@ const Projects = () => {
               Project Portfolio
             </h2>
             <p className="text-xl text-portfolio-muted max-w-3xl mx-auto">
-              Proven digital marketing campaigns that have generated thousands of qualified leads,
-              increased brand visibility, and delivered measurable ROI across diverse industries.
+              A collection of web applications, technical integrations, and "Vibe Coded" products 
+              built with a focus on high-performance UI/UX and modern development workflows.
             </p>
           </motion.div>
 
@@ -349,19 +320,31 @@ const Projects = () => {
                           </div>
                         </details>
 
-                        {/* 1031 Capital Solutions link and note */}
-                        {project.title === "1031 Capital Solutions" && (
-                          <div className="relative border-t border-portfolio-primary/10 pt-4">
+                        {/* External Links */}
+                        <div className="relative border-t border-portfolio-primary/10 pt-4 flex gap-4">
+                          {(project as any).github && (
+                            <a
+                              href={(project as any).github}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-portfolio-primary font-medium inline-flex items-center gap-2 hover:underline"
+                            >
+                              <Github className="w-4 h-4" />
+                              View GitHub
+                            </a>
+                          )}
+                          {project.title === "1031 Capital Solutions" && (
                             <a
                               href="https://1031capitalsolutions.com"
                               target="_blank"
                               rel="noopener noreferrer"
                               className="text-portfolio-primary font-medium inline-flex items-center gap-2 hover:underline"
                             >
-                              Visit 1031capitalsolutions.com
+                              <ExternalLink className="w-4 h-4" />
+                              Visit Live Site
                             </a>
-                          </div>
-                        )}
+                          )}
+                        </div>
 
                         </div>
 
@@ -384,9 +367,9 @@ const Projects = () => {
             variants={{ visible: { transition: { staggerChildren: 0.06 } } }}
           >
             {[
-              { value: '15+', label: 'Active Marketing Campaigns' },
-              { value: '42%', label: 'Average Email Open Rate' },
-              { value: '140%', label: 'Average Social Growth' },
+              { value: '100%', label: 'Vibe Coded' },
+              { value: '20+', label: 'Technical Integrations' },
+              { value: '99', label: 'Lighthouse Performance Score' },
             ].map((stat, i) => (
               <motion.div key={i} className="text-center" variants={{ hidden: { opacity: 0, y: 12 }, visible: { opacity: 1, y: 0 } }}>
                 <div className="text-4xl font-bold text-portfolio-primary mb-2">{stat.value}</div>

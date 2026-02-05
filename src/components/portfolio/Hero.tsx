@@ -16,15 +16,21 @@ const Hero = () => {
   const [imgIndex, setImgIndex] = useState(0);
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
-    element?.scrollIntoView({ behavior: 'smooth' });
+    element?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Ambient gradient blobs */}
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute -top-24 -left-24 w-72 h-72 rounded-full blur-3xl opacity-30" style={{ background: 'var(--gradient-primary)' }} />
-        <div className="absolute bottom-0 right-0 w-96 h-96 rounded-full blur-3xl opacity-25 animate-blob" style={{ background: 'var(--gradient-secondary)' }} />
+        <div
+          className="absolute -top-24 -left-24 w-72 h-72 rounded-full blur-3xl opacity-30"
+          style={{ background: "var(--gradient-primary)" }}
+        />
+        <div
+          className="absolute bottom-0 right-0 w-96 h-96 rounded-full blur-3xl opacity-25 animate-blob"
+          style={{ background: "var(--gradient-secondary)" }}
+        />
       </div>
 
       {/* Background Gradient tint */}
@@ -42,7 +48,7 @@ const Hero = () => {
           >
             <div className="space-y-4">
               <h1 className="text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight">
-                <span className="text-portfolio-neutral">Abigail</span>{' '}
+                <span className="text-portfolio-neutral">Abigail</span>{" "}
                 <span className="text-gradient-primary">Lehr</span>
               </h1>
 
@@ -58,15 +64,18 @@ const Hero = () => {
                 }}
               >
                 {[
-                  'Digital Marketing Strategist',
-                  '•',
-                  'Lead Generation Expert',
-                  '•',
-                  'Agency Founder',
+                  "Software Engineer",
+                  "•",
+                  "UI/UX Designer",
+                  "•",
+                  "Vibe Coder",
                 ].map((item, idx) => (
                   <motion.span
                     key={idx}
-                    variants={{ hidden: { opacity: 0, y: 8 }, visible: { opacity: 1, y: 0 } }}
+                    variants={{
+                      hidden: { opacity: 0, y: 8 },
+                      visible: { opacity: 1, y: 0 },
+                    }}
                     transition={{ duration: 0.4 }}
                   >
                     {item}
@@ -81,8 +90,10 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
             >
-              I drive digital marketing campaigns that generate qualified leads and convert prospects into customers.
-              Specializing in multi-channel strategies, social media management, and performance-driven campaigns.
+              Building high-performance, aesthetically pleasing web applications
+              with a focus on modern frameworks and AI-assisted development.
+              Specialized in creating seamless user experiences through "Vibe
+              Coding."
             </motion.p>
 
             <motion.div
@@ -94,7 +105,7 @@ const Hero = () => {
               <Button
                 variant="primary"
                 size="lg"
-                onClick={() => scrollToSection('contact')}
+                onClick={() => scrollToSection("contact")}
                 className="group"
               >
                 <Mail className="w-5 h-5 mr-2" />
@@ -104,7 +115,7 @@ const Hero = () => {
               <Button
                 variant="outline"
                 size="lg"
-                onClick={() => scrollToSection('projects')}
+                onClick={() => scrollToSection("projects")}
                 className="group"
               >
                 View My Work
@@ -114,7 +125,7 @@ const Hero = () => {
 
             <div className="flex items-center gap-4 pt-4 justify-center lg:justify-start">
               <div className="h-px bg-gradient-to-r from-portfolio-primary to-transparent flex-1" />
-              <span className="text-portfolio-muted text-sm">Carlsbad, CA</span>
+              <span className="text-portfolio-muted text-sm">California</span>
             </div>
           </motion.div>
 
@@ -126,12 +137,18 @@ const Hero = () => {
             transition={{ delay: 0.15, duration: 0.6 }}
           >
             <div className="relative w-[18rem] sm:w-[20rem] lg:w-[24rem] aspect-[3/4] overflow-hidden rounded-[2rem]">
-              <div className="absolute -inset-2 rounded-[2rem] opacity-30 blur-2xl" style={{ background: 'var(--gradient-primary)' }} />
+              <div
+                className="absolute -inset-2 rounded-[2rem] opacity-30 blur-2xl"
+                style={{ background: "var(--gradient-primary)" }}
+              />
               <ImgWithFallback
                 alt="Abigail Lehr headshot"
                 className="relative w-full h-full object-cover object-[center_30%] lg:object-[center_35%] shadow-[var(--shadow-medium)] border border-portfolio-primary/10 rounded-[2rem] bg-portfolio-light"
               />
-              <div className="absolute -bottom-4 -left-4 w-20 h-20 rounded-full blur-2xl opacity-30" style={{ background: 'var(--gradient-secondary)' }} />
+              <div
+                className="absolute -bottom-4 -left-4 w-20 h-20 rounded-full blur-2xl opacity-30"
+                style={{ background: "var(--gradient-secondary)" }}
+              />
             </div>
           </motion.div>
         </div>
@@ -144,7 +161,7 @@ const Hero = () => {
           transition={{ delay: 0.8, duration: 0.6 }}
         >
           <button
-            onClick={() => scrollToSection('about')}
+            onClick={() => scrollToSection("about")}
             className="p-2 rounded-full bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-colors animate-bounce"
           >
             <ArrowDown className="w-6 h-6 text-portfolio-primary" />
@@ -157,11 +174,16 @@ const Hero = () => {
 
 export default Hero;
 
-type ImgWithFallbackProps = React.ImgHTMLAttributes<HTMLImageElement> & { alt: string };
+type ImgWithFallbackProps = React.ImgHTMLAttributes<HTMLImageElement> & {
+  alt: string;
+};
 
 function ImgWithFallback(props: ImgWithFallbackProps) {
   const [index, setIndex] = useState(0);
-  const src = index < candidateHeadshots.length ? candidateHeadshots[index] : defaultHeadshot;
+  const src =
+    index < candidateHeadshots.length
+      ? candidateHeadshots[index]
+      : defaultHeadshot;
   return (
     <img
       {...props}
