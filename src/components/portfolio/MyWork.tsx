@@ -35,13 +35,15 @@ const MyWork = () => {
         </div>
 
         <Tabs value={active} onValueChange={(v) => setActive(v as WorkFolder | 'All')} className="w-full">
-          <TabsList className="bg-card/50 backdrop-blur border border-primary/10 rounded-full p-1">
-            {categories.map(cat => (
-              <TabsTrigger key={cat} value={cat} className="rounded-full px-4 py-1.5 data-[state=active]:bg-background data-[state=active]:text-primary">
-                {cat === 'All' ? 'All' : label(cat)}
-              </TabsTrigger>
-            ))}
-          </TabsList>
+          <div className="overflow-x-auto no-scrollbar pb-2">
+            <TabsList className="bg-card/50 backdrop-blur border border-primary/10 rounded-full p-1 inline-flex min-w-full sm:min-w-0">
+              {categories.map(cat => (
+                <TabsTrigger key={cat} value={cat} className="rounded-full px-4 py-1.5 data-[state=active]:bg-background data-[state=active]:text-primary whitespace-nowrap">
+                  {cat === 'All' ? 'All' : label(cat)}
+                </TabsTrigger>
+              ))}
+            </TabsList>
+          </div>
 
           <TabsContent value={active} className="mt-8">
             {visible.length === 0 ? (

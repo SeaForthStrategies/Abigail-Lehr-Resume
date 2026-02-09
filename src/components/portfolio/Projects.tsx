@@ -266,17 +266,19 @@ const Projects = () => {
 
           {/* Category Tabs */}
           <Tabs defaultValue="All" className="w-full">
-            <TabsList className="bg-card/50 backdrop-blur border border-primary/10 rounded-full p-1 text-muted-foreground">
-              {condensedCategories.map((cat) => (
-                <TabsTrigger
-                  key={cat}
-                  value={cat}
-                  className="rounded-full px-4 py-1.5 data-[state=active]:text-primary data-[state=active]:bg-background"
-                >
-                  {cat}
-                </TabsTrigger>
-              ))}
-            </TabsList>
+            <div className="overflow-x-auto no-scrollbar pb-2">
+              <TabsList className="bg-card/50 backdrop-blur border border-primary/10 rounded-full p-1 text-muted-foreground inline-flex min-w-full sm:min-w-0">
+                {condensedCategories.map((cat) => (
+                  <TabsTrigger
+                    key={cat}
+                    value={cat}
+                    className="rounded-full px-4 py-1.5 data-[state=active]:text-primary data-[state=active]:bg-background whitespace-nowrap"
+                  >
+                    {cat}
+                  </TabsTrigger>
+                ))}
+              </TabsList>
+            </div>
 
             {condensedCategories.map((cat) => {
               const visible = cat === "All" ? projects : projects.filter((p) => p.services.some((s) => mapServiceToGroup(s) === cat));
@@ -292,7 +294,7 @@ const Projects = () => {
                     {visible.map((project, index) => (
                       <motion.div
                         key={`${project.title}-${index}`}
-                        className="group glass-card p-8 relative flex flex-col"
+                        className="group glass-card p-6 sm:p-8 relative flex flex-col"
                         variants={{ hidden: { opacity: 0, y: 16 }, visible: { opacity: 1, y: 0 } }}
                         whileHover={{ y: -4, borderColor: 'hsl(var(--primary) / 0.4)' }}
                         transition={{ type: "spring", stiffness: 120, damping: 16 }}

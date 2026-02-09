@@ -87,7 +87,7 @@ const Hero = () => {
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           >
             <div className="space-y-4">
-              <h1 className="text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight">
                 <span className="text-portfolio-neutral">Abigail</span>{" "}
                 <span className="text-gradient-primary">Lehr</span>
               </h1>
@@ -104,7 +104,7 @@ const Hero = () => {
                 }}
               >
               <motion.div
-                className="flex flex-nowrap items-center justify-start gap-x-3 text-portfolio-muted text-base md:text-lg text-left whitespace-nowrap overflow-x-auto no-scrollbar"
+                className="flex flex-wrap items-center justify-start gap-x-3 text-portfolio-muted text-sm md:text-lg text-left"
                 initial="hidden"
                 animate="visible"
                 variants={{
@@ -128,7 +128,7 @@ const Hero = () => {
                       visible: { opacity: 1, y: 0 },
                     }}
                     transition={{ duration: 0.4 }}
-                    className={item === "•" ? "opacity-50" : "font-medium"}
+                    className={item === "•" ? "opacity-30 hidden sm:inline" : "font-medium"}
                   >
                     {item}
                   </motion.span>
@@ -138,7 +138,7 @@ const Hero = () => {
             </div>
 
             <motion.p
-              className="text-xl leading-relaxed max-w-2xl text-left mb-8 h-20"
+              className="text-lg md:text-xl leading-relaxed max-w-2xl text-left mb-8 min-h-[7rem] sm:min-h-[6rem] md:min-h-0"
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
