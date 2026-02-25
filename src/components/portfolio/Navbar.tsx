@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ThemeToggle } from "./ThemeToggle";
 import { Menu } from "lucide-react";
 import {
   Sheet,
@@ -14,8 +14,7 @@ import {
 const links = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
-  { href: "/expertise", label: "Expertise" },
-  { href: "/platforms", label: "Platforms" },
+  { href: "/skills", label: "Skills" },
   { href: "/portfolio", label: "Portfolio" },
   { href: "/contact", label: "Contact" },
 ];
@@ -34,83 +33,71 @@ const Navbar = () => {
 
   return (
     <header
-      className={`fixed top-0 inset-x-0 z-50 transition-all ${
-        scrolled
-          ? "backdrop-blur-md bg-white/70 dark:bg-zinc-950/70 border-b border-portfolio-primary/10"
-          : "bg-transparent"
+      className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
+        scrolled ? "bg-zinc-950/95 backdrop-blur-md border-b border-zinc-800/80" : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-6 h-16 flex items-center justify-between">
-        <Link
-          to="/"
-          className="font-bold text-portfolio-neutral dark:text-white"
-        >
-          Abigail <span className="text-gradient-primary">Lehr</span>
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-10 h-16 flex items-center justify-between gap-2">
+        <Link to="/" className="font-display font-semibold text-base sm:text-lg text-white hover:text-cyan-400 transition-colors truncate min-w-0">
+          Abigail Lehr
         </Link>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-6">
-          {links.map((link) => (
-            <Link
-              key={link.href}
-              to={link.href}
-              className={`text-sm font-medium transition-colors ${
-                location.pathname === link.href
-                  ? "text-portfolio-primary dark:text-portfolio-secondary font-bold"
-                  : "text-portfolio-muted dark:text-zinc-400 hover:text-portfolio-primary dark:hover:text-white"
-              }`}
-            >
-              {link.label}
-            </Link>
+        <nav className="hidden md:flex items-center gap-8">
+          {links.map((link, i) => (
+            <motion.div key={link.href} initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.05 }}>
+              <Link
+                to={link.href}
+                className={`text-sm font-medium transition-colors ${
+                  location.pathname === link.href ? "text-cyan-400" : "text-zinc-400 hover:text-white"
+                }`}
+              >
+                {link.label}
+              </Link>
+            </motion.div>
           ))}
-          <Link to="/contact">
-            <Button variant="primary" size="sm">
-              Let's Talk
-            </Button>
-          </Link>
+          <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: links.length * 0.05 }}>
+            <Link to="/contact">
+              <motion.span
+                className="inline-block px-4 py-2 rounded-lg bg-cyan-500 text-zinc-950 text-sm font-semibold hover:bg-cyan-400 transition-colors"
+                whileHover={{ scale: 1.05, y: -1 }}
+                whileTap={{ scale: 0.96 }}
+              >
+                Let's Talk
+              </motion.span>
+            </Link>
+          </motion.div>
         </nav>
 
         {/* Mobile Navigation */}
-        <div className="flex md:hidden items-center gap-4">
+        <div className="flex md:hidden items-center gap-2">
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild>
-              <Button
-                variant="ghost"
-                size="icon"
-                className="text-portfolio-neutral dark:text-white"
-              >
+              <Button variant="ghost" size="icon" className="text-zinc-400 hover:text-white">
                 <Menu className="h-6 w-6" />
                 <span className="sr-only">Toggle menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent
-              side="right"
-              className="w-[300px] sm:w-[400px] bg-white dark:bg-zinc-950 border-portfolio-primary/10"
-            >
+            <SheetContent side="right" className="w-[280px] bg-zinc-950 border-zinc-800/80 rounded-l-2xl">
               <SheetHeader>
-                <SheetTitle className="text-left text-portfolio-neutral dark:text-white">
-                  Abigail <span className="text-gradient-primary">Lehr</span>
-                </SheetTitle>
+                <SheetTitle className="text-left text-white font-semibold">Menu</SheetTitle>
               </SheetHeader>
-              <div className="flex flex-col gap-6 mt-12">
+              <div className="flex flex-col gap-1 mt-8">
                 {links.map((link) => (
                   <Link
                     key={link.href}
                     to={link.href}
                     onClick={() => setOpen(false)}
-                    className={`text-lg font-medium transition-colors ${
-                      location.pathname === link.href
-                        ? "text-portfolio-primary dark:text-portfolio-secondary font-bold"
-                        : "text-portfolio-muted dark:text-zinc-400"
+                    className={`px-4 py-3 rounded-xl text-sm font-medium transition-colors ${
+                      location.pathname === link.href ? "text-cyan-400 bg-cyan-500/10" : "text-zinc-400 hover:bg-zinc-800"
                     }`}
                   >
                     {link.label}
                   </Link>
                 ))}
-                <Link to="/contact" onClick={() => setOpen(false)}>
-                  <Button variant="primary" className="w-full mt-4">
+                <Link to="/contact" onClick={() => setOpen(false)} className="mt-4">
+                  <span className="block w-full text-center py-3 rounded-xl bg-cyan-500 text-zinc-950 font-semibold text-sm">
                     Let's Talk
-                  </Button>
+                  </span>
                 </Link>
               </div>
             </SheetContent>

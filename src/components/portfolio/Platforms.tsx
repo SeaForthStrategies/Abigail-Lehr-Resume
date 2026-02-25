@@ -1,94 +1,73 @@
 import { motion } from "framer-motion";
-import { 
-  Database, 
-  Layout, 
-  Cpu, 
-  Brain, 
-  PenTool, 
-  Layers, 
-  Globe, 
-  Box, 
-  Workflow, 
-  Smartphone, 
-  Mail, 
-  BarChart, 
-  Search, 
-  CreditCard, 
-  Code2, 
-  Server, 
-  Figma as FigmaIcon, 
-  Trello as TrelloIcon, 
-  Slack as SlackIcon, 
-  Github, 
-  Zap
-} from "lucide-react";
+import { PenTool, Workflow, BarChart, Code2, CalendarDays } from "lucide-react";
+import { ToolBadge } from "@/components/portfolio/ToolBadge";
 
 const Platforms = () => {
   const categories = [
     {
-      title: "Web & Development",
+      title: "Design",
+      icon: <PenTool className="w-5 h-5" />,
+      items: ["Visual Branding", "UI/UX Design", "Figma", "Framer", "Canva", "Adobe Express", "Behance", "Graphic Design"]
+    },
+    {
+      title: "Web & Tech",
       icon: <Code2 className="w-5 h-5" />,
-      items: ["Next.js", "React", "TypeScript", "Node.js", "Supabase", "GitHub", "Vercel"]
+      items: ["Next.js", "Vercel", "Squarespace", "WordPress", "Lovable", "Framer", "Tailwind CSS", "SEO", "HTML/CSS", "Python", "JavaScript", "Git", "GitHub", "VSCode", "Cursor", "Claude", "ChatGPT", "GoDaddy", "Netlify", "AI-Assisted Dev"]
     },
     {
-      title: "Marketing Tech",
-      icon: <Mail className="w-5 h-5" />,
-      items: ["GA4", "GTM", "HubSpot", "Zapier", "Stripe", "Search Console"]
+      title: "Marketing",
+      icon: <BarChart className="w-5 h-5" />,
+      items: ["Digital Strategy", "Lead Generation", "HubSpot", "Mailchimp", "GA4", "Email Automation", "Buffer", "Hootsuite", "Meta", "Instagram", "LinkedIn", "A/B Testing", "Zapier"]
     },
     {
-      title: "AI & Tools",
-      icon: <Brain className="w-5 h-5" />,
-      items: ["Cursor", "Claude", "Figma", "Notion", "Slack"]
+      title: "Events & Webinars",
+      icon: <CalendarDays className="w-5 h-5" />,
+      items: ["Event Planning (500+)", "Eventbrite", "Zoom", "Calendly", "Vendor Management", "Large-Scale Events"]
+    },
+    {
+      title: "Operations",
+      icon: <Workflow className="w-5 h-5" />,
+      items: ["Project Management", "Airtable", "Notion", "Asana", "Trello", "Square", "POS Systems", "Typeform"]
     }
   ];
 
   return (
-    <section id="platforms" className="py-20 bg-portfolio-light/20">
-      <div className="container mx-auto px-6">
+    <section id="platforms" className="py-20 md:py-28">
+      <div className="max-w-6xl mx-auto px-6 md:px-10">
         <div className="max-w-6xl mx-auto">
-          {/* Section Header */}
           <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 16 }}
+            className="text-center mb-20"
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.5 }}
           >
-            <h2 className="text-4xl lg:text-5xl font-bold text-portfolio-neutral dark:text-white mb-6">
+            <h2 className="font-display text-3xl font-bold text-white mb-4">
               Platforms & Tools
             </h2>
-            <p className="text-xl text-portfolio-muted max-w-3xl mx-auto">
-              A professional suite of technologies and platforms I utilize to architect, 
-              engineer, and manage high-fidelity digital products.
+            <p className="text-zinc-400 max-w-2xl mb-16">
+              Tools and platforms I use for design, web, marketing, and ops.
             </p>
           </motion.div>
 
-          {/* Categories Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
             {categories.map((category, idx) => (
               <motion.div
                 key={idx}
-                className="bg-white dark:bg-zinc-950 rounded-[2rem] p-8 shadow-sm border border-portfolio-primary/5 dark:border-white/10 hover:shadow-md transition-shadow"
+                className="rounded-xl p-6 border border-zinc-800 bg-zinc-900/50 hover:border-zinc-700 transition-colors"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: idx * 0.1, duration: 0.5 }}
+                transition={{ delay: idx * 0.08, type: "spring", stiffness: 80 }}
+                whileHover={{ y: -4 }}
               >
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="w-10 h-10 bg-gradient-to-br from-portfolio-primary/20 to-portfolio-secondary/20 rounded-xl flex items-center justify-center text-portfolio-primary">
-                    {category.icon}
-                  </div>
-                  <h3 className="text-lg font-semibold text-portfolio-neutral dark:text-white">{category.title}</h3>
+                <div className="w-10 h-10 rounded-lg bg-cyan-500/10 flex items-center justify-center text-cyan-400 mb-4">
+                  {category.icon}
                 </div>
-                
+                <h3 className="font-semibold text-white mb-3">{category.title}</h3>
                 <div className="flex flex-wrap gap-2">
                   {category.items.map((item, itemIdx) => (
-                    <span 
-                      key={itemIdx}
-                      className="px-3 py-1 bg-portfolio-light/50 dark:bg-zinc-900 text-portfolio-muted dark:text-zinc-400 text-sm rounded-full border border-portfolio-primary/5 dark:border-white/10"
-                    >
-                      {item}
-                    </span>
+                    <ToolBadge key={itemIdx} name={item} />
                   ))}
                 </div>
               </motion.div>

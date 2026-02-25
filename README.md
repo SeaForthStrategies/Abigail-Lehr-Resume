@@ -1,28 +1,67 @@
-# Abigail Lehr Resume - Software Engineer Edition
+# Abigail Lehr — Founder // Marketer // Software Developer (AI-Augmented)
 
-This project is a high-performance, aesthetically pleasing portfolio and resume built with "Vibe Coding" principles. It showcases a transition from digital marketing strategy to deep technical product execution.
+A React + TypeScript portfolio for Abigail Lehr—digital marketer and web specialist with a founder mindset. Curious, self-directed, and motivated by learning how things work end to end.
 
-## Project info
+**Highlights:**
+- Scaled a political campaign website to 25k+ monthly visitors
+- Increased engagement by ~47% through content, UX, and SEO improvements
+- Drove a 20% lift in leads via custom landing pages and analytics optimization
+- Saved teams 10+ hours per week through automation and smarter systems
+- Improved internal efficiency by ~30% by refining tools and processes
 
-- **Role**: Software Engineer • UI/UX Designer • Vibe Coder
-
-## Key Features
-
-- **Coding Aesthetic**: Monospace fonts and IDE-inspired color palettes.
-- **Vibe Coding Workflow**: Built using AI-assisted tools (Cursor, Claude, Lovable) for rapid development.
-- **Technical Stack**: React, TypeScript, Vite, Tailwind CSS, Framer Motion, and next-themes for Dark/Light mode.
-- **Platforms**: Comprehensive visualization of MarTech and engineering stacks.
-- **Projects**: Technical deep-dives into GitHub-based work and technical integrations.
+**Contact:** United States | ajlehr123@gmail.com | [LinkedIn](https://linkedin.com/in/abigaillehr) | [abigaillehr.com](https://abigaillehr.com) | [seaforthstrategies.com](https://seaforthstrategies.com) | [GitHub](https://github.com/SeaForthStrategies)
 
 ## Tech Stack
 
-- **Framework**: Vite + React + TypeScript
-- **Styling**: Tailwind CSS + shadcn-ui + Framer Motion
-- **Theme**: Light/Dark mode via next-themes
-- **Deployment**: Vercel ready (with SPA routing configuration)
+- **React 18** + **TypeScript** + **Vite**
+- **Tailwind CSS** + **shadcn/ui** + **Framer Motion**
+- **React Router** for SPA navigation
+- **next-themes** for light/dark mode
 
-## Local Development
+## Project Structure
 
-1. `npm i`
-2. `npm run dev`
-3. `npm run build` (Vercel ready)
+```
+src/
+├── components/
+│   ├── portfolio/     # Portfolio-specific (Hero, Navbar, Projects, etc.)
+│   ├── ui/            # shadcn components
+│   └── theme-provider.tsx
+├── pages/             # Route pages (Home, About, Portfolio, etc.)
+├── data/              # Work manifest, project data
+├── hooks/             # Shared hooks
+└── lib/               # Utilities
+public/
+├── work/              # Portfolio assets (manifest-driven gallery)
+└── favicon, headshot, etc.
+```
+
+## Setup (Before Deploy)
+
+1. **OG Image**: Add `og-image.png` (1200×630px) to `/public` for social sharing previews.
+2. **Contact Form**: Create a form at [Formspree](https://formspree.io), then set `VITE_FORMSPREE_FORM_ID` in `.env` (see `.env.example`).
+3. **Testimonials**: Edit `src/data/testimonials.ts` with real client/colleague quotes.
+
+## Development
+
+```bash
+pnpm install
+pnpm dev
+```
+
+## Build & Deploy
+
+```bash
+pnpm build
+```
+
+- **Vercel**: Connect repo → auto-deploys on push
+- **GitHub Pages**: Set `VITE_BASE_PATH=/Abigail-Lehr-Resume/` in build env
+
+## Scripts
+
+| Script   | Description        |
+|----------|--------------------|
+| `pnpm dev`   | Start dev server (port 8080) |
+| `pnpm build` | Production build    |
+| `pnpm preview` | Preview production build |
+| `pnpm lint`   | Run ESLint          |

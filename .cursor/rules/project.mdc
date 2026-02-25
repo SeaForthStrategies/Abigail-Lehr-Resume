@@ -1,0 +1,29 @@
+---
+description: Project conventions for Abigail Lehr Resume
+alwaysApply: true
+---
+
+# Abigail Lehr Resume - Project Rules
+
+## Package Manager
+- Use **pnpm** for all installs and scripts (never npm or bun).
+
+## Tech Stack
+- React 18 + TypeScript + Vite
+- Tailwind CSS + shadcn-ui + Framer Motion
+- React Router for SPA routing
+
+## Code Style
+- Functional components with hooks
+- Path alias `@/` for `./src`
+- Prefer existing shadcn components over custom UI
+
+## Consistency Pattern
+- **Home**: Quick glance only—use `SectionPreview` or `AboutPreview` with "View full" links.
+- **Detail pages** (`/about`, `/expertise`, `/platforms`, `/portfolio`): Full content.
+- **Single source of truth**: Work experience lives in `src/data/experience.ts`—used by About and AboutPreview.
+- **Shared layout**: All sections use `px-8 md:px-12`, `container mx-auto`, alternating `bg-background` / `bg-portfolio-light/30`.
+
+## Deployment
+- **Vercel**: Default deployment. No `VITE_BASE_PATH` needed.
+- **GitHub Pages**: Set `VITE_BASE_PATH=/Abigail-Lehr-Resume/` in build env.

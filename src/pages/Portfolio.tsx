@@ -1,100 +1,55 @@
-import Layout from "@/components/Layout";
-import { WORK_ITEMS } from "@/data/work";
-
-const projects = [
-  {
-    title: "Abigail-Lehr-Resume",
-    description: "Personal resume and portfolio site built with React, Vite, Tailwind CSS, and Framer Motion.",
-    href: "https://github.com/SeaForthStrategies/Abigail-Lehr-Resume",
-  },
-  {
-    title: "SeaForth Strategies Dashboard",
-    description: "Internal dashboard for client workflows and marketing analytics. Next.js, Supabase.",
-    href: null,
-  },
-  {
-    title: "Marketing Automation Engine",
-    description: "Syncs leads between Facebook Lead Ads, HubSpot, and PostgreSQL. Node.js, Zapier.",
-    href: "https://github.com/SeaForthStrategies/marketing-automation-engine",
-  },
-  {
-    title: "Headless CMS for Real Estate",
-    description: "Real estate listing portal with Sanity.io, React, Algolia search.",
-    href: "https://github.com/SeaForthStrategies/real-estate-portal",
-  },
-  {
-    title: "Technical SEO Dashboard",
-    description: "Python dashboard for technical SEO audits, Core Web Vitals. Streamlit, BeautifulSoup.",
-    href: "https://github.com/SeaForthStrategies/seo-debt-dashboard",
-  },
-  {
-    title: "Vibe-Coded E-Commerce Template",
-    description: "Conversion-optimized e-commerce starter kit. React, Tailwind CSS, Framer Motion.",
-    href: "https://github.com/SeaForthStrategies/vibe-coded-template",
-  },
-  {
-    title: "1031 Capital Solutions Website",
-    description: "Financial services website with lead gen.",
-    href: "https://1031capitalsolutions.com",
-  },
-];
+import { useState } from "react";
+import Navbar from "@/components/portfolio/Navbar";
+import Footer from "@/components/portfolio/Footer";
+import Projects from "@/components/portfolio/Projects";
+import MyWork from "@/components/portfolio/MyWork";
+import { PageMeta } from "@/components/PageMeta";
+import { PageCTA } from "@/components/portfolio/PageCTA";
 
 const Portfolio = () => {
+  const [activeTab, setActiveTab] = useState<"projects" | "design">("projects");
+
   return (
-    <Layout>
-      <h1 className="text-2xl font-semibold mb-6">Portfolio</h1>
-
-      <h2 className="text-lg font-semibold mb-3">Projects</h2>
-      <ul className="space-y-4 mb-6">
-        {projects.map((project) => (
-          <li key={project.title}>
-            {project.href ? (
-              <a
-                href={project.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 underline underline-offset-2"
-              >
-                {project.title}↗
-              </a>
-            ) : (
-              <span className="font-medium text-zinc-900 dark:text-zinc-100">{project.title}</span>
-            )}
-            <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-0.5">{project.description}</p>
-          </li>
-        ))}
-      </ul>
-
-      <h2 className="text-lg font-semibold mb-3">Work Samples</h2>
-      <p className="text-sm text-zinc-600 dark:text-zinc-400 mb-4">
-        Websites, flyers, graphics, and client logos.
-      </p>
-      <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-        {WORK_ITEMS.map((item) => (
-          <div key={item.id} className="group">
-            <a
-              href={item.link ?? item.src}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block"
-            >
-              <div className="aspect-square bg-zinc-100 dark:bg-zinc-800 rounded overflow-hidden border border-zinc-200 dark:border-zinc-700">
-                <img
-                  src={item.thumb ?? item.src}
-                  alt={item.title}
-                  className="w-full h-full object-cover group-hover:opacity-90 transition-opacity"
-                  loading="lazy"
-                />
+    <div className="min-h-screen bg-background overflow-x-hidden">
+      <PageMeta title="Portfolio" description="Projects: web, marketing, design. Dashboards, sites, campaigns." />
+      <Navbar />
+      <main id="main-content" className="pt-20">
+        {/* Page header with tab switcher */}
+        <div className="border-b border-zinc-800/80 sticky top-16 z-40 bg-zinc-950/95 backdrop-blur-md overflow-x-hidden">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-10">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 py-5">
+              <div>
+                <p className="text-cyan-400/80 text-xs font-medium uppercase tracking-wider mb-0.5">Work</p>
+                <h1 className="text-xl md:text-2xl font-bold text-white">Portfolio</h1>
               </div>
-              <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-2 truncate">
-                {item.title}
-                {" ↗"}
-              </p>
-            </a>
+              <div className="flex gap-1 p-1 rounded-xl bg-zinc-900/60 border border-zinc-800/80 w-fit shrink-0">
+                <button
+                  onClick={() => setActiveTab("projects")}
+                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
+                    activeTab === "projects" ? "bg-cyan-500 text-zinc-950 shadow-sm" : "text-zinc-400 hover:text-white hover:bg-zinc-800/50"
+                  }`}
+                >
+                  Projects
+                </button>
+                <button
+                  onClick={() => setActiveTab("design")}
+                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
+                    activeTab === "design" ? "bg-cyan-500 text-zinc-950 shadow-sm" : "text-zinc-400 hover:text-white hover:bg-zinc-800/50"
+                  }`}
+                >
+                  Design Work
+                </button>
+              </div>
+            </div>
           </div>
-        ))}
-      </div>
-    </Layout>
+        </div>
+
+        {activeTab === "projects" && <Projects />}
+        {activeTab === "design" && <MyWork />}
+        <PageCTA />
+      </main>
+      <Footer />
+    </div>
   );
 };
 

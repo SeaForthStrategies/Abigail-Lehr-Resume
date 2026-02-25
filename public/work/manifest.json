@@ -1,400 +1,75 @@
 {
-  "folders": [
-    "websites",
-    "photos",
-    "graphics",
-    "client logos"
-  ],
+  "folders": ["websites", "photos", "graphics", "client logos"],
   "items": [
-    {
-      "id": "websites-Catering-Company-Website-Home.png",
-      "title": "Catering Company  Website Home",
-      "category": "websites",
-      "src": "/work/websites/Catering Company  Website Home.png"
-    },
-    {
-      "id": "websites-Financial-Services-Website-2.png",
-      "title": "Financial Services Website 2",
-      "category": "websites",
-      "src": "/work/websites/Financial Services Website 2.png"
-    },
-    {
-      "id": "websites-Financial-Services-Website-4.png",
-      "title": "Financial Services Website 4",
-      "category": "websites",
-      "src": "/work/websites/Financial Services Website 4.png"
-    },
-    {
-      "id": "websites-Financial-Services-Website-5.png",
-      "title": "Financial Services Website 5",
-      "category": "websites",
-      "src": "/work/websites/Financial Services Website 5.png"
-    },
-    {
-      "id": "websites-Financial-Services-Website-6.png",
-      "title": "Financial Services Website 6",
-      "category": "websites",
-      "src": "/work/websites/Financial Services Website 6.png"
-    },
-    {
-      "id": "websites-Financial-Services-Website-7.png",
-      "title": "Financial Services Website 7",
-      "category": "websites",
-      "src": "/work/websites/Financial Services Website 7.png"
-    },
-    {
-      "id": "websites-Financial-Services-Website-home.png",
-      "title": "Financial Services Website home",
-      "category": "websites",
-      "src": "/work/websites/Financial Services Website home.png"
-    },
-    {
-      "id": "websites-Financial-Services-Website.png",
-      "title": "Financial Services Website",
-      "category": "websites",
-      "src": "/work/websites/Financial Services Website.png"
-    },
-    {
-      "id": "photos-3B51001C-D670-4F2D-AC38-F4623F2CD117_L0_001-4_27_2024,-9_36_27-AM.jpg",
-      "title": "3B51001C-D670-4F2D-AC38-F4623F2CD117_L0_001-4_27_2024, 9_36_27 AM",
-      "category": "photos",
-      "src": "/work/photos/3B51001C-D670-4F2D-AC38-F4623F2CD117_L0_001-4_27_2024, 9_36_27 AM.jpg"
-    },
-    {
-      "id": "photos-516B5164-0348-443A-8359-90A03DE531A6_L0_001-2_9_2024,-9_26_12-PM.jpg",
-      "title": "516B5164-0348-443A-8359-90A03DE531A6_L0_001-2_9_2024, 9_26_12 PM",
-      "category": "photos",
-      "src": "/work/photos/516B5164-0348-443A-8359-90A03DE531A6_L0_001-2_9_2024, 9_26_12 PM.jpg"
-    },
-    {
-      "id": "photos-7DE3FD9E-3763-4A8B-B050-9F1925BD9008_L0_001-4_27_2024,-9_28_35-AM.jpg",
-      "title": "7DE3FD9E-3763-4A8B-B050-9F1925BD9008_L0_001-4_27_2024, 9_28_35 AM",
-      "category": "photos",
-      "src": "/work/photos/7DE3FD9E-3763-4A8B-B050-9F1925BD9008_L0_001-4_27_2024, 9_28_35 AM.jpg"
-    },
-    {
-      "id": "photos-AD7A4870-9E4B-4AA1-A413-CC8DE6225857_L0_001-4_24_2024,-12_12_29-PM.jpg",
-      "title": "AD7A4870-9E4B-4AA1-A413-CC8DE6225857_L0_001-4_24_2024, 12_12_29 PM",
-      "category": "photos",
-      "src": "/work/photos/AD7A4870-9E4B-4AA1-A413-CC8DE6225857_L0_001-4_24_2024, 12_12_29 PM.jpg"
-    },
-    {
-      "id": "photos-B11798B4-68D7-4458-A07D-0D2361BCFC0C_L0_001-2_7_2024,-10_26_04-AM.jpg",
-      "title": "B11798B4-68D7-4458-A07D-0D2361BCFC0C_L0_001-2_7_2024, 10_26_04 AM",
-      "category": "photos",
-      "src": "/work/photos/B11798B4-68D7-4458-A07D-0D2361BCFC0C_L0_001-2_7_2024, 10_26_04 AM.jpg"
-    },
-    {
-      "id": "photos-BA7F7AC6-E426-4FB2-8EE2-2D15AC54FD86_L0_001-2_9_2024,-9_26_05-PM.jpg",
-      "title": "BA7F7AC6-E426-4FB2-8EE2-2D15AC54FD86_L0_001-2_9_2024, 9_26_05 PM",
-      "category": "photos",
-      "src": "/work/photos/BA7F7AC6-E426-4FB2-8EE2-2D15AC54FD86_L0_001-2_9_2024, 9_26_05 PM.jpg"
-    },
-    {
-      "id": "photos-BAF69E03-25D9-4458-866B-FD972612FBE8_L0_001-4_27_2024,-9_36_11-AM.jpg",
-      "title": "BAF69E03-25D9-4458-866B-FD972612FBE8_L0_001-4_27_2024, 9_36_11 AM",
-      "category": "photos",
-      "src": "/work/photos/BAF69E03-25D9-4458-866B-FD972612FBE8_L0_001-4_27_2024, 9_36_11 AM.jpg"
-    },
-    {
-      "id": "photos-Hydragear-is-built-on-the-principle-of-sustainability.__☀️-Through-our-wide-range-of-hydration-products,-we-strive-to-make-eco-friendly-living-accessible-and-fun!__♻️-Disposable-plastic,-styrofoam.jpg",
-      "title": "Hydragear is built on the principle of sustainability.__☀️ Through our wide range of hydration products, we strive to make eco-friendly living accessible and fun!__♻️ Disposable plastic, styrofoam",
-      "category": "photos",
-      "src": "/work/photos/Hydragear is built on the principle of sustainability.__☀️ Through our wide range of hydration products, we strive to make eco-friendly living accessible and fun!__♻️ Disposable plastic, styrofoam.jpg"
-    },
-    {
-      "id": "photos-IMG_1078-(1).jpg",
-      "title": "IMG_1078 (1)",
-      "category": "photos",
-      "src": "/work/photos/IMG_1078 (1).jpg"
-    },
-    {
-      "id": "photos-IMG_2237.jpg",
-      "title": "IMG_2237",
-      "category": "photos",
-      "src": "/work/photos/IMG_2237.jpg"
-    },
-    {
-      "id": "photos-IMG_2238.jpg",
-      "title": "IMG_2238",
-      "category": "photos",
-      "src": "/work/photos/IMG_2238.jpg"
-    },
-    {
-      "id": "photos-IMG_2239.jpg",
-      "title": "IMG_2239",
-      "category": "photos",
-      "src": "/work/photos/IMG_2239.jpg"
-    },
-    {
-      "id": "photos-IMG_2240.jpg",
-      "title": "IMG_2240",
-      "category": "photos",
-      "src": "/work/photos/IMG_2240.jpg"
-    },
-    {
-      "id": "photos-IMG_2408.jpg",
-      "title": "IMG_2408",
-      "category": "photos",
-      "src": "/work/photos/IMG_2408.jpg"
-    },
-    {
-      "id": "photos-IMG_8702.jpg",
-      "title": "IMG_8702",
-      "category": "photos",
-      "src": "/work/photos/IMG_8702.jpg"
-    },
-    {
-      "id": "photos-Image-2-5-24-at-9.16-PM.jpg",
-      "title": "Image 2-5-24 at 9.16 PM",
-      "category": "photos",
-      "src": "/work/photos/Image 2-5-24 at 9.16 PM.jpg"
-    },
-    {
-      "id": "photos-Image-2-5-24-at-9.19-PM-(1).jpg",
-      "title": "Image 2-5-24 at 9.19 PM (1)",
-      "category": "photos",
-      "src": "/work/photos/Image 2-5-24 at 9.19 PM (1).jpg"
-    },
-    {
-      "id": "photos-Image.jpg",
-      "title": "Image",
-      "category": "photos",
-      "src": "/work/photos/Image.jpg"
-    },
-    {
-      "id": "photos-dsc00170.jpg",
-      "title": "dsc00170",
-      "category": "photos",
-      "src": "/work/photos/dsc00170.jpg"
-    },
-    {
-      "id": "photos-dsc00175.jpg",
-      "title": "dsc00175",
-      "category": "photos",
-      "src": "/work/photos/dsc00175.jpg"
-    },
-    {
-      "id": "photos-dsc00232.jpg",
-      "title": "dsc00232",
-      "category": "photos",
-      "src": "/work/photos/dsc00232.jpg"
-    },
-    {
-      "id": "photos-dsc00261.jpg",
-      "title": "dsc00261",
-      "category": "photos",
-      "src": "/work/photos/dsc00261.jpg"
-    },
-    {
-      "id": "photos-dsc00331.jpg",
-      "title": "dsc00331",
-      "category": "photos",
-      "src": "/work/photos/dsc00331.jpg"
-    },
-    {
-      "id": "photos-dsc00359.jpg",
-      "title": "dsc00359",
-      "category": "photos",
-      "src": "/work/photos/dsc00359.jpg"
-    },
-    {
-      "id": "photos-l2.jpg",
-      "title": "l2",
-      "category": "photos",
-      "src": "/work/photos/l2.jpg"
-    },
-    {
-      "id": "photos-tp.jpeg",
-      "title": "tp",
-      "category": "photos",
-      "src": "/work/photos/tp.jpeg"
-    },
-    {
-      "id": "graphics-1.png",
-      "title": "1",
-      "category": "graphics",
-      "src": "/work/graphics/1.png"
-    },
-    {
-      "id": "graphics-2.png",
-      "title": "2",
-      "category": "graphics",
-      "src": "/work/graphics/2.png"
-    },
-    {
-      "id": "graphics-3.png",
-      "title": "3",
-      "category": "graphics",
-      "src": "/work/graphics/3.png"
-    },
-    {
-      "id": "graphics-4.png",
-      "title": "4",
-      "category": "graphics",
-      "src": "/work/graphics/4.png"
-    },
-    {
-      "id": "graphics-8-strategies-flyer-w-disclosures.png",
-      "title": "8 strategies flyer w disclosures",
-      "category": "graphics",
-      "src": "/work/graphics/8 strategies flyer w disclosures.png"
-    },
-    {
-      "id": "graphics-Always-go-with-the-choice-that-scares-you-the-most,-because-that-is-the-one-thats-going-to-help-you-grow.-(1).png",
-      "title": "Always go with the choice that scares you the most, because that is the one thats going to help you grow. (1)",
-      "category": "graphics",
-      "src": "/work/graphics/Always go with the choice that scares you the most, because that is the one thats going to help you grow. (1).png"
-    },
-    {
-      "id": "graphics-Blue-And-Beige-Minimalist-Real-Estate-Expert-Realtor-Flyer.png",
-      "title": "Blue And Beige Minimalist Real Estate Expert Realtor Flyer",
-      "category": "graphics",
-      "src": "/work/graphics/Blue And Beige Minimalist Real Estate Expert Realtor Flyer.png"
-    },
-    {
-      "id": "graphics-Casinonightflyer.png",
-      "title": "Casinonightflyer",
-      "category": "graphics",
-      "src": "/work/graphics/Casinonightflyer.png"
-    },
-    {
-      "id": "graphics-Coffee-Phone-Mock-Up-Instagram-Template.png",
-      "title": "Coffee Phone Mock Up Instagram Template",
-      "category": "graphics",
-      "src": "/work/graphics/Coffee Phone Mock Up Instagram Template.png"
-    },
-    {
-      "id": "graphics-Create-a-modern,-eye-catching-flyer-for-a-meet-and-greet-event-titled-_TRASH-BASH_-hosted-by-Nieuwenhuis-Disposal-Services.-Include-these-details-clearly___Date_-Saturday,-August-2nd-at-4_00-PM__Location_-1635-Mound-Road,-Delavan,-Wisconsin.jpg",
-      "title": "Create a modern, eye-catching flyer for a meet and greet event titled _TRASH BASH_ hosted by Nieuwenhuis Disposal Services. Include these details clearly___Date_ Saturday, August 2nd at 4_00 PM__Location_ 1635 Mound Road, Delavan, Wisconsin",
-      "category": "graphics",
-      "src": "/work/graphics/Create a modern, eye-catching flyer for a meet and greet event titled _TRASH BASH_ hosted by Nieuwenhuis Disposal Services. Include these details clearly___Date_ Saturday, August 2nd at 4_00 PM__Location_ 1635 Mound Road, Delavan, Wisconsin.jpg"
-    },
-    {
-      "id": "graphics-Create-a-striking-and-elegant-event-flyer-for-_The-wedding-affair_-The-event-tak...-(1).png",
-      "title": "Create a striking and elegant event flyer for _The wedding affair_ The event tak... (1)",
-      "category": "graphics",
-      "src": "/work/graphics/Create a striking and elegant event flyer for _The wedding affair_ The event tak... (1).png"
-    },
-    {
-      "id": "graphics-Create-an-elegant,-striking-flyer-for-_The-Wedding-Affair_-on-October-16th,-6-PM....png",
-      "title": "Create an elegant, striking flyer for _The Wedding Affair_ on October 16th, 6 PM...",
-      "category": "graphics",
-      "src": "/work/graphics/Create an elegant, striking flyer for _The Wedding Affair_ on October 16th, 6 PM....png"
-    },
-    {
-      "id": "graphics-How-to-write-an-engaging-job-description.png",
-      "title": "How to write an engaging job description",
-      "category": "graphics",
-      "src": "/work/graphics/How to write an engaging job description.png"
-    },
-    {
-      "id": "graphics-PEOPLEMVR1.png",
-      "title": "PEOPLEMVR1",
-      "category": "graphics",
-      "src": "/work/graphics/PEOPLEMVR1.png"
-    },
-    {
-      "id": "graphics-PeopleMVR-insta-work-for-us.png",
-      "title": "PeopleMVR insta work for us",
-      "category": "graphics",
-      "src": "/work/graphics/PeopleMVR insta work for us.png"
-    },
-    {
-      "id": "graphics-Reasons-to-hire.png",
-      "title": "Reasons to hire",
-      "category": "graphics",
-      "src": "/work/graphics/Reasons to hire.png"
-    },
-    {
-      "id": "graphics-Recruiting-Process-Outsourcing.png",
-      "title": "Recruiting Process Outsourcing",
-      "category": "graphics",
-      "src": "/work/graphics/Recruiting Process Outsourcing.png"
-    },
-    {
-      "id": "graphics-Red-Modern-Tennis-Season-Flyer.png",
-      "title": "Red Modern Tennis Season Flyer",
-      "category": "graphics",
-      "src": "/work/graphics/Red Modern Tennis Season Flyer.png"
-    },
-    {
-      "id": "graphics-Screenshot-2025-01-15-143127.png",
-      "title": "Screenshot 2025-01-15 143127",
-      "category": "graphics",
-      "src": "/work/graphics/Screenshot 2025-01-15 143127.png"
-    },
-    {
-      "id": "graphics-reminder-(1).png",
-      "title": "reminder (1)",
-      "category": "graphics",
-      "src": "/work/graphics/reminder (1).png"
-    },
-    {
-      "id": "client-logos-1031-Capital-Solutions.png",
-      "title": "1031 Capital Solutions",
-      "category": "client logos",
-      "src": "/work/client logos/1031 Capital Solutions.png"
-    },
-    {
-      "id": "client-logos-Amanda-Rose-Consulting.png",
-      "title": "Amanda Rose Consulting",
-      "category": "client logos",
-      "src": "/work/client logos/Amanda Rose Consulting.png"
-    },
-    {
-      "id": "client-logos-Fischer-Family-Foundation.png",
-      "title": "Fischer Family Foundation",
-      "category": "client logos",
-      "src": "/work/client logos/Fischer Family Foundation.png"
-    },
-    {
-      "id": "client-logos-My-Ruca.png",
-      "title": "My Ruca",
-      "category": "client logos",
-      "src": "/work/client logos/My Ruca.png"
-    },
-    {
-      "id": "client-logos-PeopleMVR.png",
-      "title": "PeopleMVR",
-      "category": "client logos",
-      "src": "/work/client logos/PeopleMVR.png"
-    },
-    {
-      "id": "client-logos-Premier-Recruits.png",
-      "title": "Premier Recruits",
-      "category": "client logos",
-      "src": "/work/client logos/Premier Recruits.png"
-    },
-    {
-      "id": "client-logos-The-Social-Affair.jpg",
-      "title": "The Social Affair",
-      "category": "client logos",
-      "src": "/work/client logos/The Social Affair.jpg"
-    },
-    {
-      "id": "client-logos-Toothpicks-Catering.jpg",
-      "title": "Toothpicks Catering",
-      "category": "client logos",
-      "src": "/work/client logos/Toothpicks Catering.jpg"
-    },
-    {
-      "id": "client-logos-Vine-&-Tap.png",
-      "title": "Vine & Tap",
-      "category": "client logos",
-      "src": "/work/client logos/Vine & Tap.png"
-    },
-    {
-      "id": "client-logos-Wellness-With-Lauren.png",
-      "title": "Wellness With Lauren",
-      "category": "client logos",
-      "src": "/work/client logos/Wellness With Lauren.png"
-    },
-    {
-      "id": "client-logos-West-Coast-Chiropractic-Center.webp",
-      "title": "West Coast Chiropractic Center",
-      "category": "client logos",
-      "src": "/work/client logos/West Coast Chiropractic Center.webp"
-    }
+    {"id":"websites-Financial-Services-Website-home.png","title":"1031 Capital Solutions - Home","category":"websites","src":"/work/websites/Financial Services Website home.png","tags":["Website","Financial Services"],"link":"https://1031capitalsolutions.com"},
+    {"id":"websites-san-diego-tax-hike-tracker.png","title":"San Diego County Tax Hike Tracker","category":"websites","src":"/work/websites/san-diego-tax-hike-tracker.png","tags":["Website","Data","UI Design"]},
+    {"id":"websites-news-commentary-mayor-franklin.png","title":"News & Commentary - Mayor John Franklin","category":"websites","src":"/work/websites/news-commentary-mayor-franklin.png","tags":["Website","Campaign","News"]},
+    {"id":"websites-issues-page-mayor-franklin.png","title":"Issues - Mayor John Franklin","category":"websites","src":"/work/websites/issues-page-mayor-franklin.png","tags":["Website","Campaign","Video"]},
+    {"id":"websites-endorsements-page-mayor-franklin.png","title":"Endorsements - Mayor John Franklin","category":"websites","src":"/work/websites/endorsements-page-mayor-franklin.png","tags":["Website","Campaign"]},
+    {"id":"websites-Catering-Company-Website-Home.png","title":"Catering Company Website Home","category":"websites","src":"/work/websites/Catering Company  Website Home.png","tags":["Website"]},
+    {"id":"websites-Financial-Services-Website.png","title":"Financial Services Website","category":"websites","src":"/work/websites/Financial Services Website.png"},
+    {"id":"websites-Financial-Services-Website-2.png","title":"Financial Services Website 2","category":"websites","src":"/work/websites/Financial Services Website 2.png"},
+    {"id":"websites-Financial-Services-Website-4.png","title":"Financial Services Website 4","category":"websites","src":"/work/websites/Financial Services Website 4.png"},
+    {"id":"websites-Financial-Services-Website-5.png","title":"Financial Services Website 5","category":"websites","src":"/work/websites/Financial Services Website 5.png"},
+    {"id":"websites-Financial-Services-Website-6.png","title":"Financial Services Website 6","category":"websites","src":"/work/websites/Financial Services Website 6.png"},
+    {"id":"websites-Financial-Services-Website-7.png","title":"Financial Services Website 7","category":"websites","src":"/work/websites/Financial Services Website 7.png"},
+    {"id":"graphics-1.png","title":"1031 Capital Solutions - Active vs Passive vs Portfolio Income","category":"graphics","src":"/work/graphics/1.png"},
+    {"id":"graphics-2.png","title":"1031 Basics - Homework After Your Exchange","category":"graphics","src":"/work/graphics/2.png"},
+    {"id":"graphics-3.png","title":"1031 Basics - A Deferred Sales Trust Is Not a DST","category":"graphics","src":"/work/graphics/3.png"},
+    {"id":"graphics-4.png","title":"1031 Basics - Start With a Property, End With REIT Shares","category":"graphics","src":"/work/graphics/4.png"},
+    {"id":"graphics-8-strategies-flyer-w-disclosures.png","title":"1031 Capital Solutions - 8 Strategies Flyer","category":"graphics","src":"/work/graphics/8 strategies flyer w disclosures.png"},
+    {"id":"graphics-Blue-And-Beige-Minimalist-Real-Estate-Expert-Realtor-Flyer.png","title":"Donna Stroupe Real Estate Flyer","category":"graphics","src":"/work/graphics/Blue And Beige Minimalist Real Estate Expert Realtor Flyer.png"},
+    {"id":"graphics-Casinonightflyer.png","title":"Vegas Night - East Troy Gridiron Club","category":"graphics","src":"/work/graphics/Casinonightflyer.png"},
+    {"id":"graphics-Create-an-elegant,-striking-flyer-for-_The-Wedding-Affair_-on-October-16th,-6-PM....png","title":"The Wedding Affair - October 16th","category":"graphics","src":"/work/graphics/Create an elegant, striking flyer for _The Wedding Affair_ on October 16th, 6 PM....png"},
+    {"id":"graphics-Create-a-striking-and-elegant-event-flyer-for-_The-wedding-affair_-The-event-tak...-(1).png","title":"The Wedding Affair - Event Flyer","category":"graphics","src":"/work/graphics/Create a striking and elegant event flyer for _The wedding affair_ The event tak... (1).png"},
+    {"id":"graphics-Create-a-modern,-eye-catching-flyer-for-a-meet-and-greet-event-titled-_TRASH-BASH_-hosted-by-Nieuwenhuis-Disposal-Services.-Include-these-details-clearly___Date_-Saturday,-August-2nd-at-4_00-PM__Location_-1635-Mound-Road,-Delavan,-Wisconsin.jpg","title":"Trash Meet & Greet Bash - Nieuwenhuis Disposal Services","category":"graphics","src":"/work/graphics/Create a modern, eye-catching flyer for a meet and greet event titled _TRASH BASH_ hosted by Nieuwenhuis Disposal Services. Include these details clearly___Date_ Saturday, August 2nd at 4_00 PM__Location_ 1635 Mound Road, Delavan, Wisconsin.jpg"},
+    {"id":"graphics-Coffee-Phone-Mock-Up-Instagram-Template.png","title":"Abby Jane Media - PeopleMVR Website Launch","category":"graphics","src":"/work/graphics/Coffee Phone Mock Up Instagram Template.png"},
+    {"id":"graphics-How-to-write-an-engaging-job-description.png","title":"PeopleMVR - How to Write an Engaging Job Description","category":"graphics","src":"/work/graphics/How to write an engaging job description.png"},
+    {"id":"graphics-PeopleMVR-insta-work-for-us.png","title":"PeopleMVR - Mind People Vivid Office","category":"graphics","src":"/work/graphics/PeopleMVR insta work for us.png"},
+    {"id":"graphics-PEOPLEMVR1.png","title":"PeopleMVR - Reminder: Never Stop Working Towards Your Dreams","category":"graphics","src":"/work/graphics/PEOPLEMVR1.png"},
+    {"id":"graphics-reminder-(1).png","title":"PeopleMVR - Consistency Reminder","category":"graphics","src":"/work/graphics/reminder (1).png"},
+    {"id":"graphics-Red-Modern-Tennis-Season-Flyer.png","title":"Salford & Co. Tennis Season Flyer","category":"graphics","src":"/work/graphics/Red Modern Tennis Season Flyer.png"},
+    {"id":"graphics-Screenshot-2025-01-15-143127.png","title":"Real Estate Seminar - Rental Property Exchange","category":"graphics","src":"/work/graphics/Screenshot 2025-01-15 143127.png"},
+    {"id":"graphics-Reasons-to-hire.png","title":"Virtual Assistant Outsourcing Benefits","category":"graphics","src":"/work/graphics/Reasons to hire.png"},
+    {"id":"graphics-Recruiting-Process-Outsourcing.png","title":"SoCal Recruiting - RPO Process","category":"graphics","src":"/work/graphics/Recruiting Process Outsourcing.png"},
+    {"id":"graphics-Always-go-with-the-choice-that-scares-you-the-most,-because-that-is-the-one-thats-going-to-help-you-grow.-(1).png","title":"Motivational Quote - Always Go With the Choice That Scares You","category":"graphics","src":"/work/graphics/Always go with the choice that scares you the most, because that is the one thats going to help you grow. (1).png"},
+    {"id":"photos-IMG_2237.jpg","title":"Kitchen with Blue Island & Subway Tile","category":"photos","src":"/work/photos/IMG_2237.jpg"},
+    {"id":"photos-IMG_2238.jpg","title":"Interior","category":"photos","src":"/work/photos/IMG_2238.jpg"},
+    {"id":"photos-IMG_2239.jpg","title":"Interior","category":"photos","src":"/work/photos/IMG_2239.jpg"},
+    {"id":"photos-IMG_2240.jpg","title":"Interior","category":"photos","src":"/work/photos/IMG_2240.jpg"},
+    {"id":"photos-IMG_2408.jpg","title":"Interior","category":"photos","src":"/work/photos/IMG_2408.jpg"},
+    {"id":"photos-3B51001C-D670-4F2D-AC38-F4623F2CD117_L0_001-4_27_2024,-9_36_27-AM.jpg","title":"Aerial View of Modern L-Shaped Home","category":"photos","src":"/work/photos/3B51001C-D670-4F2D-AC38-F4623F2CD117_L0_001-4_27_2024, 9_36_27 AM.jpg"},
+    {"id":"photos-B11798B4-68D7-4458-A07D-0D2361BCFC0C_L0_001-2_7_2024,-10_26_04-AM.jpg","title":"Home Exterior","category":"photos","src":"/work/photos/B11798B4-68D7-4458-A07D-0D2361BCFC0C_L0_001-2_7_2024, 10_26_04 AM.jpg"},
+    {"id":"photos-BAF69E03-25D9-4458-866B-FD972612FBE8_L0_001-4_27_2024,-9_36_11-AM.jpg","title":"Property Overview","category":"photos","src":"/work/photos/BAF69E03-25D9-4458-866B-FD972612FBE8_L0_001-4_27_2024, 9_36_11 AM.jpg"},
+    {"id":"photos-516B5164-0348-443A-8359-90A03DE531A6_L0_001-2_9_2024,-9_26_12-PM.jpg","title":"Residential Property","category":"photos","src":"/work/photos/516B5164-0348-443A-8359-90A03DE531A6_L0_001-2_9_2024, 9_26_12 PM.jpg"},
+    {"id":"photos-7DE3FD9E-3763-4A8B-B050-9F1925BD9008_L0_001-4_27_2024,-9_28_35-AM.jpg","title":"Property & Landscaping","category":"photos","src":"/work/photos/7DE3FD9E-3763-4A8B-B050-9F1925BD9008_L0_001-4_27_2024, 9_28_35 AM.jpg"},
+    {"id":"photos-AD7A4870-9E4B-4AA1-A413-CC8DE6225857_L0_001-4_24_2024,-12_12_29-PM.jpg","title":"Property Photo","category":"photos","src":"/work/photos/AD7A4870-9E4B-4AA1-A413-CC8DE6225857_L0_001-4_24_2024, 12_12_29 PM.jpg"},
+    {"id":"photos-BA7F7AC6-E426-4FB2-8EE2-2D15AC54FD86_L0_001-2_9_2024,-9_26_05-PM.jpg","title":"Residence","category":"photos","src":"/work/photos/BA7F7AC6-E426-4FB2-8EE2-2D15AC54FD86_L0_001-2_9_2024, 9_26_05 PM.jpg"},
+    {"id":"photos-tp.jpeg","title":"Grilled Fish with Tropical Bay View","category":"photos","src":"/work/photos/tp.jpeg"},
+    {"id":"photos-Image.jpg","title":"Tacos with Cilantro & Onion","category":"photos","src":"/work/photos/Image.jpg"},
+    {"id":"photos-l2.jpg","title":"Waffle with Strawberries & Whipped Cream","category":"photos","src":"/work/photos/l2.jpg"},
+    {"id":"photos-dsc00170.jpg","title":"Breakfast Burritos at Pannikin Cafe","category":"photos","src":"/work/photos/dsc00170.jpg"},
+    {"id":"photos-dsc00175.jpg","title":"Breakfast Omelet at Pannikin Coffee & Tea","category":"photos","src":"/work/photos/dsc00175.jpg"},
+    {"id":"photos-dsc00232.jpg","title":"Wine & Cheesy Dip at Restaurant","category":"photos","src":"/work/photos/dsc00232.jpg"},
+    {"id":"photos-IMG_8702.jpg","title":"Instagram Analytics Overview","category":"photos","src":"/work/photos/IMG_8702.jpg"},
+    {"id":"photos-Hydragear-is-built-on-the-principle-of-sustainability.__☀️-Through-our-wide-range-of-hydration-products,-we-strive-to-make-eco-friendly-living-accessible-and-fun!__♻️-Disposable-plastic,-styrofoam.jpg","title":"Hydragear Sustainability Brand Content","category":"photos","src":"/work/photos/Hydragear is built on the principle of sustainability.__☀️ Through our wide range of hydration products, we strive to make eco-friendly living accessible and fun!__♻️ Disposable plastic, styrofoam.jpg"},
+    {"id":"photos-IMG_1078-(1).jpg","title":"Photo","category":"photos","src":"/work/photos/IMG_1078 (1).jpg"},
+    {"id":"photos-Image-2-5-24-at-9.16-PM.jpg","title":"Photo","category":"photos","src":"/work/photos/Image 2-5-24 at 9.16 PM.jpg"},
+    {"id":"photos-Image-2-5-24-at-9.19-PM-(1).jpg","title":"Photo","category":"photos","src":"/work/photos/Image 2-5-24 at 9.19 PM (1).jpg"},
+    {"id":"photos-dsc00261.jpg","title":"Photo","category":"photos","src":"/work/photos/dsc00261.jpg"},
+    {"id":"photos-dsc00331.jpg","title":"Photo","category":"photos","src":"/work/photos/dsc00331.jpg"},
+    {"id":"photos-dsc00359.jpg","title":"Photo","category":"photos","src":"/work/photos/dsc00359.jpg"},
+    {"id":"client-logos-1031-Capital-Solutions.png","title":"1031 Capital Solutions","category":"client logos","src":"/work/client logos/1031 Capital Solutions.png"},
+    {"id":"client-logos-Toothpicks-Catering.jpg","title":"Toothpicks Catering","category":"client logos","src":"/work/client logos/Toothpicks Catering.jpg"},
+    {"id":"client-logos-The-Social-Affair.jpg","title":"The Social Affair","category":"client logos","src":"/work/client logos/The Social Affair.jpg"},
+    {"id":"client-logos-PeopleMVR.png","title":"PeopleMVR","category":"client logos","src":"/work/client logos/PeopleMVR.png"},
+    {"id":"client-logos-Amanda-Rose-Consulting.png","title":"Amanda Rose Consulting","category":"client logos","src":"/work/client logos/Amanda Rose Consulting.png"},
+    {"id":"client-logos-Fischer-Family-Foundation.png","title":"Fischer Family Foundation","category":"client logos","src":"/work/client logos/Fischer Family Foundation.png"},
+    {"id":"client-logos-My-Ruca.png","title":"My Ruca","category":"client logos","src":"/work/client logos/My Ruca.png"},
+    {"id":"client-logos-Premier-Recruits.png","title":"Premier Recruits","category":"client logos","src":"/work/client logos/Premier Recruits.png"},
+    {"id":"client-logos-Vine-&-Tap.png","title":"Vine & Tap","category":"client logos","src":"/work/client logos/Vine & Tap.png"},
+    {"id":"client-logos-Wellness-With-Lauren.png","title":"Wellness With Lauren","category":"client logos","src":"/work/client logos/Wellness With Lauren.png"},
+    {"id":"client-logos-West-Coast-Chiropractic-Center.webp","title":"West Coast Chiropractic Center","category":"client logos","src":"/work/client logos/West Coast Chiropractic Center.webp"},
+    {"id":"websites-1031-capital-solutions-team.png","title":"1031 Capital Solutions - About & Team","category":"websites","src":"/work/websites/1031-capital-solutions-team.png","tags":["Website","Financial Services","Lead Gen"],"link":"https://1031capitalsolutions.com"}
   ]
 }

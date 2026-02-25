@@ -1,194 +1,228 @@
-import { Mail, MapPin, Globe, Linkedin, Phone } from "lucide-react";
+import { useState } from "react";
+import { Mail, MapPin, Globe, Linkedin, Github } from "lucide-react";
+
+const XIcon = ({ className = "w-6 h-6" }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+  </svg>
+);
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 import { motion } from "framer-motion";
 
+/** Replace with your Formspree form ID from https://formspree.io */
+const FORMSPREE_FORM_ID = import.meta.env.VITE_FORMSPREE_FORM_ID || "YOUR_FORM_ID";
+
 const Contact = () => {
+  const [formStatus, setFormStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    setFormStatus("submitting");
+    try {
+      const res = await fetch(`https://formspree.io/f/${FORMSPREE_FORM_ID}`, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { Accept: "application/json" },
+      });
+      if (res.ok) {
+        setFormStatus("success");
+        form.reset();
+      } else setFormStatus("error");
+    } catch {
+      setFormStatus("error");
+    }
+  };
   const contactInfo = [
     {
       icon: <Mail className="w-6 h-6" />,
       label: "Email",
-      value: "abby@seaforthstrategies.com",
-      href: "mailto:abby@seaforthstrategies.com"
+      value: "ajlehr123@gmail.com",
+      href: "mailto:ajlehr123@gmail.com"
     },
     {
-      icon: <Phone className="w-6 h-6" />,
-      label: "Phone",
-      value: "(262) 210-2921",
-      href: "tel:+12622102921"
+      icon: <Linkedin className="w-6 h-6" />,
+      label: "LinkedIn",
+      value: "linkedin.com/in/abigaillehr",
+      href: "https://linkedin.com/in/abigaillehr"
+    },
+    {
+      icon: <XIcon />,
+      label: "𝕏",
+      value: "x.com/abbyjlehr",
+      href: "https://x.com/abbyjlehr"
+    },
+    {
+      icon: <Globe className="w-6 h-6" />,
+      label: "Portfolio",
+      value: "abigaillehr.com",
+      href: "https://abigaillehr.com"
     },
     {
       icon: <Globe className="w-6 h-6" />,
       label: "Website",
-      value: "www.seaforthstrategies.com",
-      href: "https://www.seaforthstrategies.com"
+      value: "seaforthstrategies.com",
+      href: "https://seaforthstrategies.com"
+    },
+    {
+      icon: <Github className="w-6 h-6" />,
+      label: "GitHub",
+      value: "github.com/SeaForthStrategies",
+      href: "https://github.com/SeaForthStrategies"
     },
     {
       icon: <MapPin className="w-6 h-6" />,
       label: "Location",
-      value: "Carlsbad, CA",
+      value: "California",
       href: null
     }
   ];
 
   return (
-    <section id="contact" className="py-20 bg-background">
-      <div className="container mx-auto px-6">
-        <div className="max-w-4xl mx-auto">
-          {/* Section Header */}
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-4xl lg:text-5xl font-bold text-portfolio-neutral dark:text-white mb-6">
-              Get In Touch
-            </h2>
-            <p className="text-xl text-portfolio-muted max-w-2xl mx-auto">
-              Interested in collaborating or have a question about my work?
-              I'm always open to discussing new opportunities and technical challenges.
-            </p>
-          </motion.div>
+    <section id="contact" className="py-20 md:py-28 overflow-x-hidden">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 md:px-10">
+        <motion.div className="mb-16" initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+          <p className="text-cyan-400/80 text-sm font-medium uppercase tracking-wider mb-2">Contact</p>
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-white mb-4">Get In Touch</h2>
+          <p className="text-zinc-400 max-w-2xl text-lg">
+            Interested in collaborating? I'm always open to discussing new opportunities.
+          </p>
+        </motion.div>
 
-          {/* Contact Grid */}
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Contact Info */}
-            <motion.div
-              className="space-y-8"
+          {/* Contact form */}
+          {FORMSPREE_FORM_ID !== "YOUR_FORM_ID" && (
+            <motion.form
+              onSubmit={handleSubmit}
+              className="mb-16 p-5 sm:p-8 md:p-10 rounded-2xl border border-zinc-800/80 bg-zinc-900/60 backdrop-blur-sm min-w-0"
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
             >
-              <div>
-                <h3 className="text-2xl font-semibold text-portfolio-neutral dark:text-white mb-6">
-                  Contact Information
-                </h3>
-                <p className="text-portfolio-muted leading-relaxed mb-8">
-                  Whether you're looking to generate more qualified leads, increase your social media presence,
-                  or optimize your technical workflows for better efficiency, I specialize in creating software
-                  solutions that deliver measurable results.
-                </p>
+              <h3 className="font-display text-xl font-bold text-white mb-6">Send a message</h3>
+              <div className="grid sm:grid-cols-2 gap-4 mb-4">
+                <Input name="name" placeholder="Your name" required className="bg-zinc-800/80 border-zinc-700 rounded-xl" />
+                <Input name="email" type="email" placeholder="Your email" required className="bg-zinc-800/80 border-zinc-700 rounded-xl" />
               </div>
+              <Textarea name="message" placeholder="Your message" required rows={4} className="mb-4 bg-zinc-800/80 border-zinc-700 rounded-xl resize-none" />
+              <Button type="submit" variant="primary" disabled={formStatus === "submitting"} className="rounded-xl">
+                {formStatus === "submitting" ? "Sending..." : formStatus === "success" ? "Sent!" : "Send message"}
+              </Button>
+              {formStatus === "error" && <p className="mt-2 text-sm text-red-400">Something went wrong. Please email directly.</p>}
+            </motion.form>
+          )}
 
-              {/* Contact Details */}
-              <motion.div
-                className="space-y-4"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.2 }}
-                variants={{ visible: { transition: { staggerChildren: 0.08 } } }}
-              >
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-start">
+            <motion.div
+              className="space-y-8"
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.5 }}
+            >
+              <p className="text-zinc-400 leading-relaxed">
+                I run my own marketing and web consultancy. I like figuring out how things work end to end. Running things myself taught me to learn fast and adapt.
+              </p>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {contactInfo.map((info, index) => (
-                  <motion.div key={index} className="flex items-center gap-4 group" variants={{ hidden: { opacity: 0, y: 10 }, visible: { opacity: 1, y: 0 } }}>
-                    <div className="w-12 h-12 bg-gradient-to-br from-portfolio-primary to-portfolio-secondary rounded-xl flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300">
+                  <motion.div
+                    key={index}
+                    className="flex items-center gap-4 p-5 rounded-2xl bg-zinc-900/60 border border-zinc-800/80 backdrop-blur-sm hover:border-zinc-700/80 transition-colors min-w-0"
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.05 }}
+                  >
+                    <div className="w-10 h-10 rounded-lg bg-cyan-500/10 flex items-center justify-center text-cyan-400 shrink-0">
                       {info.icon}
                     </div>
-                    <div>
-                      <div className="text-sm text-portfolio-muted">{info.label}</div>
+                    <div className="min-w-0 flex-1 overflow-hidden">
+                      <div className="text-xs text-zinc-500 uppercase tracking-wider">{info.label}</div>
                       {info.href ? (
                         <a
                           href={info.href}
-                          className="text-portfolio-neutral dark:text-zinc-300 font-medium hover:text-portfolio-primary transition-colors"
-                          target={info.href.startsWith('http') ? '_blank' : undefined}
-                          rel={info.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                          className="text-zinc-300 font-medium hover:text-cyan-400 transition-colors break-all block"
+                          target={info.href.startsWith("http") ? "_blank" : undefined}
+                          rel={info.href.startsWith("http") ? "noopener noreferrer" : undefined}
                         >
                           {info.value}
                         </a>
                       ) : (
-                        <div className="text-portfolio-neutral font-medium">{info.value}</div>
+                        <div className="text-zinc-300 font-medium">{info.value}</div>
                       )}
                     </div>
                   </motion.div>
                 ))}
-              </motion.div>
+              </div>
 
-              {/* Quick Contact Buttons */}
-              <div className="space-y-4 pt-4">
+              <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
                 <Button
-                  variant="primary"
                   size="lg"
-                  className="w-full"
-                  onClick={() => window.open('mailto:abby@seaforthstrategies.com')}
+                  className="flex-1 rounded-lg bg-cyan-500 text-zinc-950 hover:bg-cyan-400"
+                  onClick={() => window.open("mailto:ajlehr123@gmail.com")}
                 >
                   <Mail className="w-5 h-5 mr-2" />
                   Send Email
                 </Button>
-
                 <Button
-                  variant="portfolio"
+                  variant="outline"
                   size="lg"
-                  className="w-full"
-                  onClick={() => window.open('https://www.seaforthstrategies.com', '_blank')}
+                  className="w-full sm:flex-1 rounded-lg border-zinc-600 text-zinc-300 hover:bg-zinc-800"
+                  onClick={() => window.open("https://linkedin.com/in/abigaillehr", "_blank")}
                 >
-                  <Globe className="w-5 h-5 mr-2" />
-                  Visit SeaForth Strategies
+                  <Linkedin className="w-5 h-5 mr-2" />
+                  Connect on LinkedIn
+                </Button>
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="w-full sm:flex-1 rounded-lg border-zinc-600 text-zinc-300 hover:bg-zinc-800"
+                  onClick={() => window.open("https://x.com/abbyjlehr", "_blank")}
+                >
+                  <XIcon className="w-5 h-5 mr-2" />
+                  Follow on 𝕏
                 </Button>
               </div>
             </motion.div>
 
-            {/* CTA Card */}
             <motion.div
-              className="relative"
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              className="rounded-2xl p-6 sm:p-8 border border-zinc-800/80 bg-zinc-900/60 backdrop-blur-sm min-w-0"
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.5 }}
             >
-              {/* Background decoration */}
-              <div
-                className="absolute -inset-4 rounded-3xl opacity-20 blur-3xl"
-                style={{ background: 'var(--gradient-primary)' }}
-              />
-
-              {/* Main card */}
-              <div className="relative bg-white dark:bg-zinc-900 rounded-3xl p-8 shadow-xl border border-portfolio-primary/10">
-                <div className="text-center space-y-6">
-                  <motion.div className="w-20 h-20 bg-gradient-to-br from-portfolio-primary to-portfolio-secondary rounded-full flex items-center justify-center text-white mx-auto" whileHover={{ scale: 1.05 }}>
-                    <Linkedin className="w-10 h-10" />
-                  </motion.div>
-
-                  <div>
-                    <h3 className="text-2xl font-semibold text-portfolio-neutral dark:text-white mb-4">
-                      Interested in Collaboration?
-                    </h3>
-                    <p className="text-portfolio-muted dark:text-zinc-400 leading-relaxed">
-                      Let's connect to discuss potential roles, technical needs, or how my background
-                      in both development and strategy can add value to your team.
-                    </p>
-                  </div>
-
-                  <div className="space-y-4">
-                    <div className="text-sm text-portfolio-muted">
-                      <strong>What you can expect:</strong>
+              <div className="flex flex-col items-center text-center space-y-6">
+                <a
+                  href="https://linkedin.com/in/abigaillehr"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-16 h-16 rounded-xl bg-cyan-500/10 flex items-center justify-center text-cyan-400 hover:bg-cyan-500/20 transition-colors"
+                >
+                  <Linkedin className="w-10 h-10" />
+                </a>
+                <div>
+                  <h3 className="font-semibold text-white mb-3">
+                    Interested in Collaboration?
+                  </h3>
+                  <p className="text-zinc-400 text-sm leading-relaxed">
+                    Open to roles in marketing, web, content, growth, or strategy. Reach out if you think we'd work well together.
+                  </p>
+                </div>
+                <div className="w-full space-y-3 text-left">
+                  {["UI/UX Design", "Web Development (React/Next.js)", "Marketing & Growth", "Content & Social", "AI-Assisted Dev", "Web Architecture"].map((item, i) => (
+                    <div key={i} className="flex items-center gap-3 px-3 py-2 rounded-lg bg-zinc-800">
+                      <div className="w-1.5 h-1.5 rounded-full bg-cyan-400 shrink-0" />
+                      <span className="text-sm text-zinc-400">{item}</span>
                     </div>
-                    <div className="grid grid-cols-1 gap-3 text-left">
-                      <div className="flex items-center gap-3">
-                        <div className="w-2 h-2 bg-portfolio-primary rounded-full" />
-                        <span className="text-sm text-portfolio-muted">Custom UI/UX Design</span>
-                      </div>
-                      <div className="flex items-center gap-3">
-                        <div className="w-2 h-2 bg-portfolio-primary rounded-full" />
-                        <span className="text-sm text-portfolio-muted">Full-Stack Development (React/Next.js)</span>
-                      </div>
-                      <div className="flex items-center gap-3">
-                        <div className="w-2 h-2 bg-portfolio-primary rounded-full" />
-                        <span className="text-sm text-portfolio-muted">AI-Assisted Workflows</span>
-                      </div>
-                      <div className="flex items-center gap-3">
-                        <div className="w-2 h-2 bg-portfolio-primary rounded-full" />
-                        <span className="text-sm text-portfolio-muted">Scalable Architecture</span>
-                      </div>
-                    </div>
-                  </div>
+                  ))}
                 </div>
               </div>
             </motion.div>
           </div>
-
         </div>
-      </div>
     </section>
   );
 };

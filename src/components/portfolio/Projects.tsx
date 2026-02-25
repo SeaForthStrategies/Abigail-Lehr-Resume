@@ -1,12 +1,9 @@
-import { ExternalLink, Calendar, Tag, Github } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
-import { useMemo } from "react";
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { ExternalLink, Github } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 
-const Projects = () => {
-  interface Project {
+interface Project {
     title: string;
     type: string;
     period: string;
@@ -19,151 +16,60 @@ const Projects = () => {
     results: string;
     github?: string;
     link?: string;
-  }
+}
 
+const Projects = () => {
   const projects: Project[] = [
     {
       title: "Abigail-Lehr-Resume",
       type: "Vibe Coding • React • Vite",
       period: "2024",
-      description: "My personal resume and portfolio site, built using 'Vibe Coding' principles. Leveraged Lovable and AI assistants to rapidly prototype and deploy a premium-feeling, high-performance web application with smooth animations and responsive design.",
-      tags: ["React", "Vite", "Tailwind CSS", "Framer Motion", "Vibe Coding"],
+      description: "This site. Built with Lovable, React, Vite, Tailwind, and Framer Motion. Deployed on Vercel.",
+      tags: ["React", "Vite", "Tailwind CSS", "Framer Motion"],
       category: "Personal Project",
-      services: ["Web Development", "UI/UX Design", "AI Integration"],
+      services: ["Web Development", "UI/UX Design"],
       scope: [
-        "Rapid prototyping with Lovable",
-        "Customizing shadcn-ui components",
-        "Implementing fluid animations with Framer Motion",
-        "Setting up CI/CD with GitHub and Vercel"
+        "Prototyping with Lovable",
+        "Custom shadcn-ui components",
+        "Framer Motion animations",
+        "CI/CD via GitHub + Vercel"
       ],
       outcomes: [
-        "Fully responsive and premium UI",
-        "99/100 Lighthouse performance score",
-        "Integrated dynamic platform/skills visualization",
-        "Easy maintenance through Vibe Coding workflow"
+        "Responsive layout",
+        "99/100 Lighthouse score",
+        "Skills/tools visualization",
+        "Easy to update"
       ],
-      results: "GitHub Repository • Vercel Deployment • 100% Vibe Coded",
+      results: "GitHub • Vercel",
       github: "https://github.com/SeaForthStrategies/Abigail-Lehr-Resume"
     },
     {
       title: "SeaForth Strategies Dashboard",
-      type: "Full-Stack Development • Next.js",
+      type: "Web Development • Next.js",
       period: "2024",
-      description: "Developed a internal dashboard for SeaForth Strategies to manage client workflows and marketing analytics. Built with Next.js and Supabase for real-time updates and secure data management.",
+      description: "Internal dashboard for SeaForth-client workflows and marketing analytics. Next.js + Supabase.",
       tags: ["Next.js", "Supabase", "PostgreSQL", "Tailwind CSS"],
       category: "Business Tools",
-      services: ["Full-Stack Dev", "Database Design", "Marketing Tech"],
+      services: ["Web Dev", "Database Design", "Marketing Tech"],
       scope: [
-        "Architecting front-end with Next.js App Router",
-        "Designing Supabase schema for client and campaign data",
-        "Implementing authentication and role-based access",
-        "Integrating GA4 and Stripe APIs for reporting"
+        "Next.js App Router front-end",
+        "Supabase schema for clients and campaigns",
+        "Auth and role-based access",
+        "GA4 and Stripe API integration"
       ],
       outcomes: [
-        "Centralized client data for easier reporting",
-        "Automated recurring tasks via serverless functions",
-        "Improved team collaboration efficiency by 40%",
-        "Reduced manual data entry sessions"
+        "Centralized client data",
+        "Serverless automations for recurring tasks",
+        "Team collaboration up ~40%",
+        "Less manual data entry"
       ],
       results: "Next.js • Supabase • Real-time Analytics"
-    },
-    {
-      title: "Marketing Automation Engine",
-      type: "Automation • Node.js • Zapier",
-      period: "2023",
-      description: "A custom-built automation engine that syncs leads between Facebook Lead Ads, HubSpot, and a private PostgreSQL database. Includes automated follow-up sequences and UTM attribution tracking.",
-      tags: ["Node.js", "Zapier", "HubSpot API", "PostgreSQL"],
-      category: "Tech & Automation",
-      services: ["Backend Dev", "API Integration", "Marketing Tech"],
-      scope: [
-        "Building custom webhooks in Node.js",
-        "Orchestrating complex multi-step Zaps",
-        "Implementing database-level UTM normalization",
-        "Setting up Slack notifications for real-time lead alerts"
-      ],
-      outcomes: [
-        "Eliminated manual lead entry for 3+ clients",
-        "Reduced response time from 4 hours to < 5 minutes",
-        "Accurate source attribution for 100% of leads",
-        "Automated recurring reporting dashboards"
-      ],
-      results: "Node.js • API-First • 90% Automation",
-      github: "https://github.com/SeaForthStrategies/marketing-automation-engine"
-    },
-    {
-      title: "Headless CMS for Real Estate",
-      type: "Full-Stack • React • Sanity.io",
-      period: "2023",
-      description: "A high-performance real estate listing portal using Sanity.io as a headless CMS and React for the frontend. Features include advanced filtering, interactive map search, and programmatic SEO pages.",
-      tags: ["React", "Sanity.io", "Google Maps API", "Tailwind CSS"],
-      category: "Real Estate",
-      services: ["Frontend Dev", "CMS Architecture", "UI/UX"],
-      scope: [
-        "Defining schemas for properties, agents, and locations",
-        "Implementing real-time search with Algolia integration",
-        "Building a custom map-based discovery interface",
-        "Optimizing for split-second page loads via SSR"
-      ],
-      outcomes: [
-        "150% increase in time-on-site",
-        "Significantly easier listing management for staff",
-        "Top-tier SEO performance for local keywords",
-        "Zero downtime since launch"
-      ],
-      results: "React • Sanity • Algolia Search",
-      github: "https://github.com/SeaForthStrategies/real-estate-portal"
-    },
-    {
-      title: "Technical SEO Dashboard",
-      type: "Data Visualization • Python • Streamlit",
-      period: "2023",
-      description: "A Python-based dashboard that crawls sites to identify technical SEO debt, including broken links, missing meta tags, and Core Web Vitals issues. Uses Streamlit for the UI and BeautifulSoup for scraping.",
-      tags: ["Python", "Streamlit", "BeautifulSoup", "Technical SEO"],
-      category: "Tools",
-      services: ["Backend Dev", "Data Analysis", "SEO Audit"],
-      scope: [
-        "Building a site-wide crawler with depth control",
-        "Implementing Core Web Vitals scoring via PageSpeed API",
-        "Visualizing SEO debt over time with Plotly",
-        "Exporting actionable fix lists for development teams"
-      ],
-      outcomes: [
-        "Identified 500+ critical errors on legacy sites",
-        "Improved average Lighthouse SEO score by 15 points",
-        "Standardized technical auditing for 10+ clients",
-        "Reduced manual audit time by 80%"
-      ],
-      results: "Python Crawler • Real-time Auditing • 80% Efficiency",
-      github: "https://github.com/SeaForthStrategies/seo-debt-dashboard"
-    },
-    {
-      title: "Vibe-Coded E-Commerce Template",
-      type: "Front-End • React • Tailwind CSS",
-      period: "2024",
-      description: "A conversion-optimized e-commerce starter kit focused on premium aesthetics and fluid UX. Built using 'Vibe Coding' workflows to achieve a high-fidelity design in record time.",
-      tags: ["React", "Tailwind CSS", "Framer Motion", "Vibe Coding"],
-      category: "Personal Project",
-      services: ["Front-End Dev", "UI/UX & Product Design", "Rapid Prototyping"],
-      scope: [
-        "Designing high-polish product grids and detail pages",
-        "Implementing complex cart animations with Framer Motion",
-        "Optimizing mobile checkout flow for 0.5s interaction time",
-        "Documenting the Vibe Coding process for rapid scaling"
-      ],
-      outcomes: [
-        "Sub-100ms interaction latency",
-        "Aesthetic score rated 9.5/10 in peer reviews",
-        "Easily adaptable for any boutique brand",
-        "Showcases the power of AI-assisted layout design"
-      ],
-      results: "React • 100ms Latency • Premium UX",
-      github: "https://github.com/SeaForthStrategies/vibe-coded-template"
     },
     {
       title: "Real Estate Marketing Campaigns",
       type: "Digital Marketing Specialist",
       period: "2022-2023",
-      description: "Developed and executed comprehensive digital marketing strategies for real estate professionals, including Michael Nucci Real Estate. Implemented lead capture systems, social media advertising, and email nurturing campaigns.",
+      description: "Digital marketing for real estate pros-Michael Nucci Real Estate and others. Lead capture, Meta ads, email nurture campaigns.",
       tags: ["Real Estate Marketing", "Lead Capture", "Social Advertising", "CRM Integration"],
       category: "Real Estate",
       services: ["Lead Generation", "Social Media", "Marketing Technology"],
@@ -187,7 +93,7 @@ const Projects = () => {
       title: "Beauty & Wellness Brand Growth",
       type: "Social Media & Content Marketing",
       period: "2021-2023", 
-      description: "Multi-brand campaign management for Amazing Grace Salon, Lux Wellness, and Luxe Wellness. Created cohesive content strategies, managed booking systems integration, and developed visual brand identities that increased client bookings.",
+      description: "Multi-brand work for Amazing Grace Salon, Lux Wellness, Luxe Wellness. Content strategy, booking integrations, visual brand-bookings and engagement up.",
       tags: ["Multi-Brand Management", "Visual Content", "Booking Optimization", "Brand Identity"],
       category: "Beauty & Wellness",
       services: ["Social Media", "Content Marketing", "Marketing Technology"],
@@ -209,7 +115,7 @@ const Projects = () => {
       title: "Service Business Marketing Optimization",
       type: "Digital Strategy Consultant",
       period: "2021-2022",
-      description: "Comprehensive marketing support for service-based businesses including People MVR, CA Notary Dynamics, and The Social Affair. Focused on local SEO, social media management, and conversion optimization.",
+      description: "Marketing for service businesses-People MVR, CA Notary Dynamics, The Social Affair. Local SEO, social, conversion optimization.",
       tags: ["Local SEO", "Service Marketing", "Conversion Optimization", "Multi-Channel Strategy"],
       category: "Service Business",
       services: ["SEO & Local Search", "Social Media", "Performance Analytics"],
@@ -238,268 +144,156 @@ const Projects = () => {
     return "Web & Dev";
   };
 
-  const condensedCategories = useMemo(
-    () => ["All", "Web & Dev", "UI/UX Design", "Tech & Automation", "Data & Analytics"],
-    [],
-  );
+  const condensedCategories = [
+    "All", "Web & Dev", "UI/UX Design", "Tech & Automation", "Data & Analytics",
+  ];
+
+  const [filter, setFilter] = useState("All");
+  const filtered = filter === "All" ? projects : projects.filter((p) => p.services.some((s) => mapServiceToGroup(s) === filter));
 
   return (
-    <section id="projects" className="py-20 bg-background/50">
-      <div className="container mx-auto px-6">
-        <div className="max-w-6xl mx-auto">
-          {/* Section Header */}
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-4xl lg:text-5xl font-bold text-portfolio-neutral mb-6">
-              Project Portfolio
-            </h2>
-            <p className="text-xl text-portfolio-muted max-w-3xl mx-auto">
-              A collection of web applications, technical integrations, and "Vibe Coded" products 
-              built with a focus on high-performance UI/UX and modern development workflows.
-            </p>
-          </motion.div>
-
-          {/* Category Tabs */}
-          <Tabs defaultValue="All" className="w-full">
-            <div className="overflow-x-auto no-scrollbar pb-2">
-              <TabsList className="bg-card/50 backdrop-blur border border-primary/10 rounded-full p-1 text-muted-foreground inline-flex min-w-full sm:min-w-0">
-                {condensedCategories.map((cat) => (
-                  <TabsTrigger
-                    key={cat}
-                    value={cat}
-                    className="rounded-full px-4 py-1.5 data-[state=active]:text-primary data-[state=active]:bg-background whitespace-nowrap"
-                  >
-                    {cat}
-                  </TabsTrigger>
-                ))}
-              </TabsList>
-            </div>
-
-            {condensedCategories.map((cat) => {
-              const visible = cat === "All" ? projects : projects.filter((p) => p.services.some((s) => mapServiceToGroup(s) === cat));
-              return (
-                <TabsContent key={cat} value={cat} className="mt-8">
-                  <motion.div
-                    className="grid lg:grid-cols-2 gap-8"
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, amount: 0.2 }}
-                    variants={{ visible: { transition: { staggerChildren: 0.08 } } }}
-                  >
-                    {visible.map((project, index) => (
-                      <motion.div
-                        key={`${project.title}-${index}`}
-                        className="group glass-card p-6 sm:p-8 relative flex flex-col"
-                        variants={{ hidden: { opacity: 0, y: 16 }, visible: { opacity: 1, y: 0 } }}
-                        whileHover={{ y: -4, borderColor: 'hsl(var(--primary) / 0.4)' }}
-                        transition={{ type: "spring", stiffness: 120, damping: 16 }}
-                      >
-                        <div className="relative z-10">
-                        {/* Header */}
-                        <div className="relative flex items-start justify-between mb-5">
-                          <div className="flex-1">
-                            <h3 className="text-xl font-semibold text-portfolio-neutral mb-2">
-                              {project.title}
-                            </h3>
-                            <p className="text-portfolio-primary font-medium">
-                              {project.type}
-                            </p>
-                          </div>
-                          {project.period && (
-                            <div className="flex items-center gap-2 text-portfolio-muted text-sm">
-                              <Calendar className="w-4 h-4" />
-                              <span>{project.period}</span>
-                            </div>
-                          )}
-                        </div>
-
-                        {/* Category Badge */}
-                        <div className="relative mb-4">
-                          <span className="inline-flex items-center gap-1 px-3 py-1 bg-portfolio-primary/10 text-portfolio-primary text-sm font-medium rounded-full">
-                            <Tag className="w-3 h-3" />
-                            Industry: {project.category}
-                          </span>
-                        </div>
-
-                        {/* Services */}
-                        <div className="relative flex flex-wrap gap-2 mb-4">
-                          {project.services.map((service, sIdx) => (
-                            <span key={sIdx} className="px-3 py-1 text-xs font-medium rounded-full bg-portfolio-light border border-portfolio-primary/10 text-portfolio-neutral">
-                              {service}
-                            </span>
-                          ))}
-                        </div>
-
-                        {project.results && (
-                          <div className="relative mb-2">
-                            <div className="bg-primary/5 border border-primary/20 rounded-lg p-3">
-                              <div className="text-primary text-sm font-medium">Campaign Results</div>
-                              <div className="text-muted-foreground text-sm">{project.results}</div>
-                            </div>
-                          </div>
-                        )}
-
-                        {/* Collapsible Details (native) */}
-                        <details className="group">
-                          <summary className="flex items-center gap-2 py-2 cursor-pointer text-portfolio-neutral hover:underline">
-                            <ChevronDown className="h-4 w-4 transition-transform group-open:rotate-180" />
-                            Read more
-                          </summary>
-                          <div className="mt-2">
-                            {/* Description */}
-                            <p className="text-portfolio-muted leading-relaxed mb-4">
-                              {project.description}
-                            </p>
-
-                            {/* Scope of Work */}
-                            {Array.isArray(project.scope) && project.scope.length > 0 && (
-                              <div className="mb-4">
-                                <div className="text-sm text-portfolio-muted font-medium mb-2">Scope of Work</div>
-                                <div className="space-y-2">
-                                  {project.scope.map((item: string, i: number) => (
-                                    <div key={i} className="flex items-start gap-3">
-                                      <div className="mt-1 w-1.5 h-1.5 rounded-full bg-portfolio-primary" />
-                                      <span className="text-sm text-portfolio-muted">{item}</span>
-                                    </div>
-                                  ))}
-                                </div>
-                              </div>
-                            )}
-
-                            {/* Key Outcomes */}
-                            {Array.isArray(project.outcomes) && project.outcomes.length > 0 && (
-                              <div className="mb-4">
-                                <div className="text-sm text-portfolio-muted font-medium mb-2">Key Outcomes</div>
-                                <div className="space-y-2">
-                                  {project.outcomes.map((item: string, i: number) => (
-                                    <div key={i} className="flex items-start gap-3">
-                                      <div className="mt-1 w-1.5 h-1.5 rounded-full bg-green-500" />
-                                      <span className="text-sm text-portfolio-neutral">{item}</span>
-                                    </div>
-                                  ))}
-                                </div>
-                              </div>
-                            )}
-
-                            {/* Tags */}
-                            <div className="flex flex-wrap gap-2">
-                              {project.tags.map((tag, tagIndex) => (
-                                <span
-                                  key={tagIndex}
-                                  className="px-3 py-1 bg-portfolio-light text-portfolio-neutral text-xs font-medium rounded-full border border-portfolio-primary/10"
-                                >
-                                  {tag}
-                                </span>
-                              ))}
-                            </div>
-                          </div>
-                        </details>
-
-                        {/* External Links */}
-                        <div className="relative border-t border-portfolio-primary/10 pt-4 flex gap-4">
-                          {project.github && (
-                            <a
-                              href={project.github}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-portfolio-primary font-medium inline-flex items-center gap-2 hover:underline"
-                            >
-                              <Github className="w-4 h-4" />
-                              View GitHub
-                            </a>
-                          )}
-                          {project.link && (
-                            <a
-                              href={project.link}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-portfolio-primary font-medium inline-flex items-center gap-2 hover:underline"
-                            >
-                              <ExternalLink className="w-4 h-4" />
-                              Live Site
-                            </a>
-                          )}
-                          {project.title === "1031 Capital Solutions" && !project.link && (
-                            <a
-                              href="https://1031capitalsolutions.com"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-portfolio-primary font-medium inline-flex items-center gap-2 hover:underline"
-                            >
-                              <ExternalLink className="w-4 h-4" />
-                              Visit Live Site
-                            </a>
-                          )}
-                        </div>
-
-                        </div>
-
-                        {/* Subtle hover overlay */}
-                        <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" style={{ background: 'linear-gradient(145deg, rgba(59,130,246,0.06), rgba(34,211,238,0.06))' }} />
-                      </motion.div>
-                    ))}
-                  </motion.div>
-                </TabsContent>
-              );
-            })}
-          </Tabs>
-
-          {/* Stats Section */}
-          <motion.div
-            className="mt-20 grid md:grid-cols-3 gap-8"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-            variants={{ visible: { transition: { staggerChildren: 0.06 } } }}
-          >
-            {[
-              { value: '100%', label: 'Vibe Coded' },
-              { value: '20+', label: 'Technical Integrations' },
-              { value: '99', label: 'Lighthouse Performance Score' },
-            ].map((stat, i) => (
-              <motion.div key={i} className="text-center" variants={{ hidden: { opacity: 0, y: 12 }, visible: { opacity: 1, y: 0 } }}>
-                <div className="text-4xl font-bold text-portfolio-primary mb-2">{stat.value}</div>
-                <div className="text-portfolio-muted">{stat.label}</div>
-              </motion.div>
+    <section className="py-12 md:py-16 overflow-x-hidden">
+      <div className="container mx-auto px-4 sm:px-6 md:px-10">
+        <div className="max-w-5xl mx-auto">
+          {/* Filter */}
+          <motion.div className="flex flex-wrap gap-2 mb-10 min-w-0" layout>
+            {condensedCategories.map((cat) => (
+              <motion.button
+                key={cat}
+                onClick={() => setFilter(cat)}
+                className={`px-4 py-2 rounded-xl text-sm font-medium transition-all ${
+                  filter === cat ? "bg-cyan-500 text-zinc-950 shadow-sm" : "text-zinc-400 hover:text-white hover:bg-zinc-800/80"
+                }`}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.98 }}
+                layout
+              >
+                {cat}
+              </motion.button>
             ))}
           </motion.div>
 
-          {/* Notes & Disclosures */}
-          <div className="mt-6 text-xs text-portfolio-muted">
-            <div className="border-t border-portfolio-primary/10 pt-4">
-              <ul className="space-y-2 text-left max-w-3xl mx-auto">
-                <li className="flex items-start gap-3">
-                  <div className="mt-1 w-1.5 h-1.5 rounded-full bg-portfolio-primary" />
-                  <span>Metrics are aggregated across selected client projects; not a single engagement.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <div className="mt-1 w-1.5 h-1.5 rounded-full bg-portfolio-primary" />
-                  <span>Average email open rate reflects opted-in campaigns and varies by list quality, offer, and segment.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <div className="mt-1 w-1.5 h-1.5 rounded-full bg-portfolio-primary" />
-                  <span>Social growth is driven by consistent content, creative, and promotions; baselines differ by account.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <div className="mt-1 w-1.5 h-1.5 rounded-full bg-portfolio-primary" />
-                  <span>Qualified leads are counted using agreed criteria and exclude spam/duplicates.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <div className="mt-1 w-1.5 h-1.5 rounded-full bg-portfolio-primary" />
-                  <span>Results depend on budget, product–market fit, sales SLAs, and external market conditions.</span>
-                </li>
-              </ul>
-            </div>
+          {/* Project cards */}
+          <motion.div className="space-y-6" layout initial={false}>
+            <AnimatePresence mode="popLayout">
+              {filtered.map((project, index) => (
+                <ProjectCard key={project.title} project={project} index={index} />
+              ))}
+            </AnimatePresence>
+          </motion.div>
+
+          {/* Disclosures - compact */}
+          <div className="mt-16 pt-8 border-t border-zinc-800 text-xs text-zinc-500 max-w-2xl break-words">
+            <p>Metrics are aggregated across selected client projects. Results depend on budget, product–market fit, and market conditions.</p>
           </div>
         </div>
       </div>
     </section>
   );
 };
+
+function ProjectCard({ project, index }: { project: Project; index: number }) {
+  const [expanded, setExpanded] = useState(false);
+  return (
+    <motion.div
+      layout
+      initial={{ opacity: 0, y: 16 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, scale: 0.98 }}
+      transition={{ delay: index * 0.04, type: "spring", stiffness: 100 }}
+      className="rounded-2xl border border-zinc-800/80 bg-zinc-900/60 backdrop-blur-sm overflow-hidden hover:border-cyan-500/20 hover:shadow-[0_0_24px_-6px_rgba(34,211,238,0.08)] transition-all duration-300 min-w-0"
+      whileHover={{ y: -2 }}
+    >
+      <div className="p-4 sm:p-6 min-w-0">
+        <div className="flex flex-wrap items-start justify-between gap-4 min-w-0">
+          <div className="min-w-0 flex-1">
+            <h3 className="text-base sm:text-lg font-semibold text-white break-words">{project.title}</h3>
+            <p className="text-sm text-zinc-400 mt-0.5 break-words">{project.type}</p>
+          </div>
+          <div className="flex items-center gap-3 shrink-0">
+            <span className="text-xs text-zinc-500">{project.period}</span>
+            {(project.github || project.link) && (
+              <div className="flex gap-2">
+                {project.github && (
+                  <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline text-sm flex items-center gap-1">
+                    <Github className="w-4 h-4" /> GitHub
+                  </a>
+                )}
+                {project.link && (
+                  <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline text-sm flex items-center gap-1">
+                    <ExternalLink className="w-4 h-4" /> Live
+                  </a>
+                )}
+              </div>
+            )}
+          </div>
+        </div>
+
+        <p className="text-zinc-400 text-sm mt-3 line-clamp-2 break-words">{project.description}</p>
+
+        {project.results && (
+          <div className="mt-3 px-3 py-2 rounded-lg bg-cyan-500/10 border border-cyan-500/20 min-w-0 overflow-hidden">
+            <span className="text-sm text-cyan-400 font-medium break-words">{project.results}</span>
+          </div>
+        )}
+
+        <button
+          onClick={() => setExpanded(!expanded)}
+          className="mt-4 flex items-center gap-2 text-sm text-zinc-400 hover:text-white transition-colors"
+        >
+          <motion.span animate={{ rotate: expanded ? 180 : 0 }} transition={{ duration: 0.2 }}>
+          <ChevronDown className="w-4 h-4" />
+        </motion.span>
+          {expanded ? "Show less" : "View details"}
+        </button>
+
+        <AnimatePresence>
+        {expanded && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="overflow-hidden"
+          >
+          <div className="mt-4 pt-4 border-t border-zinc-800 space-y-4">
+            <p className="text-zinc-400 text-sm">{project.description}</p>
+            {project.scope?.length > 0 && (
+              <div>
+                <div className="text-xs font-medium text-zinc-500 uppercase tracking-wider mb-2">Scope</div>
+                <ul className="space-y-1 text-sm text-zinc-400">
+                  {project.scope.map((s, i) => (
+                    <li key={i} className="flex gap-2">
+                      <span className="text-cyan-400">•</span> {s}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            {project.outcomes?.length > 0 && (
+              <div>
+                <div className="text-xs font-medium text-zinc-500 uppercase tracking-wider mb-2">Outcomes</div>
+                <ul className="space-y-1 text-sm text-zinc-400">
+                  {project.outcomes.map((o, i) => (
+                    <li key={i} className="flex gap-2">
+                      <span className="text-emerald-500">•</span> {o}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            <div className="flex flex-wrap gap-2">
+              {project.tags.map((tag, i) => (
+                <span key={i} className="px-2 py-1 rounded bg-zinc-800 text-zinc-400 text-xs">{tag}</span>
+              ))}
+            </div>
+          </div>
+          </motion.div>
+        )}
+        </AnimatePresence>
+      </div>
+    </motion.div>
+  );
+}
 
 export default Projects;

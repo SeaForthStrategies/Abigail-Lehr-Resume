@@ -13,7 +13,7 @@ function readFolder(folder) {
   if (!fs.existsSync(dir)) return [];
   const files = fs.readdirSync(dir);
   return files
-    .filter((f) => allowedExt.has(path.extname(f)))
+    .filter((f) => allowedExt.has(path.extname(f)) && !f.startsWith('._'))
     .map((f) => ({ id: `${folder}-${f}`.replace(/\s+/g, '-'), title: f.replace(/\.[^.]+$/, ''), category: folder, src: `/work/${folder}/${f}` }));
 }
 

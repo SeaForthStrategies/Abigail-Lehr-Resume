@@ -1,8 +1,38 @@
-import { Button } from "@/components/ui/button";
 import { ArrowDown, Mail, ExternalLink } from "lucide-react";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import defaultHeadshot from "@/assets/abigail-headshot.jpg";
+import { useNavigate } from "react-router-dom";
+
+const BIO_TEXT =
+  "Digital marketer and web specialist with a founder mindset. Curious, self-directed, and motivated by learning how things work end to end. Open to roles across marketing, content, social, growth, events, and web.";
+
+function Typewriter({ text, className }: { text: string; className?: string }) {
+  const [display, setDisplay] = useState("");
+  const [done, setDone] = useState(false);
+
+  useEffect(() => {
+    let i = 0;
+    const id = setInterval(() => {
+      if (i <= text.length) {
+        setDisplay(text.slice(0, i));
+        i++;
+      } else {
+        setDone(true);
+        clearInterval(id);
+      }
+    }, 30);
+    return () => clearInterval(id);
+  }, [text]);
+
+  return (
+    <span className={className}>
+      {display}
+      {!done && <span className="animate-cursor-blink text-cyan-400 ml-0.5">|</span>}
+    </span>
+  );
+}
+
 const candidateHeadshots: string[] = [
   "/headshot.jpg",
   "/headshot.jpeg",
@@ -12,210 +42,103 @@ const candidateHeadshots: string[] = [
   "/headshot.PNG",
 ];
 
-import { useNavigate } from "react-router-dom";
+const container = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.08, delayChildren: 0.1 },
+  },
+};
 
-const TypingText = ({ text }: { text: string }) => {
-  return (
-    <motion.span
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      className="font-mono text-portfolio-primary dark:text-portfolio-secondary"
-    >
-      {text.split("").map((char, i) => (
-        <motion.span
-          key={i}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: i * 0.03, duration: 0.1 }}
-        >
-          {char}
-        </motion.span>
-      ))}
-      <motion.span
-        animate={{ opacity: [0, 1, 0] }}
-        transition={{ repeat: Infinity, duration: 0.8 }}
-        className="inline-block w-2 h-5 bg-portfolio-primary ml-1 align-middle"
-      />
-    </motion.span>
-  );
+const item = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 },
 };
 
 const Hero = () => {
-  const [imgIndex, setImgIndex] = useState(0);
   const navigate = useNavigate();
 
   const handleNav = (sectionId: string) => {
     if (sectionId === "about") {
       const element = document.getElementById(sectionId);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-      } else {
-        navigate("/about");
-      }
-    } else if (sectionId === "contact") {
-      navigate("/contact");
-    } else if (sectionId === "projects") {
-      navigate("/portfolio");
-    }
+      if (element) element.scrollIntoView({ behavior: "smooth" });
+      else navigate("/about");
+    } else if (sectionId === "contact") navigate("/contact");
+    else if (sectionId === "projects") navigate("/portfolio");
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Ambient gradient blobs */}
-      <div className="pointer-events-none absolute inset-0">
-        <div
-          className="absolute -top-24 -left-24 w-72 h-72 rounded-full blur-3xl opacity-30"
-          style={{ background: "var(--gradient-primary)" }}
-        />
-        <div
-          className="absolute bottom-0 right-0 w-96 h-96 rounded-full blur-3xl opacity-25 animate-blob"
-          style={{ background: "var(--gradient-secondary)" }}
-        />
-      </div>
-
-      {/* Background Gradient tint */}
-      <div className="absolute inset-0 bg-gradient-to-br from-portfolio-primary/5 via-background to-portfolio-secondary/5" />
-
-      {/* Content */}
-      <div className="container mx-auto px-6 pt-28 pb-20 relative z-10">
-        <div className="grid gap-12 lg:grid-cols-2 items-center">
-          {/* Text Content */}
+    <section className="min-h-screen flex items-center relative overflow-hidden">
+      <div className="max-w-6xl mx-auto px-6 md:px-10 pt-28 pb-20 w-full">
+        <div className="grid lg:grid-cols-[1fr,280px] gap-12 lg:gap-20 items-center">
           <motion.div
-            className="space-y-8 text-left"
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+            className="space-y-8 order-2 lg:order-1"
+            variants={container}
+            initial="hidden"
+            animate="visible"
           >
-            <div className="space-y-4">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight">
-                <span className="text-portfolio-neutral">Abigail</span>{" "}
-                <span className="text-gradient-primary">Lehr</span>
-              </h1>
-
-              <motion.div
-                className="flex flex-wrap justify-start gap-x-2 gap-y-1 text-portfolio-muted text-lg"
-                initial="hidden"
-                animate="visible"
-                variants={{
-                  hidden: {},
-                  visible: {
-                    transition: { staggerChildren: 0.08 },
-                  },
-                }}
-              >
-              <motion.div
-                className="flex flex-wrap items-center justify-start gap-x-3 text-portfolio-muted text-sm md:text-lg text-left"
-                initial="hidden"
-                animate="visible"
-                variants={{
-                  hidden: {},
-                  visible: {
-                    transition: { staggerChildren: 0.08 },
-                  },
-                }}
-              >
-                {[
-                  "Software Engineer",
-                  "•",
-                  "Full-Stack Developer",
-                  "•",
-                  "Marketing Strategist",
-                ].map((item, idx) => (
-                  <motion.span
-                    key={idx}
-                    variants={{
-                      hidden: { opacity: 0, y: 8 },
-                      visible: { opacity: 1, y: 0 },
-                    }}
-                    transition={{ duration: 0.4 }}
-                    className={item === "•" ? "opacity-30 hidden sm:inline" : "font-medium"}
-                  >
-                    {item}
-                  </motion.span>
-                ))}
-              </motion.div>
-              </motion.div>
-            </div>
-
-            <motion.p
-              className="text-lg md:text-xl leading-relaxed max-w-2xl text-left mb-8 min-h-[7rem] sm:min-h-[6rem] md:min-h-0"
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.6 }}
-            >
-              <TypingText text="Passionate about building high-performance web applications with a focus on clean code, responsive design, and technical product execution." />
+            <motion.p variants={item} className="text-cyan-400 text-sm font-medium uppercase tracking-wider">California</motion.p>
+            <motion.h1 variants={item} className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-white tracking-tight leading-[1.1]">
+              Abigail Lehr
+            </motion.h1>
+            <motion.p variants={item} className="text-xl text-cyan-400/90 font-medium">
+              Founder • Marketer • Software Developer (AI-Augmented)
             </motion.p>
-
-            <motion.div
-              className="flex flex-wrap gap-4 justify-start"
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.35, duration: 0.5 }}
-            >
-              <Button
-                variant="primary"
-                size="lg"
+            <motion.p variants={item} className="text-zinc-400 text-base md:text-lg leading-relaxed max-w-xl">
+              <Typewriter text={BIO_TEXT} />
+            </motion.p>
+            <motion.div variants={item} className="flex gap-4">
+              <motion.button
                 onClick={() => handleNav("contact")}
-                className="group"
+                className="px-6 py-3 rounded-lg bg-cyan-500 text-zinc-950 font-semibold hover:bg-cyan-400 transition-colors inline-flex items-center gap-2"
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.98 }}
               >
-                <Mail className="w-5 h-5 mr-2" />
+                <Mail className="w-5 h-5" />
                 Get In Touch
-              </Button>
-
-              <Button
-                variant="outline"
-                size="lg"
+              </motion.button>
+              <motion.button
                 onClick={() => handleNav("projects")}
-                className="group"
+                className="px-6 py-3 rounded-lg border border-zinc-600 text-zinc-300 font-medium hover:border-zinc-500 hover:text-white transition-colors inline-flex items-center gap-2"
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.98 }}
               >
-                View My Work
-                <ExternalLink className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Button>
+                View Work
+                <ExternalLink className="w-4 h-4" />
+              </motion.button>
             </motion.div>
-
-            <div className="flex items-center gap-4 pt-4 justify-center lg:justify-start">
-              <div className="h-px bg-gradient-to-r from-portfolio-primary to-transparent flex-1" />
-              <span className="text-portfolio-muted text-sm">California</span>
-            </div>
           </motion.div>
 
-          {/* Headshot / Visual */}
           <motion.div
-            className="relative flex justify-center lg:justify-end"
-            initial={{ opacity: 0, scale: 0.96 }}
+            className="flex justify-center lg:justify-end order-1 lg:order-2"
+            initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.15, duration: 0.6 }}
+            transition={{ delay: 0.2, duration: 0.6, type: "spring", stiffness: 80 }}
           >
-            <div className="relative w-[18rem] sm:w-[20rem] lg:w-[24rem] aspect-[3/4] overflow-hidden rounded-[2rem]">
-              <div
-                className="absolute -inset-2 rounded-[2rem] opacity-30 blur-2xl"
-                style={{ background: "var(--gradient-primary)" }}
-              />
-              <ImgWithFallback
-                alt="Abigail Lehr headshot"
-                className="relative w-full h-full object-cover object-top shadow-[var(--shadow-medium)] border border-portfolio-primary/10 rounded-[2rem] bg-portfolio-light"
-              />
-              <div
-                className="absolute -bottom-4 -left-4 w-20 h-20 rounded-full blur-2xl opacity-30"
-                style={{ background: "var(--gradient-secondary)" }}
-              />
-            </div>
+            <motion.div
+              className="w-56 sm:w-64 aspect-[3/4] overflow-hidden rounded-2xl border-2 border-zinc-800 animate-pulse-glow"
+              whileHover={{ scale: 1.02 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
+              <ImgWithFallback alt="Abigail Lehr" className="w-full h-full object-cover object-top" />
+            </motion.div>
           </motion.div>
         </div>
 
-        {/* Scroll indicator */}
         <motion.div
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+          className="absolute bottom-8 left-1/2 -translate-x-1/2"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.8, duration: 0.6 }}
+          transition={{ delay: 0.8 }}
         >
-          <button
+          <motion.button
             onClick={() => handleNav("about")}
-            className="p-2 rounded-full bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-colors animate-bounce"
+            className="p-2 rounded-full text-zinc-500 hover:text-zinc-300 transition-colors"
+            animate={{ y: [0, 6, 0] }}
+            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
           >
-            <ArrowDown className="w-6 h-6 text-portfolio-primary" />
-          </button>
+            <ArrowDown className="w-5 h-5" />
+          </motion.button>
         </motion.div>
       </div>
     </section>

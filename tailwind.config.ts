@@ -3,17 +3,17 @@ import animate from "tailwindcss-animate";
 
 export default {
   darkMode: ["class"],
-  content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}"],
+  content: ["./index.html", "./src/**/*.{ts,tsx}"],
   prefix: "",
   theme: {
     container: {
       center: true,
       padding: {
-        DEFAULT: "1.5rem",
-        sm: "2rem",
-        lg: "4rem",
-        xl: "5rem",
-        "2xl": "6rem",
+        DEFAULT: "2rem",
+        sm: "2.5rem",
+        lg: "5rem",
+        xl: "6rem",
+        "2xl": "8rem",
       },
       screens: {
         "2xl": "1400px",
@@ -23,6 +23,7 @@ export default {
       fontFamily: {
         mono: ["JetBrains Mono", "Fira Code", "monospace"],
         sans: ["Plus Jakarta Sans", "inter", "sans-serif"],
+        display: ["Outfit", "Plus Jakarta Sans", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
