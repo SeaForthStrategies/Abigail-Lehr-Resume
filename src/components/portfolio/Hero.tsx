@@ -135,7 +135,7 @@ const Hero = () => {
             transition={{ delay: 0.2, duration: 0.6, type: "spring", stiffness: 80 }}
           >
             <motion.div
-              className="w-20 h-20 sm:w-24 sm:h-24 rounded-full lg:w-56 lg:h-auto lg:aspect-[3/4] lg:rounded-2xl overflow-hidden border-2 border-zinc-800 animate-pulse-glow shrink-0"
+              className="w-20 h-20 sm:w-24 sm:h-24 rounded-full lg:w-56 lg:h-56 overflow-hidden border-2 border-zinc-800 animate-pulse-glow shrink-0"
               whileHover={{ scale: 1.02 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
