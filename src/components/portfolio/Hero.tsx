@@ -5,7 +5,7 @@ import defaultHeadshot from "@/assets/abigail-headshot.jpg";
 import { useNavigate } from "react-router-dom";
 
 const BIO_TEXT =
-  "Digital marketer and web specialist with a founder mindset. Curious, self-directed, and motivated by learning how things work end to end. Open to roles across marketing, content, social, growth, events, and web.";
+  "Marketing strategist and web developer with a founder mindset. Curious, self-directed, and motivated by learning how things work end to end. Open to roles across marketing, content, social, growth, events, and web.";
 
 function Typewriter({ text, className }: { text: string; className?: string }) {
   const [display, setDisplay] = useState("");
@@ -70,20 +70,39 @@ const Hero = () => {
   return (
     <section className="min-h-screen flex items-center relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 md:px-10 pt-28 pb-20 w-full">
-        <div className="grid lg:grid-cols-[1fr,280px] gap-12 lg:gap-20 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr,280px] gap-6 lg:gap-20 items-start">
           <motion.div
-            className="space-y-8 order-2 lg:order-1"
+            className="space-y-6 lg:space-y-8 order-2 lg:order-1"
             variants={container}
             initial="hidden"
             animate="visible"
           >
-            <motion.p variants={item} className="text-cyan-400 text-sm font-medium uppercase tracking-wider">California</motion.p>
-            <motion.h1 variants={item} className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-white tracking-tight leading-[1.1]">
-              Abigail Lehr
-            </motion.h1>
-            <motion.p variants={item} className="text-xl text-cyan-400/90 font-medium">
-              Founder • Marketer • Software Developer (AI-Augmented)
-            </motion.p>
+            {/* Mobile/tablet: image + name aligned in one row */}
+            <div className="flex flex-row items-center gap-4 sm:gap-5 lg:contents">
+              <motion.div
+                className="shrink-0 lg:hidden"
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.2, duration: 0.6, type: "spring", stiffness: 80 }}
+              >
+                <motion.div
+                  className="w-24 h-24 rounded-full overflow-hidden border-2 border-zinc-800 animate-pulse-glow shrink-0"
+                  whileHover={{ scale: 1.02 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
+                  <ImgWithFallback alt="Abigail Lehr" className="w-full h-full object-cover object-top" />
+                </motion.div>
+              </motion.div>
+              <div className="space-y-1 sm:space-y-2">
+                <motion.p variants={item} className="text-cyan-400 text-sm font-medium uppercase tracking-wider">Carlsbad, CA</motion.p>
+                <motion.h1 variants={item} className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-white tracking-tight leading-[1.1]">
+                  Abigail Lehr
+                </motion.h1>
+                <motion.p variants={item} className="text-xl text-cyan-400/90 font-medium">
+                  Growth Marketing Strategist and web developer
+                </motion.p>
+              </div>
+            </div>
             <motion.p variants={item} className="text-zinc-400 text-base md:text-lg leading-relaxed max-w-xl">
               <Typewriter text={BIO_TEXT} />
             </motion.p>
@@ -110,13 +129,13 @@ const Hero = () => {
           </motion.div>
 
           <motion.div
-            className="flex justify-center lg:justify-end order-1 lg:order-2"
+            className="hidden lg:flex justify-end order-1 lg:order-2"
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2, duration: 0.6, type: "spring", stiffness: 80 }}
           >
             <motion.div
-              className="w-56 sm:w-64 aspect-[3/4] overflow-hidden rounded-2xl border-2 border-zinc-800 animate-pulse-glow"
+              className="w-20 h-20 sm:w-24 sm:h-24 rounded-full lg:w-56 lg:h-auto lg:aspect-[3/4] lg:rounded-2xl overflow-hidden border-2 border-zinc-800 animate-pulse-glow shrink-0"
               whileHover={{ scale: 1.02 }}
               transition={{ type: "spring", stiffness: 300 }}
             >

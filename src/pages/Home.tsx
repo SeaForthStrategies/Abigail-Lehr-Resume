@@ -29,7 +29,7 @@ const itemVariants = {
 const Home = () => {
   return (
     <div className="min-h-screen bg-background relative overflow-x-hidden">
-      <PageMeta title="Home" description="Abigail Lehr, Founder, marketer, developer. I run SeaForth Strategies and build sites." />
+      <PageMeta title="Home" description="Abigail Lehr, Marketing strategist and web developer. I run SeaForth Strategies and build sites." />
       <Navbar />
       <main id="main-content">
         <Hero />

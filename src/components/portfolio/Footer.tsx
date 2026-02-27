@@ -22,7 +22,7 @@ const Footer = () => (
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 sm:gap-8">
         <div className="min-w-0">
           <p className="font-semibold text-white">Abigail Lehr</p>
-          <p className="text-sm text-zinc-500 mt-0.5 break-words">Founder • Marketer • Software Developer</p>
+          <p className="text-sm text-zinc-500 mt-0.5 break-words">Growth Marketing Strategist and web developer</p>
         </div>
         <div className="flex flex-wrap gap-4 sm:gap-6">
           {links.map(({ href, label, icon: Icon }) => (

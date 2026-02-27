@@ -75,7 +75,7 @@ const Contact = () => {
     {
       icon: <MapPin className="w-6 h-6" />,
       label: "Location",
-      value: "California",
+      value: "Carlsbad, CA",
       href: null
     }
   ];
