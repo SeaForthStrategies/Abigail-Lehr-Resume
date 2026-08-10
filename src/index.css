@@ -3,6 +3,18 @@
 @tailwind components;
 @tailwind utilities;
 
+.hero-system-layout {
+  gap: 2.5rem;
+}
+
+@media (min-width: 1024px) {
+  .hero-system-layout {
+    flex-direction: row;
+    align-items: center;
+    gap: 3.5rem;
+  }
+}
+
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
 All colors MUST be HSL.
 */

@@ -195,14 +195,16 @@ const Contact = () => {
               transition={{ duration: 0.5 }}
             >
               <div className="flex flex-col items-center text-center space-y-6">
-                <a
-                  href="https://linkedin.com/in/abigaillehr"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-16 h-16 rounded-xl bg-cyan-500/10 flex items-center justify-center text-cyan-400 hover:bg-cyan-500/20 transition-colors"
-                >
-                  <Linkedin className="w-10 h-10" />
-                </a>
+                <div className="w-full overflow-hidden rounded-xl border border-zinc-800/80 bg-zinc-950">
+                  <img
+                    src="/site-visuals/oceanside-beach-portrait.jpg"
+                    alt=""
+                    aria-hidden="true"
+                    className="h-56 w-full object-cover object-[48%_center] opacity-90"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
                 <div>
                   <h3 className="font-semibold text-white mb-3">
                     Interested in Collaboration?

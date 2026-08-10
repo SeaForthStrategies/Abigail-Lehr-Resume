@@ -130,6 +130,16 @@ const ExpertiseAndTools = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.2 }}
           >
+            <div className="mb-5 overflow-hidden rounded-xl border border-zinc-800/80 bg-zinc-950">
+              <img
+                src="/site-visuals/mirror-phone-portrait.jpg"
+                alt=""
+                aria-hidden="true"
+                className="h-48 w-full object-cover object-[54%_center] opacity-90"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
             <p className="text-cyan-400/80 text-xs font-medium uppercase tracking-wider mb-2">How I Work</p>
             <h2 className="font-display text-xl font-bold text-white mb-4">Lifecycle I cover</h2>
             <ol className="space-y-2.5">

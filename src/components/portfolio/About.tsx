@@ -40,15 +40,32 @@ const About = () => {
   return (
     <section id="about" className="py-20 md:py-28 overflow-x-hidden">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 md:px-10">
-        <motion.div className="mb-16" initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-          <p className="text-cyan-400/80 text-sm font-medium uppercase tracking-wider mb-2">About</p>
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-white mb-4">Marketing, product, and shipped work</h2>
-          <p className="text-zinc-400 max-w-2xl text-lg mb-2">
-            I am a full-stack marketer and AI software engineer with experience turning strategy into live campaigns, websites, automations, and measurable growth systems.
-          </p>
-          <p className="text-zinc-500 text-sm">
-            <strong className="text-zinc-400">Plain version:</strong> I plan the work, build the assets, ship the site, watch the data, and keep improving what performs.
-          </p>
+        <motion.div
+          className="mb-16 flex flex-col gap-8 lg:flex-row lg:items-end"
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <div className="min-w-0 lg:flex-1">
+            <p className="text-cyan-400/80 text-sm font-medium uppercase tracking-wider mb-2">About</p>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-white mb-4">Marketing, product, and shipped work</h2>
+            <p className="text-zinc-400 max-w-2xl text-lg mb-2">
+              I am a full-stack marketer and AI software engineer with experience turning strategy into live campaigns, websites, automations, and measurable growth systems.
+            </p>
+            <p className="text-zinc-500 text-sm">
+              <strong className="text-zinc-400">Plain version:</strong> I plan the work, build the assets, ship the site, watch the data, and keep improving what performs.
+            </p>
+          </div>
+          <div className="hidden lg:block lg:w-[280px] lg:shrink-0 overflow-hidden rounded-2xl border border-zinc-800/80 bg-zinc-950">
+            <img
+              src="/site-visuals/on-air-studio-portrait.jpg"
+              alt=""
+              aria-hidden="true"
+              className="h-[320px] w-full object-cover object-center opacity-90"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
         </motion.div>
 
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">

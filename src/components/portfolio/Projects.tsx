@@ -325,8 +325,8 @@ const PROJECTS: Project[] = [
   },
   {
     title: "Salt & Serendipity",
-    status: "Concept",
-    period: "Concept",
+    status: "In Development",
+    period: "In Development",
     summary: "A community and experiential brand focused on real-world connection, events, and a broader consumer technology ecosystem.",
     group: "Product & Brand",
     categories: ["Product", "Growth", "Brand", "GTM"],
@@ -341,7 +341,7 @@ const PROJECTS: Project[] = [
     techStack: ["Product Ecosystem Strategy", "Community UX", "Concept Development"],
     growthStack: ["Community-Led Growth", "Partnerships", "Sponsorship Strategy", "Audience Acquisition", "Event Economics"],
     results: [
-      "Concept/community strategy project; not presented as launched",
+      "In-development community and consumer product ecosystem; not presented as fully launched",
       "Shows ability to connect offline experiences with digital product and acquisition strategy",
     ],
     demonstrates: ["Community Strategy", "Experiential GTM", "Brand Ecosystems", "Audience Development"],

@@ -38,8 +38,11 @@ const Navbar = () => {
       }`}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-10 h-16 flex items-center justify-between gap-2">
-        <Link to="/" className="font-display font-semibold text-base sm:text-lg text-white hover:text-cyan-400 transition-colors truncate min-w-0">
-          Abigail Lehr
+        <Link to="/" className="flex items-center gap-2.5 text-white hover:text-cyan-400 transition-colors truncate min-w-0">
+          <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-cyan-400/20 bg-zinc-950/70 shadow-[0_0_18px_-10px_rgba(34,211,238,0.8)] backdrop-blur-sm">
+            <img src="/favicon.png" alt="" className="h-7 w-7 object-contain" aria-hidden="true" />
+          </span>
+          <span className="font-display font-semibold text-base sm:text-lg truncate">Abigail Lehr</span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">
