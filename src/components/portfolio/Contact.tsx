@@ -75,7 +75,7 @@ const Contact = () => {
     {
       icon: <MapPin className="w-6 h-6" />,
       label: "Location",
-      value: "Carlsbad, CA",
+      value: "Oceanside, CA",
       href: null
     }
   ];
@@ -122,7 +122,7 @@ const Contact = () => {
               transition={{ duration: 0.5 }}
             >
               <p className="text-zinc-400 leading-relaxed">
-                I run my own marketing and web consultancy. I like figuring out how things work end to end. Running things myself taught me to learn fast and adapt.
+                I work across marketing, software, content, and operations. I like roles where strategy has to become something real: a shipped site, a working funnel, a stronger campaign, or a cleaner system.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -208,11 +208,11 @@ const Contact = () => {
                     Interested in Collaboration?
                   </h3>
                   <p className="text-zinc-400 text-sm leading-relaxed">
-                    Open to roles in marketing, web, content, growth, or strategy. Reach out if you think we'd work well together.
+                    Open to marketing, software, growth, content, and strategy roles where hands-on execution matters.
                   </p>
                 </div>
                 <div className="w-full space-y-3 text-left">
-                  {["UI/UX Design", "Web Development (React/Next.js)", "Marketing & Growth", "Content & Social", "AI-Assisted Dev", "Web Architecture"].map((item, i) => (
+                  {["Growth Strategy", "Full-Stack Web", "Content & Social", "Marketing Automation", "Analytics & CRO", "AI-Augmented Workflows"].map((item, i) => (
                     <div key={i} className="flex items-center gap-3 px-3 py-2 rounded-lg bg-zinc-800">
                       <div className="w-1.5 h-1.5 rounded-full bg-cyan-400 shrink-0" />
                       <span className="text-sm text-zinc-400">{item}</span>

@@ -5,7 +5,7 @@ import defaultHeadshot from "@/assets/abigail-headshot.jpg";
 import { useNavigate } from "react-router-dom";
 
 const BIO_TEXT =
-  "Marketing strategist and web developer with a founder mindset. Curious, self-directed, and motivated by learning how things work end to end. Open to roles across marketing, content, social, growth, events, and web.";
+  "Full-stack marketer and AI software engineer with hands-on experience across growth strategy, content, SEO/AEO, analytics, automation, and full-stack product builds. I connect the plan to the shipped work.";
 
 function Typewriter({ text, className }: { text: string; className?: string }) {
   const [display, setDisplay] = useState("");
@@ -34,9 +34,9 @@ function Typewriter({ text, className }: { text: string; className?: string }) {
 }
 
 const candidateHeadshots: string[] = [
+  "/headshot.png",
   "/headshot.jpg",
   "/headshot.jpeg",
-  "/headshot.png",
   "/headshot.JPG",
   "/headshot.JPEG",
   "/headshot.PNG",
@@ -94,12 +94,12 @@ const Hero = () => {
                 </motion.div>
               </motion.div>
               <div className="space-y-1 sm:space-y-2">
-                <motion.p variants={item} className="text-cyan-400 text-sm font-medium uppercase tracking-wider">Carlsbad, CA</motion.p>
+                <motion.p variants={item} className="text-cyan-400 text-sm font-medium uppercase tracking-wider">Oceanside, CA</motion.p>
                 <motion.h1 variants={item} className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-white tracking-tight leading-[1.1]">
                   Abigail Lehr
                 </motion.h1>
                 <motion.p variants={item} className="text-xl text-cyan-400/90 font-medium">
-                  Growth Marketing Strategist and web developer
+                  Full-Stack Marketer and AI Software Engineer
                 </motion.p>
               </div>
             </div>

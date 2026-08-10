@@ -1,6 +1,6 @@
-# Abigail Lehr — Founder // Marketer // Software Developer (AI-Augmented)
+# Abigail Lehr — Full-Stack Marketer // AI Software Engineer
 
-A React + TypeScript portfolio for Abigail Lehr—digital marketer and web specialist with a founder mindset. Curious, self-directed, and motivated by learning how things work end to end.
+A React + TypeScript portfolio for Abigail Lehr, a full-stack marketer and AI software engineer who builds campaigns, websites, automations, and growth systems.
 
 **Highlights:**
 - Scaled a political campaign website to 25k+ monthly visitors
@@ -9,7 +9,7 @@ A React + TypeScript portfolio for Abigail Lehr—digital marketer and web speci
 - Saved teams 10+ hours per week through automation and smarter systems
 - Improved internal efficiency by ~30% by refining tools and processes
 
-**Contact:** United States | ajlehr123@gmail.com | [LinkedIn](https://linkedin.com/in/abigaillehr) | [abigaillehr.com](https://abigaillehr.com) | [seaforthstrategies.com](https://seaforthstrategies.com) | [GitHub](https://github.com/SeaForthStrategies)
+**Contact:** Oceanside, CA | ajlehr123@gmail.com | [LinkedIn](https://linkedin.com/in/abigaillehr) | [abigaillehr.com](https://abigaillehr.com) | [seaforthstrategies.com](https://seaforthstrategies.com) | [GitHub](https://github.com/SeaForthStrategies)
 
 ## Tech Stack
 

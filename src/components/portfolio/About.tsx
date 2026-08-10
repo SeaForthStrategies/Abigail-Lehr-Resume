@@ -30,13 +30,10 @@ const CERT_CATEGORY_STYLES: Record<CertCategory, { box: string; icon: string; ba
 
 const CERTIFICATIONS: { provider: string; title: string; year: string | null; category: CertCategory }[] = [
   { provider: "UC Davis", title: "The Strategy of Content Marketing", year: "2024", category: "marketing" },
-  { provider: "HubSpot", title: "Social Media Marketing", year: "2023", category: "marketing" },
-  { provider: "Google", title: "Digital Skills Business Plan", year: "2023", category: "marketing" },
+  { provider: "HubSpot", title: "Social Media Marketing Certification", year: "2023", category: "marketing" },
+  { provider: "Google", title: "Digital Skills & Business Strategy Certification", year: null, category: "marketing" },
   { provider: "Codédex", title: "Foundations in Python, HTML, CSS, and JavaScript", year: null, category: "web" },
-  { provider: "Project Training", title: "Modern Web Design, Next.js, and AI-Assisted Workflows", year: null, category: "web" },
-  { provider: "Gateway Technical College", title: "Hospitality Essentials Certificate & Nursing Assistant Technical Diploma", year: "2022", category: "hospitality" },
-  { provider: "AHLEI | TripAdvisor", title: "Guest Service Professional | Reputation Management", year: null, category: "hospitality" },
-  { provider: "California", title: "Real Estate Salesperson Licensing Coursework", year: "2026", category: "professional" },
+  { provider: "Gateway Technical College", title: "Business, Management, Marketing, and Related Support Services", year: "2020-2023", category: "professional" },
 ];
 
 const About = () => {
@@ -45,12 +42,12 @@ const About = () => {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 md:px-10">
         <motion.div className="mb-16" initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
           <p className="text-cyan-400/80 text-sm font-medium uppercase tracking-wider mb-2">About</p>
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-white mb-4">About Me</h2>
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-white mb-4">Marketing, product, and shipped work</h2>
           <p className="text-zinc-400 max-w-2xl text-lg mb-2">
-            Marketing strategist and web developer—6+ years. I run SeaForth Strategies and build sites with modern tools.
+            I am a full-stack marketer and AI software engineer with experience turning strategy into live campaigns, websites, automations, and measurable growth systems.
           </p>
           <p className="text-zinc-500 text-sm">
-            <strong className="text-zinc-400">TL;DR:</strong> Marketing + web + events. I design, build, and run campaigns—from websites to email to 500-person events.
+            <strong className="text-zinc-400">Plain version:</strong> I plan the work, build the assets, ship the site, watch the data, and keep improving what performs.
           </p>
         </motion.div>
 
@@ -100,12 +97,6 @@ const About = () => {
                         </div>
                       )}
                       <p className="mt-3 text-sm text-zinc-400 leading-relaxed">{role.intro}</p>
-                      {role.reasonLeft && (
-                        <p className="mt-3 text-xs text-zinc-500 italic border-l-2 border-zinc-700 pl-3">
-                          <span className="text-zinc-600 not-italic font-medium">Why I left: </span>
-                          {role.reasonLeft}
-                        </p>
-                      )}
                       <p className="mt-4 text-[10px] font-semibold text-zinc-500 uppercase tracking-wider">Key results</p>
                       <ul className="mt-2 space-y-1.5 text-sm text-zinc-400">
                         {role.bullets.map((bullet, j) => (
@@ -137,12 +128,12 @@ const About = () => {
               </div>
               <div className="space-y-4">
                 {[
-                  { category: "Design", skills: "Visual Branding, UI/UX, Figma, Framer, Canva, Adobe Express, Behance, Graphic Design" },
-                  { category: "Web & Tech", skills: "Next.js, Vercel, Squarespace, WordPress, Lovable, Framer, Final Cut Pro, Tailwind CSS, SEO, HTML/CSS, Python, JavaScript, Git, GitHub, VSCode, Cursor, Claude, ChatGPT, GoDaddy, Netlify, AI-Assisted Development" },
-                  { category: "Marketing", skills: "Digital Strategy, Lead Generation, HubSpot, Mailchimp, Google Analytics (GA4), Email Automation, Buffer, Hootsuite, Meta, Instagram, LinkedIn, A/B Testing, Zapier" },
-                  { category: "Events & Webinars", skills: "Large-Scale Event Planning (500+ guests), Eventbrite, Zoom, Calendly, Vendor Management, Webinar Hosting" },
-                  { category: "Operations", skills: "Project Management, Airtable, Notion, Asana, Trello, Square, POS Systems, Typeform" },
-                  { category: "Communication", skills: "Technical Copywriting, Client Relations, Process Improvement, Public Messaging" },
+                  { category: "Growth & Strategy", skills: "Growth Strategy, GTM Execution, Acquisition Funnels, CRO, Lifecycle Marketing, Paid Media, Performance Media" },
+                  { category: "Data & Operations", skills: "A/B Testing, Funnel Analysis, CRM Strategy, Marketing Automation, Analytics, AI-Augmented Workflows, Operational Efficiency" },
+                  { category: "Platform Stack", skills: "GA4, WordPress, HubSpot, Mailchimp, Airtable, Figma, Adobe Creative Suite, GitHub, Cursor, ChatGPT, Claude" },
+                  { category: "Web Development", skills: "Python, HTML, CSS, JavaScript, React, Next.js, Tailwind CSS, Vercel, Netlify, SEO/AEO" },
+                  { category: "Events & Content", skills: "Social Media Strategy, Content Planning, Event Promotion, Community Engagement, Large-Scale Event Planning, Vendor Management" },
+                  { category: "Communication", skills: "Brand Messaging, Technical Copywriting, Client Relations, Stakeholder Coordination, Cross-Functional Leadership" },
                 ].map((item, index) => (
                   <motion.div
                     key={index}

@@ -22,7 +22,7 @@ const Footer = () => (
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 sm:gap-8">
         <div className="min-w-0">
           <p className="font-semibold text-white">Abigail Lehr</p>
-          <p className="text-sm text-zinc-500 mt-0.5 break-words">Growth Marketing Strategist and web developer</p>
+          <p className="text-sm text-zinc-500 mt-0.5 break-words">Full-Stack Marketer and AI Software Engineer</p>
         </div>
         <div className="flex flex-wrap gap-4 sm:gap-6">
           {links.map(({ href, label, icon: Icon }) => (
@@ -41,10 +41,10 @@ const Footer = () => (
           ))}
         </div>
         <div className="flex flex-wrap gap-4 sm:gap-6 text-sm text-zinc-500">
-          <Link to="/about" className="hover:text-cyan-400 transition-colors">About</Link>
-          <Link to="/skills" className="hover:text-cyan-400 transition-colors">Skills</Link>
-          <Link to="/portfolio" className="hover:text-cyan-400 transition-colors">Portfolio</Link>
-          <Link to="/contact" className="hover:text-cyan-400 transition-colors">Contact</Link>
+          <Link to="/about" className="hover:text-cyan-400 transition-colors">Profile</Link>
+          <Link to="/skills" className="hover:text-cyan-400 transition-colors">Stack</Link>
+          <Link to="/portfolio" className="hover:text-cyan-400 transition-colors">Builds</Link>
+          <Link to="/contact" className="hover:text-cyan-400 transition-colors">Connect</Link>
         </div>
       </div>
       <p className="mt-8 pt-8 border-t border-zinc-800 text-center text-xs text-zinc-600">

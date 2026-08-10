@@ -13,10 +13,10 @@ import {
 
 const links = [
   { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/skills", label: "Skills" },
-  { href: "/portfolio", label: "Portfolio" },
-  { href: "/contact", label: "Contact" },
+  { href: "/about", label: "Profile" },
+  { href: "/skills", label: "Stack" },
+  { href: "/portfolio", label: "Builds" },
+  { href: "/contact", label: "Connect" },
 ];
 
 const Navbar = () => {
@@ -62,7 +62,7 @@ const Navbar = () => {
                 whileHover={{ scale: 1.05, y: -1 }}
                 whileTap={{ scale: 0.96 }}
               >
-                Let's Talk
+                Contact
               </motion.span>
             </Link>
           </motion.div>
@@ -96,7 +96,7 @@ const Navbar = () => {
                 ))}
                 <Link to="/contact" onClick={() => setOpen(false)} className="mt-4">
                   <span className="block w-full text-center py-3 rounded-xl bg-cyan-500 text-zinc-950 font-semibold text-sm">
-                    Let's Talk
+                    Contact
                   </span>
                 </Link>
               </div>

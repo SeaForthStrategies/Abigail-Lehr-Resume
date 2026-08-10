@@ -26,7 +26,7 @@ const AboutPreview = () => (
             </motion.div>
             <div>
               <h2 className="font-display text-xl font-bold text-white">Quick Glance</h2>
-              <p className="text-zinc-500 text-sm mt-0.5">6+ years · Marketing, Web, Events</p>
+              <p className="text-zinc-500 text-sm mt-0.5">Marketing · Software · Growth</p>
             </div>
           </div>
 
@@ -65,12 +65,6 @@ const AboutPreview = () => (
                       </div>
                     ))}
                   </div>
-                )}
-                {role.reasonLeft && (
-                  <p className="mt-2 text-xs text-zinc-500 italic">
-                    <span className="text-zinc-600 not-italic font-medium">Why I left: </span>
-                    {role.reasonLeft}
-                  </p>
                 )}
               </motion.li>
             ))}

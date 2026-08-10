@@ -5,39 +5,39 @@ import { ToolBadge } from "@/components/portfolio/ToolBadge";
 const EXPERTISE_CATEGORIES = [
   {
     icon: <PenTool className="w-5 h-5" />,
-    title: "Design",
-    description: "Branding, UI/UX, and graphics for web and marketing.",
-    skills: ["Visual Branding", "UI/UX Design", "Figma", "Framer", "Canva", "Adobe Express", "Behance", "Graphic Design"],
+    title: "Brand & Content",
+    description: "Messaging, visuals, social content, and campaign assets.",
+    skills: ["Brand Messaging", "Content Planning", "Social Media Strategy", "Figma", "Canva", "Adobe Creative Suite", "Graphic Design"],
   },
   {
     icon: <Code2 className="w-5 h-5" />,
-    title: "Web & Tech",
-    description: "Web dev, AI-assisted workflows, and deployment.",
-    skills: ["Next.js", "Vercel", "Squarespace", "WordPress", "Lovable", "Framer", "Final Cut Pro", "Tailwind CSS", "SEO", "HTML/CSS", "Python", "JavaScript", "Git", "GitHub", "VSCode", "Cursor", "Claude", "ChatGPT", "GoDaddy", "Netlify", "AI-Assisted Development"],
+    title: "Software & Web",
+    description: "Full-stack product builds, websites, and launch workflows.",
+    skills: ["Python", "HTML", "CSS", "JavaScript", "React", "Next.js", "Tailwind CSS", "WordPress", "Vercel", "Netlify", "Git", "GitHub"],
   },
   {
     icon: <BarChart3 className="w-5 h-5" />,
-    title: "Marketing",
-    description: "Strategy, email, social, and analytics.",
-    skills: ["Digital Strategy", "Growth Strategies", "Lead Generation", "HubSpot", "Mailchimp", "Google Analytics (GA4)", "Email Automation", "Buffer", "Hootsuite", "Meta", "Instagram", "LinkedIn", "A/B Testing", "Zapier"],
+    title: "Growth Marketing",
+    description: "Strategy, funnels, lifecycle, paid media, and conversion.",
+    skills: ["Growth Strategy", "GTM Execution", "Acquisition Funnels", "CRO", "Lifecycle Marketing", "Paid Media", "Performance Media", "SEO/AEO"],
   },
   {
     icon: <CalendarDays className="w-5 h-5" />,
     title: "Events & Webinars",
-    description: "Big events, webinars, vendor coordination.",
-    skills: ["Large-Scale Event Planning (500+ guests)", "Eventbrite", "Zoom", "Calendly", "Vendor Management", "Webinar Hosting"],
+    description: "Campaign events, community moments, and vendor coordination.",
+    skills: ["Large-Scale Event Planning", "Event Promotion", "Community Engagement", "Vendor Management", "Calendly", "Zoom"],
   },
   {
     icon: <Workflow className="w-5 h-5" />,
     title: "Operations",
-    description: "Project management, POS, and workflow tools.",
-    skills: ["Project Management", "Airtable", "Notion", "Asana", "Trello", "Square", "POS Systems", "Typeform"],
+    description: "CRM, automation, reporting, and repeatable systems.",
+    skills: ["CRM Strategy", "Marketing Automation", "Airtable", "HubSpot", "Mailchimp", "GA4", "Funnel Analysis", "A/B Testing"],
   },
   {
     icon: <MessageSquare className="w-5 h-5" />,
     title: "Communication",
-    description: "Copywriting, client relations, and process.",
-    skills: ["Technical Copywriting", "Client Relations", "Process Improvement", "Public Messaging"],
+    description: "Clear writing and coordination across teams and stakeholders.",
+    skills: ["Technical Copywriting", "Client Relations", "Stakeholder Coordination", "Cross-Functional Leadership", "Public Messaging"],
   },
 ];
 
@@ -48,7 +48,7 @@ const Services = () => {
         <motion.div className="mb-16" initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
           <h2 className="font-display text-3xl font-bold text-white mb-4">Expertise & Skills</h2>
           <p className="text-zinc-400 max-w-2xl">
-            6+ years in design, web, marketing, and ops.
+            A practical mix of marketing, software, analytics, automation, and content work.
           </p>
         </motion.div>
 

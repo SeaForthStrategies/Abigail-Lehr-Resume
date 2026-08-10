@@ -29,7 +29,7 @@ const itemVariants = {
 const Home = () => {
   return (
     <div className="min-h-screen bg-background relative overflow-x-hidden">
-      <PageMeta title="Home" description="Abigail Lehr, Marketing strategist and web developer. I run SeaForth Strategies and build sites." />
+      <PageMeta title="Home" description="Abigail Lehr, full-stack marketer and AI software engineer building campaigns, websites, automations, and growth systems." />
       <Navbar />
       <main id="main-content">
         <Hero />
@@ -55,7 +55,7 @@ const Home = () => {
               <motion.div variants={itemVariants}>
                 <SectionPreview
                   id="skills"
-                  title="Expertise & Tools"
+                  title="Stack"
                   to="/skills"
                   linkLabel="View all"
                   icon={<Code2 className="w-4 h-4" />}
@@ -64,7 +64,7 @@ const Home = () => {
               <motion.div variants={itemVariants}>
                 <SectionPreview
                   id="portfolio"
-                  title="Portfolio"
+                  title="Builds"
                   to="/portfolio"
                   linkLabel="View all"
                   icon={<FolderOpen className="w-4 h-4" />}
