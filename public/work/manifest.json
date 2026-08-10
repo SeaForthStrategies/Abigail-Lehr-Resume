@@ -1,8 +1,8 @@
 {
   "folders": [
     "websites",
-    "photos",
     "graphics",
+    "photos",
     "client logos"
   ],
   "items": [
@@ -106,128 +106,31 @@
       "src": "/work/websites/Financial Services Website 7.png"
     },
     {
-      "id": "graphics-1.png",
-      "title": "1031 Capital Solutions - Active vs Passive vs Portfolio Income",
-      "category": "graphics",
-      "src": "/work/graphics/1.png"
+      "id": "websites-1031-capital-solutions-team.png",
+      "title": "1031 Capital Solutions - About & Team",
+      "category": "websites",
+      "src": "/work/websites/1031-capital-solutions-team.png",
+      "tags": [
+        "Website",
+        "Financial Services",
+        "Lead Gen"
+      ],
+      "link": "https://1031capitalsolutions.com"
     },
     {
-      "id": "graphics-2.png",
-      "title": "1031 Basics - Homework After Your Exchange",
+      "id": "graphics-social-affair-marfa",
+      "title": "Social Affair Rooftop Ticket Flyer",
       "category": "graphics",
-      "src": "/work/graphics/2.png"
-    },
-    {
-      "id": "graphics-3.png",
-      "title": "1031 Basics - A Deferred Sales Trust Is Not a DST",
-      "category": "graphics",
-      "src": "/work/graphics/3.png"
-    },
-    {
-      "id": "graphics-4.png",
-      "title": "1031 Basics - Start With a Property, End With REIT Shares",
-      "category": "graphics",
-      "src": "/work/graphics/4.png"
-    },
-    {
-      "id": "graphics-8-strategies-flyer-w-disclosures.png",
-      "title": "1031 Capital Solutions - 8 Strategies Flyer",
-      "category": "graphics",
-      "src": "/work/graphics/8 strategies flyer w disclosures.png"
-    },
-    {
-      "id": "graphics-Blue-And-Beige-Minimalist-Real-Estate-Expert-Realtor-Flyer.png",
-      "title": "Donna Stroupe Real Estate Flyer",
-      "category": "graphics",
-      "src": "/work/graphics/Blue And Beige Minimalist Real Estate Expert Realtor Flyer.png"
-    },
-    {
-      "id": "graphics-Casinonightflyer.png",
-      "title": "Vegas Night - East Troy Gridiron Club",
-      "category": "graphics",
-      "src": "/work/graphics/Casinonightflyer.png"
-    },
-    {
-      "id": "graphics-Create-an-elegant,-striking-flyer-for-_The-Wedding-Affair_-on-October-16th,-6-PM....png",
-      "title": "The Wedding Affair - October 16th",
-      "category": "graphics",
-      "src": "/work/graphics/Create an elegant, striking flyer for _The Wedding Affair_ on October 16th, 6 PM....png"
-    },
-    {
-      "id": "graphics-Create-a-striking-and-elegant-event-flyer-for-_The-wedding-affair_-The-event-tak...-(1).png",
-      "title": "The Wedding Affair - Event Flyer",
-      "category": "graphics",
-      "src": "/work/graphics/Create a striking and elegant event flyer for _The wedding affair_ The event tak... (1).png"
-    },
-    {
-      "id": "graphics-Create-a-modern,-eye-catching-flyer-for-a-meet-and-greet-event-titled-_TRASH-BASH_-hosted-by-Nieuwenhuis-Disposal-Services.-Include-these-details-clearly___Date_-Saturday,-August-2nd-at-4_00-PM__Location_-1635-Mound-Road,-Delavan,-Wisconsin.jpg",
-      "title": "Trash Meet & Greet Bash - Nieuwenhuis Disposal Services",
-      "category": "graphics",
-      "src": "/work/graphics/Create a modern, eye-catching flyer for a meet and greet event titled _TRASH BASH_ hosted by Nieuwenhuis Disposal Services. Include these details clearly___Date_ Saturday, August 2nd at 4_00 PM__Location_ 1635 Mound Road, Delavan, Wisconsin.jpg"
-    },
-    {
-      "id": "graphics-Coffee-Phone-Mock-Up-Instagram-Template.png",
-      "title": "Abby Jane Media - PeopleMVR Website Launch",
-      "category": "graphics",
-      "src": "/work/graphics/Coffee Phone Mock Up Instagram Template.png"
-    },
-    {
-      "id": "graphics-How-to-write-an-engaging-job-description.png",
-      "title": "PeopleMVR - How to Write an Engaging Job Description",
-      "category": "graphics",
-      "src": "/work/graphics/How to write an engaging job description.png"
-    },
-    {
-      "id": "graphics-PeopleMVR-insta-work-for-us.png",
-      "title": "PeopleMVR - Mind People Vivid Office",
-      "category": "graphics",
-      "src": "/work/graphics/PeopleMVR insta work for us.png"
-    },
-    {
-      "id": "graphics-PEOPLEMVR1.png",
-      "title": "PeopleMVR - Reminder: Never Stop Working Towards Your Dreams",
-      "category": "graphics",
-      "src": "/work/graphics/PEOPLEMVR1.png"
-    },
-    {
-      "id": "graphics-reminder-(1).png",
-      "title": "PeopleMVR - Consistency Reminder",
-      "category": "graphics",
-      "src": "/work/graphics/reminder (1).png"
-    },
-    {
-      "id": "graphics-Red-Modern-Tennis-Season-Flyer.png",
-      "title": "Salford & Co. Tennis Season Flyer",
-      "category": "graphics",
-      "src": "/work/graphics/Red Modern Tennis Season Flyer.png"
-    },
-    {
-      "id": "graphics-Screenshot-2025-01-15-143127.png",
-      "title": "Real Estate Seminar - Rental Property Exchange",
-      "category": "graphics",
-      "src": "/work/graphics/Screenshot 2025-01-15 143127.png"
-    },
-    {
-      "id": "graphics-Reasons-to-hire.png",
-      "title": "Virtual Assistant Outsourcing Benefits",
-      "category": "graphics",
-      "src": "/work/graphics/Reasons to hire.png"
-    },
-    {
-      "id": "graphics-Recruiting-Process-Outsourcing.png",
-      "title": "SoCal Recruiting - RPO Process",
-      "category": "graphics",
-      "src": "/work/graphics/Recruiting Process Outsourcing.png"
-    },
-    {
-      "id": "graphics-Always-go-with-the-choice-that-scares-you-the-most,-because-that-is-the-one-thats-going-to-help-you-grow.-(1).png",
-      "title": "Motivational Quote - Always Go With the Choice That Scares You",
-      "category": "graphics",
-      "src": "/work/graphics/Always go with the choice that scares you the most, because that is the one thats going to help you grow. (1).png"
+      "src": "/work/graphics/added-event-ai-graphics/social-affair-marfa-tickets.png",
+      "tags": [
+        "Event Flyer",
+        "Hospitality",
+        "Social Graphics"
+      ]
     },
     {
       "id": "graphics-premium-surfaces-statuario",
-      "title": "Premium Surfaces Social Graphic - Statuario",
+      "title": "Italic Surfaces Social Graphic: Statuario",
       "category": "graphics",
       "src": "/work/graphics/premium-surfaces-social/01_Statuario_social.png",
       "tags": [
@@ -237,19 +140,8 @@
       ]
     },
     {
-      "id": "graphics-premium-surfaces-arabescato-vagli",
-      "title": "Premium Surfaces Social Graphic - Arabescato Vagli",
-      "category": "graphics",
-      "src": "/work/graphics/premium-surfaces-social/02_ARABESCATO-VAGLI_social.png",
-      "tags": [
-        "Social Graphics",
-        "Product Marketing",
-        "Brand Design"
-      ]
-    },
-    {
       "id": "graphics-premium-surfaces-super-white",
-      "title": "Premium Surfaces Social Graphic - Super White",
+      "title": "Italic Surfaces Social Graphic: Super White",
       "category": "graphics",
       "src": "/work/graphics/premium-surfaces-social/03_Super_White_social.png",
       "tags": [
@@ -259,8 +151,63 @@
       ]
     },
     {
+      "id": "graphics-mayor-john-beau-hotel-fundraiser",
+      "title": "John Franklin Fundraiser Flyer",
+      "category": "graphics",
+      "src": "/work/graphics/added-event-ai-graphics/mayor-john-beau-hotel-fundraiser.png",
+      "tags": [
+        "Campaign Design",
+        "Event Flyer",
+        "Fundraising"
+      ]
+    },
+    {
+      "id": "graphics-same-ai-different-context",
+      "title": "AI Context Strategy Social Graphic",
+      "category": "graphics",
+      "src": "/work/graphics/added-event-ai-graphics/same-ai-different-context.png",
+      "tags": [
+        "AI Strategy",
+        "SEO/AEO",
+        "Social Graphics"
+      ]
+    },
+    {
+      "id": "graphics-jason-postcard-template",
+      "title": "Rental Property Seminar Postcard",
+      "category": "graphics",
+      "src": "/work/graphics/added-brand-marketing/jason-postcard-template.png",
+      "tags": [
+        "Postcard Design",
+        "Seminar Marketing",
+        "Direct Mail"
+      ]
+    },
+    {
+      "id": "graphics-sean-patrick-upcoming-shows",
+      "title": "Sean Patrick Show Schedule Graphic",
+      "category": "graphics",
+      "src": "/work/graphics/added-event-ai-graphics/sean-patrick-upcoming-shows.png",
+      "tags": [
+        "Music Marketing",
+        "Social Graphics",
+        "Event Promotion"
+      ]
+    },
+    {
+      "id": "graphics-premium-surfaces-arabescato-vagli",
+      "title": "Italic Surfaces Social Graphic: Arabescato Vagli",
+      "category": "graphics",
+      "src": "/work/graphics/premium-surfaces-social/02_ARABESCATO-VAGLI_social.png",
+      "tags": [
+        "Social Graphics",
+        "Product Marketing",
+        "Brand Design"
+      ]
+    },
+    {
       "id": "graphics-premium-surfaces-blanc-invictus",
-      "title": "Premium Surfaces Social Graphic - Blanc Invictus",
+      "title": "Italic Surfaces Social Graphic: Blanc Invictus",
       "category": "graphics",
       "src": "/work/graphics/premium-surfaces-social/04_Blanc_Invictus_social.png",
       "tags": [
@@ -271,7 +218,7 @@
     },
     {
       "id": "graphics-premium-surfaces-quartzite-cristallo",
-      "title": "Premium Surfaces Social Graphic - Quartzite Cristallo",
+      "title": "Italic Surfaces Social Graphic: Quartzite Cristallo",
       "category": "graphics",
       "src": "/work/graphics/premium-surfaces-social/05_Quartzite_Cristallo_social.png",
       "tags": [
@@ -282,7 +229,7 @@
     },
     {
       "id": "graphics-premium-surfaces-calacatta-macchia-vecchia",
-      "title": "Premium Surfaces Social Graphic - Calacatta Macchia Vecchia",
+      "title": "Italic Surfaces Social Graphic: Calacatta Macchia Vecchia",
       "category": "graphics",
       "src": "/work/graphics/premium-surfaces-social/06_Calacatta_Macchia_Vecchia_social.png",
       "tags": [
@@ -293,7 +240,7 @@
     },
     {
       "id": "graphics-premium-surfaces-calacatta-classic",
-      "title": "Premium Surfaces Social Graphic - Calacatta Classic",
+      "title": "Italic Surfaces Social Graphic: Calacatta Classic",
       "category": "graphics",
       "src": "/work/graphics/premium-surfaces-social/07_Calacatta_Classic_social.png",
       "tags": [
@@ -304,7 +251,7 @@
     },
     {
       "id": "graphics-premium-surfaces-patagonia-blue",
-      "title": "Premium Surfaces Social Graphic - Patagonia Blue",
+      "title": "Italic Surfaces Social Graphic: Patagonia Blue",
       "category": "graphics",
       "src": "/work/graphics/premium-surfaces-social/08_patagonia_blue_social.png",
       "tags": [
@@ -315,7 +262,7 @@
     },
     {
       "id": "graphics-premium-surfaces-brazilian-quartzite",
-      "title": "Premium Surfaces Social Graphic - Brazilian Quartzite",
+      "title": "Italic Surfaces Social Graphic: Brazilian Quartzite",
       "category": "graphics",
       "src": "/work/graphics/premium-surfaces-social/09_BRAZILIAN-QUARTZITE_social.png",
       "tags": [
@@ -326,7 +273,7 @@
     },
     {
       "id": "graphics-premium-surfaces-bianco-lasa-vena-oro",
-      "title": "Premium Surfaces Social Graphic - Bianco Lasa Vena Oro",
+      "title": "Italic Surfaces Social Graphic: Bianco Lasa Vena Oro",
       "category": "graphics",
       "src": "/work/graphics/premium-surfaces-social/10_Bianco_Lasa_Vena_Oro_social.png",
       "tags": [
@@ -337,7 +284,7 @@
     },
     {
       "id": "graphics-premium-surfaces-calacatta-oro",
-      "title": "Premium Surfaces Social Graphic - Calacatta Oro",
+      "title": "Italic Surfaces Social Graphic: Calacatta Oro",
       "category": "graphics",
       "src": "/work/graphics/premium-surfaces-social/11_Calacatta_Oro_social.png",
       "tags": [
@@ -345,6 +292,137 @@
         "Product Marketing",
         "Brand Design"
       ]
+    },
+    {
+      "id": "graphics-my-ruca-dinner-cruise",
+      "title": "My Ruca Dinner Cruise Menu",
+      "category": "graphics",
+      "src": "/work/graphics/added-event-ai-graphics/my-ruca-dinner-cruise.png",
+      "tags": [
+        "Menu Design",
+        "Event Marketing",
+        "Hospitality"
+      ]
+    },
+    {
+      "id": "graphics-8-strategies-flyer-w-disclosures.png",
+      "title": "1031 Strategy Comparison Flyer",
+      "category": "graphics",
+      "src": "/work/graphics/8 strategies flyer w disclosures.png"
+    },
+    {
+      "id": "graphics-1.png",
+      "title": "Active, Passive & Portfolio Income Explainer",
+      "category": "graphics",
+      "src": "/work/graphics/1.png"
+    },
+    {
+      "id": "graphics-2.png",
+      "title": "1031 Exchange Follow-Up Checklist",
+      "category": "graphics",
+      "src": "/work/graphics/2.png"
+    },
+    {
+      "id": "graphics-3.png",
+      "title": "Deferred Sales Trust vs. DST Education Graphic",
+      "category": "graphics",
+      "src": "/work/graphics/3.png"
+    },
+    {
+      "id": "graphics-4.png",
+      "title": "Property-to-REIT Exchange Explainer",
+      "category": "graphics",
+      "src": "/work/graphics/4.png"
+    },
+    {
+      "id": "graphics-Blue-And-Beige-Minimalist-Real-Estate-Expert-Realtor-Flyer.png",
+      "title": "Real Estate Agent Listing Flyer",
+      "category": "graphics",
+      "src": "/work/graphics/Blue And Beige Minimalist Real Estate Expert Realtor Flyer.png"
+    },
+    {
+      "id": "graphics-Casinonightflyer.png",
+      "title": "Casino Night Event Flyer",
+      "category": "graphics",
+      "src": "/work/graphics/Casinonightflyer.png"
+    },
+    {
+      "id": "graphics-Create-an-elegant,-striking-flyer-for-_The-Wedding-Affair_-on-October-16th,-6-PM....png",
+      "title": "Wedding Affair Event Flyer",
+      "category": "graphics",
+      "src": "/work/graphics/Create an elegant, striking flyer for _The Wedding Affair_ on October 16th, 6 PM....png"
+    },
+    {
+      "id": "graphics-Create-a-striking-and-elegant-event-flyer-for-_The-wedding-affair_-The-event-tak...-(1).png",
+      "title": "Wedding Affair Ticket Promotion",
+      "category": "graphics",
+      "src": "/work/graphics/Create a striking and elegant event flyer for _The wedding affair_ The event tak... (1).png"
+    },
+    {
+      "id": "graphics-Create-a-modern,-eye-catching-flyer-for-a-meet-and-greet-event-titled-_TRASH-BASH_-hosted-by-Nieuwenhuis-Disposal-Services.-Include-these-details-clearly___Date_-Saturday,-August-2nd-at-4_00-PM__Location_-1635-Mound-Road,-Delavan,-Wisconsin.jpg",
+      "title": "NDSES Trash Bash Event Flyer",
+      "category": "graphics",
+      "src": "/work/graphics/Create a modern, eye-catching flyer for a meet and greet event titled _TRASH BASH_ hosted by Nieuwenhuis Disposal Services. Include these details clearly___Date_ Saturday, August 2nd at 4_00 PM__Location_ 1635 Mound Road, Delavan, Wisconsin.jpg"
+    },
+    {
+      "id": "graphics-Coffee-Phone-Mock-Up-Instagram-Template.png",
+      "title": "Website Launch Social Graphic",
+      "category": "graphics",
+      "src": "/work/graphics/Coffee Phone Mock Up Instagram Template.png"
+    },
+    {
+      "id": "graphics-How-to-write-an-engaging-job-description.png",
+      "title": "Hiring Content Social Graphic",
+      "category": "graphics",
+      "src": "/work/graphics/How to write an engaging job description.png"
+    },
+    {
+      "id": "graphics-PeopleMVR-insta-work-for-us.png",
+      "title": "Recruiting Brand Social Graphic",
+      "category": "graphics",
+      "src": "/work/graphics/PeopleMVR insta work for us.png"
+    },
+    {
+      "id": "graphics-PEOPLEMVR1.png",
+      "title": "Career Motivation Social Graphic",
+      "category": "graphics",
+      "src": "/work/graphics/PEOPLEMVR1.png"
+    },
+    {
+      "id": "graphics-reminder-(1).png",
+      "title": "Consistency Reminder Social Graphic",
+      "category": "graphics",
+      "src": "/work/graphics/reminder (1).png"
+    },
+    {
+      "id": "graphics-Red-Modern-Tennis-Season-Flyer.png",
+      "title": "Tennis Season Promotional Flyer",
+      "category": "graphics",
+      "src": "/work/graphics/Red Modern Tennis Season Flyer.png"
+    },
+    {
+      "id": "graphics-Screenshot-2025-01-15-143127.png",
+      "title": "Rental Property Exchange Seminar Graphic",
+      "category": "graphics",
+      "src": "/work/graphics/Screenshot 2025-01-15 143127.png"
+    },
+    {
+      "id": "graphics-Reasons-to-hire.png",
+      "title": "Virtual Assistant Benefits Graphic",
+      "category": "graphics",
+      "src": "/work/graphics/Reasons to hire.png"
+    },
+    {
+      "id": "graphics-Recruiting-Process-Outsourcing.png",
+      "title": "Recruiting Process Outsourcing Graphic",
+      "category": "graphics",
+      "src": "/work/graphics/Recruiting Process Outsourcing.png"
+    },
+    {
+      "id": "graphics-Always-go-with-the-choice-that-scares-you-the-most,-because-that-is-the-one-thats-going-to-help-you-grow.-(1).png",
+      "title": "Growth Mindset Quote Graphic",
+      "category": "graphics",
+      "src": "/work/graphics/Always go with the choice that scares you the most, because that is the one thats going to help you grow. (1).png"
     },
     {
       "id": "graphics-spl-acoustics-2026-03-07",
@@ -402,56 +480,6 @@
       ]
     },
     {
-      "id": "graphics-mayor-john-brand-asset-1",
-      "title": "Mayor John Campaign Brand Asset 1",
-      "category": "graphics",
-      "src": "/work/graphics/mayor-john-series/1.png",
-      "tags": [
-        "Campaign Design",
-        "Brand Asset"
-      ]
-    },
-    {
-      "id": "graphics-mayor-john-brand-asset-2",
-      "title": "Mayor John Campaign Brand Asset 2",
-      "category": "graphics",
-      "src": "/work/graphics/mayor-john-series/2.png",
-      "tags": [
-        "Campaign Design",
-        "Brand Asset"
-      ]
-    },
-    {
-      "id": "graphics-mayor-john-brand-asset-3",
-      "title": "Mayor John Campaign Brand Asset 3",
-      "category": "graphics",
-      "src": "/work/graphics/mayor-john-series/3.png",
-      "tags": [
-        "Campaign Design",
-        "Brand Asset"
-      ]
-    },
-    {
-      "id": "graphics-mayor-john-brand-asset-4",
-      "title": "Mayor John Campaign Brand Asset 4",
-      "category": "graphics",
-      "src": "/work/graphics/mayor-john-series/4.png",
-      "tags": [
-        "Campaign Design",
-        "Brand Asset"
-      ]
-    },
-    {
-      "id": "graphics-mayor-john-brand-asset-5",
-      "title": "Mayor John Campaign Brand Asset 5",
-      "category": "graphics",
-      "src": "/work/graphics/mayor-john-series/5.png",
-      "tags": [
-        "Campaign Design",
-        "Brand Asset"
-      ]
-    },
-    {
       "id": "graphics-conservative-leader-fact-sheet-1",
       "title": "Conservative Leader Fact Sheet - Page 1",
       "category": "graphics",
@@ -496,630 +524,14 @@
       ]
     },
     {
-      "id": "graphics-same-ai-different-context",
-      "title": "SEO + AEO Agent Comparison Graphic",
-      "category": "graphics",
-      "src": "/work/graphics/added-event-ai-graphics/same-ai-different-context.png",
-      "tags": [
-        "AI Strategy",
-        "SEO/AEO",
-        "Social Graphics"
-      ]
-    },
-    {
-      "id": "graphics-my-ruca-dinner-cruise",
-      "title": "My Ruca Sunset Dinner Cruise Menu",
-      "category": "graphics",
-      "src": "/work/graphics/added-event-ai-graphics/my-ruca-dinner-cruise.png",
-      "tags": [
-        "Menu Design",
-        "Event Marketing",
-        "Hospitality"
-      ]
-    },
-    {
-      "id": "graphics-social-affair-marfa",
-      "title": "The Social Affair Marfa Ticket Flyer",
-      "category": "graphics",
-      "src": "/work/graphics/added-event-ai-graphics/social-affair-marfa-tickets.png",
-      "tags": [
-        "Event Flyer",
-        "Hospitality",
-        "Social Graphics"
-      ]
-    },
-    {
-      "id": "graphics-mayor-john-beau-hotel-fundraiser",
-      "title": "Mayor John Beau Hotel Fundraiser Flyer",
-      "category": "graphics",
-      "src": "/work/graphics/added-event-ai-graphics/mayor-john-beau-hotel-fundraiser.png",
-      "tags": [
-        "Campaign Design",
-        "Event Flyer",
-        "Fundraising"
-      ]
-    },
-    {
-      "id": "graphics-sean-patrick-upcoming-shows",
-      "title": "Sean Patrick Upcoming Shows Graphic",
-      "category": "graphics",
-      "src": "/work/graphics/added-event-ai-graphics/sean-patrick-upcoming-shows.png",
-      "tags": [
-        "Music Marketing",
-        "Social Graphics",
-        "Event Promotion"
-      ]
-    },
-    {
-      "id": "graphics-marketing-agency-portrait-template-01",
-      "title": "Marketing Agency Portrait Template - Page 1",
-      "category": "graphics",
-      "src": "/work/graphics/marketing-agency-portrait-template/1.png",
-      "tags": [
-        "Agency Marketing",
-        "Portrait Template",
-        "Brand Design"
-      ]
-    },
-    {
-      "id": "graphics-marketing-agency-portrait-template-02",
-      "title": "Marketing Agency Portrait Template - Page 2",
-      "category": "graphics",
-      "src": "/work/graphics/marketing-agency-portrait-template/2.png",
-      "tags": [
-        "Agency Marketing",
-        "Portrait Template",
-        "Brand Design"
-      ]
-    },
-    {
-      "id": "graphics-marketing-agency-portrait-template-03",
-      "title": "Marketing Agency Portrait Template - Page 3",
-      "category": "graphics",
-      "src": "/work/graphics/marketing-agency-portrait-template/3.png",
-      "tags": [
-        "Agency Marketing",
-        "Portrait Template",
-        "Brand Design"
-      ]
-    },
-    {
-      "id": "graphics-marketing-agency-portrait-template-04",
-      "title": "Marketing Agency Portrait Template - Page 4",
-      "category": "graphics",
-      "src": "/work/graphics/marketing-agency-portrait-template/4.png",
-      "tags": [
-        "Agency Marketing",
-        "Portrait Template",
-        "Brand Design"
-      ]
-    },
-    {
-      "id": "graphics-marketing-agency-portrait-template-05",
-      "title": "Marketing Agency Portrait Template - Page 5",
-      "category": "graphics",
-      "src": "/work/graphics/marketing-agency-portrait-template/5.png",
-      "tags": [
-        "Agency Marketing",
-        "Portrait Template",
-        "Brand Design"
-      ]
-    },
-    {
-      "id": "graphics-marketing-agency-portrait-template-06",
-      "title": "Marketing Agency Portrait Template - Page 6",
-      "category": "graphics",
-      "src": "/work/graphics/marketing-agency-portrait-template/6.png",
-      "tags": [
-        "Agency Marketing",
-        "Portrait Template",
-        "Brand Design"
-      ]
-    },
-    {
-      "id": "graphics-marketing-agency-portrait-template-07",
-      "title": "Marketing Agency Portrait Template - Page 7",
-      "category": "graphics",
-      "src": "/work/graphics/marketing-agency-portrait-template/7.png",
-      "tags": [
-        "Agency Marketing",
-        "Portrait Template",
-        "Brand Design"
-      ]
-    },
-    {
-      "id": "graphics-marketing-agency-portrait-template-08",
-      "title": "Marketing Agency Portrait Template - Page 8",
-      "category": "graphics",
-      "src": "/work/graphics/marketing-agency-portrait-template/8.png",
-      "tags": [
-        "Agency Marketing",
-        "Portrait Template",
-        "Brand Design"
-      ]
-    },
-    {
-      "id": "graphics-marketing-agency-portrait-template-09",
-      "title": "Marketing Agency Portrait Template - Page 9",
-      "category": "graphics",
-      "src": "/work/graphics/marketing-agency-portrait-template/9.png",
-      "tags": [
-        "Agency Marketing",
-        "Portrait Template",
-        "Brand Design"
-      ]
-    },
-    {
-      "id": "graphics-marketing-agency-portrait-template-10",
-      "title": "Marketing Agency Portrait Template - Page 10",
-      "category": "graphics",
-      "src": "/work/graphics/marketing-agency-portrait-template/10.png",
-      "tags": [
-        "Agency Marketing",
-        "Portrait Template",
-        "Brand Design"
-      ]
-    },
-    {
-      "id": "graphics-marketing-agency-portrait-template-11",
-      "title": "Marketing Agency Portrait Template - Page 11",
-      "category": "graphics",
-      "src": "/work/graphics/marketing-agency-portrait-template/11.png",
-      "tags": [
-        "Agency Marketing",
-        "Portrait Template",
-        "Brand Design"
-      ]
-    },
-    {
-      "id": "graphics-marketing-agency-portrait-template-12",
-      "title": "Marketing Agency Portrait Template - Page 12",
-      "category": "graphics",
-      "src": "/work/graphics/marketing-agency-portrait-template/12.png",
-      "tags": [
-        "Agency Marketing",
-        "Portrait Template",
-        "Brand Design"
-      ]
-    },
-    {
-      "id": "graphics-marketing-agency-portrait-template-13",
-      "title": "Marketing Agency Portrait Template - Page 13",
-      "category": "graphics",
-      "src": "/work/graphics/marketing-agency-portrait-template/13.png",
-      "tags": [
-        "Agency Marketing",
-        "Portrait Template",
-        "Brand Design"
-      ]
-    },
-    {
-      "id": "graphics-marketing-agency-portrait-template-14",
-      "title": "Marketing Agency Portrait Template - Page 14",
-      "category": "graphics",
-      "src": "/work/graphics/marketing-agency-portrait-template/14.png",
-      "tags": [
-        "Agency Marketing",
-        "Portrait Template",
-        "Brand Design"
-      ]
-    },
-    {
-      "id": "graphics-marketing-agency-portrait-template-15",
-      "title": "Marketing Agency Portrait Template - Page 15",
-      "category": "graphics",
-      "src": "/work/graphics/marketing-agency-portrait-template/15.png",
-      "tags": [
-        "Agency Marketing",
-        "Portrait Template",
-        "Brand Design"
-      ]
-    },
-    {
-      "id": "graphics-marketing-agency-portrait-template-16",
-      "title": "Marketing Agency Portrait Template - Page 16",
-      "category": "graphics",
-      "src": "/work/graphics/marketing-agency-portrait-template/16.png",
-      "tags": [
-        "Agency Marketing",
-        "Portrait Template",
-        "Brand Design"
-      ]
-    },
-    {
-      "id": "graphics-marketing-agency-portrait-template-17",
-      "title": "Marketing Agency Portrait Template - Page 17",
-      "category": "graphics",
-      "src": "/work/graphics/marketing-agency-portrait-template/17.png",
-      "tags": [
-        "Agency Marketing",
-        "Portrait Template",
-        "Brand Design"
-      ]
-    },
-    {
-      "id": "graphics-marketing-agency-portrait-template-18",
-      "title": "Marketing Agency Portrait Template - Page 18",
-      "category": "graphics",
-      "src": "/work/graphics/marketing-agency-portrait-template/18.png",
-      "tags": [
-        "Agency Marketing",
-        "Portrait Template",
-        "Brand Design"
-      ]
-    },
-    {
-      "id": "graphics-marketing-agency-portrait-template-19",
-      "title": "Marketing Agency Portrait Template - Page 19",
-      "category": "graphics",
-      "src": "/work/graphics/marketing-agency-portrait-template/19.png",
-      "tags": [
-        "Agency Marketing",
-        "Portrait Template",
-        "Brand Design"
-      ]
-    },
-    {
-      "id": "graphics-marketing-agency-portrait-template-20",
-      "title": "Marketing Agency Portrait Template - Page 20",
-      "category": "graphics",
-      "src": "/work/graphics/marketing-agency-portrait-template/20.png",
-      "tags": [
-        "Agency Marketing",
-        "Portrait Template",
-        "Brand Design"
-      ]
-    },
-    {
-      "id": "graphics-marketing-agency-portrait-template-21",
-      "title": "Marketing Agency Portrait Template - Page 21",
-      "category": "graphics",
-      "src": "/work/graphics/marketing-agency-portrait-template/21.png",
-      "tags": [
-        "Agency Marketing",
-        "Portrait Template",
-        "Brand Design"
-      ]
-    },
-    {
-      "id": "graphics-marketing-agency-portrait-template-22",
-      "title": "Marketing Agency Portrait Template - Page 22",
-      "category": "graphics",
-      "src": "/work/graphics/marketing-agency-portrait-template/22.png",
-      "tags": [
-        "Agency Marketing",
-        "Portrait Template",
-        "Brand Design"
-      ]
-    },
-    {
-      "id": "graphics-marketing-agency-portrait-template-23",
-      "title": "Marketing Agency Portrait Template - Page 23",
-      "category": "graphics",
-      "src": "/work/graphics/marketing-agency-portrait-template/23.png",
-      "tags": [
-        "Agency Marketing",
-        "Portrait Template",
-        "Brand Design"
-      ]
-    },
-    {
-      "id": "graphics-marketing-agency-portrait-template-24",
-      "title": "Marketing Agency Portrait Template - Page 24",
-      "category": "graphics",
-      "src": "/work/graphics/marketing-agency-portrait-template/24.png",
-      "tags": [
-        "Agency Marketing",
-        "Portrait Template",
-        "Brand Design"
-      ]
-    },
-    {
-      "id": "graphics-marketing-agency-portrait-template-25",
-      "title": "Marketing Agency Portrait Template - Page 25",
-      "category": "graphics",
-      "src": "/work/graphics/marketing-agency-portrait-template/25.png",
-      "tags": [
-        "Agency Marketing",
-        "Portrait Template",
-        "Brand Design"
-      ]
-    },
-    {
-      "id": "graphics-marketing-agency-portrait-template-26",
-      "title": "Marketing Agency Portrait Template - Page 26",
-      "category": "graphics",
-      "src": "/work/graphics/marketing-agency-portrait-template/26.png",
-      "tags": [
-        "Agency Marketing",
-        "Portrait Template",
-        "Brand Design"
-      ]
-    },
-    {
-      "id": "graphics-marketing-agency-portrait-template-27",
-      "title": "Marketing Agency Portrait Template - Page 27",
-      "category": "graphics",
-      "src": "/work/graphics/marketing-agency-portrait-template/27.png",
-      "tags": [
-        "Agency Marketing",
-        "Portrait Template",
-        "Brand Design"
-      ]
-    },
-    {
-      "id": "graphics-marketing-agency-portrait-template-28",
-      "title": "Marketing Agency Portrait Template - Page 28",
-      "category": "graphics",
-      "src": "/work/graphics/marketing-agency-portrait-template/28.png",
-      "tags": [
-        "Agency Marketing",
-        "Portrait Template",
-        "Brand Design"
-      ]
-    },
-    {
-      "id": "graphics-marketing-agency-portrait-template-29",
-      "title": "Marketing Agency Portrait Template - Page 29",
-      "category": "graphics",
-      "src": "/work/graphics/marketing-agency-portrait-template/29.png",
-      "tags": [
-        "Agency Marketing",
-        "Portrait Template",
-        "Brand Design"
-      ]
-    },
-    {
-      "id": "graphics-marketing-agency-portrait-template-30",
-      "title": "Marketing Agency Portrait Template - Page 30",
-      "category": "graphics",
-      "src": "/work/graphics/marketing-agency-portrait-template/30.png",
-      "tags": [
-        "Agency Marketing",
-        "Portrait Template",
-        "Brand Design"
-      ]
-    },
-    {
-      "id": "graphics-marketing-agency-portrait-template-31",
-      "title": "Marketing Agency Portrait Template - Page 31",
-      "category": "graphics",
-      "src": "/work/graphics/marketing-agency-portrait-template/31.png",
-      "tags": [
-        "Agency Marketing",
-        "Portrait Template",
-        "Brand Design"
-      ]
-    },
-    {
-      "id": "graphics-marketing-agency-portrait-template-32",
-      "title": "Marketing Agency Portrait Template - Page 32",
-      "category": "graphics",
-      "src": "/work/graphics/marketing-agency-portrait-template/32.png",
-      "tags": [
-        "Agency Marketing",
-        "Portrait Template",
-        "Brand Design"
-      ]
-    },
-    {
-      "id": "graphics-marketing-agency-portrait-template-33",
-      "title": "Marketing Agency Portrait Template - Page 33",
-      "category": "graphics",
-      "src": "/work/graphics/marketing-agency-portrait-template/33.png",
-      "tags": [
-        "Agency Marketing",
-        "Portrait Template",
-        "Brand Design"
-      ]
-    },
-    {
-      "id": "graphics-marketing-agency-portrait-template-34",
-      "title": "Marketing Agency Portrait Template - Page 34",
-      "category": "graphics",
-      "src": "/work/graphics/marketing-agency-portrait-template/34.png",
-      "tags": [
-        "Agency Marketing",
-        "Portrait Template",
-        "Brand Design"
-      ]
-    },
-    {
-      "id": "graphics-marketing-agency-portrait-template-35",
-      "title": "Marketing Agency Portrait Template - Page 35",
-      "category": "graphics",
-      "src": "/work/graphics/marketing-agency-portrait-template/35.png",
-      "tags": [
-        "Agency Marketing",
-        "Portrait Template",
-        "Brand Design"
-      ]
-    },
-    {
-      "id": "graphics-marketing-agency-portrait-template-36",
-      "title": "Marketing Agency Portrait Template - Page 36",
-      "category": "graphics",
-      "src": "/work/graphics/marketing-agency-portrait-template/36.png",
-      "tags": [
-        "Agency Marketing",
-        "Portrait Template",
-        "Brand Design"
-      ]
-    },
-    {
-      "id": "graphics-marketing-agency-portrait-template-37",
-      "title": "Marketing Agency Portrait Template - Page 37",
-      "category": "graphics",
-      "src": "/work/graphics/marketing-agency-portrait-template/37.png",
-      "tags": [
-        "Agency Marketing",
-        "Portrait Template",
-        "Brand Design"
-      ]
-    },
-    {
-      "id": "graphics-marketing-agency-portrait-template-38",
-      "title": "Marketing Agency Portrait Template - Page 38",
-      "category": "graphics",
-      "src": "/work/graphics/marketing-agency-portrait-template/38.png",
-      "tags": [
-        "Agency Marketing",
-        "Portrait Template",
-        "Brand Design"
-      ]
-    },
-    {
-      "id": "graphics-marketing-agency-portrait-template-39",
-      "title": "Marketing Agency Portrait Template - Page 39",
-      "category": "graphics",
-      "src": "/work/graphics/marketing-agency-portrait-template/39.png",
-      "tags": [
-        "Agency Marketing",
-        "Portrait Template",
-        "Brand Design"
-      ]
-    },
-    {
-      "id": "graphics-marketing-agency-portrait-template-40",
-      "title": "Marketing Agency Portrait Template - Page 40",
-      "category": "graphics",
-      "src": "/work/graphics/marketing-agency-portrait-template/40.png",
-      "tags": [
-        "Agency Marketing",
-        "Portrait Template",
-        "Brand Design"
-      ]
-    },
-    {
-      "id": "graphics-marketing-agency-portrait-template-41",
-      "title": "Marketing Agency Portrait Template - Page 41",
-      "category": "graphics",
-      "src": "/work/graphics/marketing-agency-portrait-template/41.png",
-      "tags": [
-        "Agency Marketing",
-        "Portrait Template",
-        "Brand Design"
-      ]
-    },
-    {
-      "id": "graphics-marketing-agency-portrait-template-42",
-      "title": "Marketing Agency Portrait Template - Page 42",
-      "category": "graphics",
-      "src": "/work/graphics/marketing-agency-portrait-template/42.png",
-      "tags": [
-        "Agency Marketing",
-        "Portrait Template",
-        "Brand Design"
-      ]
-    },
-    {
-      "id": "graphics-marketing-agency-portrait-template-43",
-      "title": "Marketing Agency Portrait Template - Page 43",
-      "category": "graphics",
-      "src": "/work/graphics/marketing-agency-portrait-template/43.png",
-      "tags": [
-        "Agency Marketing",
-        "Portrait Template",
-        "Brand Design"
-      ]
-    },
-    {
-      "id": "graphics-marketing-agency-portrait-template-44",
-      "title": "Marketing Agency Portrait Template - Page 44",
-      "category": "graphics",
-      "src": "/work/graphics/marketing-agency-portrait-template/44.png",
-      "tags": [
-        "Agency Marketing",
-        "Portrait Template",
-        "Brand Design"
-      ]
-    },
-    {
-      "id": "graphics-marketing-agency-portrait-template-45",
-      "title": "Marketing Agency Portrait Template - Page 45",
-      "category": "graphics",
-      "src": "/work/graphics/marketing-agency-portrait-template/45.png",
-      "tags": [
-        "Agency Marketing",
-        "Portrait Template",
-        "Brand Design"
-      ]
-    },
-    {
-      "id": "graphics-marketing-agency-portrait-template-46",
-      "title": "Marketing Agency Portrait Template - Page 46",
-      "category": "graphics",
-      "src": "/work/graphics/marketing-agency-portrait-template/46.png",
-      "tags": [
-        "Agency Marketing",
-        "Portrait Template",
-        "Brand Design"
-      ]
-    },
-    {
-      "id": "graphics-marketing-agency-portrait-template-47",
-      "title": "Marketing Agency Portrait Template - Page 47",
-      "category": "graphics",
-      "src": "/work/graphics/marketing-agency-portrait-template/47.png",
-      "tags": [
-        "Agency Marketing",
-        "Portrait Template",
-        "Brand Design"
-      ]
-    },
-    {
-      "id": "graphics-marketing-agency-portrait-template-48",
-      "title": "Marketing Agency Portrait Template - Page 48",
-      "category": "graphics",
-      "src": "/work/graphics/marketing-agency-portrait-template/48.png",
-      "tags": [
-        "Agency Marketing",
-        "Portrait Template",
-        "Brand Design"
-      ]
-    },
-    {
-      "id": "graphics-marketing-agency-portrait-template-49",
-      "title": "Marketing Agency Portrait Template - Page 49",
-      "category": "graphics",
-      "src": "/work/graphics/marketing-agency-portrait-template/49.png",
-      "tags": [
-        "Agency Marketing",
-        "Portrait Template",
-        "Brand Design"
-      ]
-    },
-    {
-      "id": "graphics-marketing-agency-portrait-template-50",
-      "title": "Marketing Agency Portrait Template - Page 50",
-      "category": "graphics",
-      "src": "/work/graphics/marketing-agency-portrait-template/50.png",
-      "tags": [
-        "Agency Marketing",
-        "Portrait Template",
-        "Brand Design"
-      ]
-    },
-    {
       "id": "graphics-meet-your-marketer",
-      "title": "Meet Your Marketer Personal Brand Graphic",
+      "title": "Personal Brand Introduction Graphic",
       "category": "graphics",
       "src": "/work/graphics/added-brand-marketing/meet-your-marketer.png",
       "tags": [
         "Personal Brand",
         "Social Graphics",
         "Marketing"
-      ]
-    },
-    {
-      "id": "graphics-jason-postcard-template",
-      "title": "Real Estate Seminar Postcard Template",
-      "category": "graphics",
-      "src": "/work/graphics/added-brand-marketing/jason-postcard-template.png",
-      "tags": [
-        "Postcard Design",
-        "Seminar Marketing",
-        "Direct Mail"
       ]
     },
     {
@@ -1291,6 +703,56 @@
       "src": "/work/photos/dsc00359.jpg"
     },
     {
+      "id": "graphics-mayor-john-brand-asset-1",
+      "title": "John Franklin Campaign Logo",
+      "category": "client logos",
+      "src": "/work/graphics/mayor-john-series/1.png",
+      "tags": [
+        "Campaign Logo",
+        "Brand Asset"
+      ]
+    },
+    {
+      "id": "graphics-mayor-john-brand-asset-2",
+      "title": "John Franklin Campaign Wordmark",
+      "category": "client logos",
+      "src": "/work/graphics/mayor-john-series/2.png",
+      "tags": [
+        "Campaign Logo",
+        "Brand Asset"
+      ]
+    },
+    {
+      "id": "graphics-mayor-john-brand-asset-3",
+      "title": "John Franklin Campaign Seal",
+      "category": "client logos",
+      "src": "/work/graphics/mayor-john-series/3.png",
+      "tags": [
+        "Campaign Logo",
+        "Brand Asset"
+      ]
+    },
+    {
+      "id": "graphics-mayor-john-brand-asset-4",
+      "title": "California Families Campaign Logo",
+      "category": "client logos",
+      "src": "/work/graphics/mayor-john-series/4.png",
+      "tags": [
+        "Campaign Logo",
+        "Brand Asset"
+      ]
+    },
+    {
+      "id": "graphics-mayor-john-brand-asset-5",
+      "title": "John Franklin Campaign Support Mark",
+      "category": "client logos",
+      "src": "/work/graphics/mayor-john-series/5.png",
+      "tags": [
+        "Campaign Logo",
+        "Brand Asset"
+      ]
+    },
+    {
       "id": "client-logos-gg-square-logo",
       "title": "GG Digital Marketing Agency Logo",
       "category": "client logos",
@@ -1366,18 +828,6 @@
       "title": "West Coast Chiropractic Center",
       "category": "client logos",
       "src": "/work/client logos/normalized/client-logos-West-Coast-Chiropractic-Center-webp.png"
-    },
-    {
-      "id": "websites-1031-capital-solutions-team.png",
-      "title": "1031 Capital Solutions - About & Team",
-      "category": "websites",
-      "src": "/work/websites/1031-capital-solutions-team.png",
-      "tags": [
-        "Website",
-        "Financial Services",
-        "Lead Gen"
-      ],
-      "link": "https://1031capitalsolutions.com"
     }
   ]
 }

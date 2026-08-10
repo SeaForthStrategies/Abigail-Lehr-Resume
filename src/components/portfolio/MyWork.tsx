@@ -113,7 +113,7 @@ function LogoSampleCard({ item, label }: { item: WorkItem; label: (category: str
                 <img
                   src={encodeURI(item.thumb ?? item.src)}
                   alt={item.title}
-                  className={`${getLogoSizingClass(item)} w-auto h-auto object-contain`}
+                  className={`w-auto h-auto object-contain ${getLogoSizingClass(item)}`}
                   loading="lazy"
                   decoding="async"
                 />
@@ -143,9 +143,17 @@ function getLogoSizingClass(item: WorkItem) {
     "client-logos-Toothpicks-Catering.jpg",
     "client-logos-My-Ruca.png",
   ]);
+  const smallWideLogoIds = new Set([
+    "graphics-mayor-john-brand-asset-1",
+    "graphics-mayor-john-brand-asset-2",
+    "graphics-mayor-john-brand-asset-3",
+    "graphics-mayor-john-brand-asset-4",
+    "graphics-mayor-john-brand-asset-5",
+  ]);
 
   if (compactMarkIds.has(item.id)) return "max-w-[120px] max-h-[112px]";
   if (mediumLogoIds.has(item.id)) return "max-w-[164px] max-h-[104px]";
+  if (smallWideLogoIds.has(item.id)) return "w-[230px] max-w-[78%] max-h-[84px]";
   return "max-w-[230px] max-h-[84px]";
 }
 
