@@ -11,14 +11,14 @@ const EXPERTISE_CATEGORIES = [
   },
   {
     icon: <Code2 className="w-5 h-5" />,
-    title: "Software & Web",
-    description: "Full-stack product builds, websites, and launch workflows.",
+    title: "Web & Product Builds",
+    description: "Websites, product builds, integrations, and launch workflows.",
     skills: ["Python", "HTML", "CSS", "JavaScript", "React", "Next.js", "Tailwind CSS", "WordPress", "Vercel", "Netlify", "Git", "GitHub"],
   },
   {
     icon: <BarChart3 className="w-5 h-5" />,
-    title: "Growth Marketing",
-    description: "Strategy, funnels, lifecycle, paid media, and conversion.",
+    title: "Growth Engineering",
+    description: "GTM, funnels, lifecycle, paid media, conversion, and measurement.",
     skills: ["Growth Strategy", "GTM Execution", "Acquisition Funnels", "CRO", "Lifecycle Marketing", "Paid Media", "Performance Media", "SEO/AEO"],
   },
   {
@@ -29,8 +29,8 @@ const EXPERTISE_CATEGORIES = [
   },
   {
     icon: <Workflow className="w-5 h-5" />,
-    title: "Operations",
-    description: "CRM, automation, reporting, and repeatable systems.",
+    title: "Automation & Operations",
+    description: "CRM, automation, reporting, AI workflows, and repeatable systems.",
     skills: ["CRM Strategy", "Marketing Automation", "Airtable", "HubSpot", "Mailchimp", "GA4", "Funnel Analysis", "A/B Testing"],
   },
   {
@@ -48,7 +48,7 @@ const Services = () => {
         <motion.div className="mb-16" initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
           <h2 className="font-display text-3xl font-bold text-white mb-4">Expertise & Skills</h2>
           <p className="text-zinc-400 max-w-2xl">
-            A practical mix of marketing, software, analytics, automation, and content work.
+            A practical marketing engineering stack: growth strategy, web builds, analytics, automation, content, events, and systems that ship.
           </p>
         </motion.div>
 

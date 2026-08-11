@@ -27,7 +27,7 @@ export const EXPERIENCE_ROLES: ExperienceRole[] = [
     location: "Carlsbad, CA",
     period: "March 2026 - Present",
     periodShort: "2026 - Present",
-    intro: "Social media strategy and day-to-day media management for brand accounts and growth initiatives.",
+    intro: "Media, content, and growth support across brand accounts and digital initiatives.",
     bullets: [
       "Lead content planning, publishing, and community engagement across brand social accounts",
       "Keep media output consistent across multiple properties while supporting audience growth",
@@ -35,12 +35,12 @@ export const EXPERIENCE_ROLES: ExperienceRole[] = [
     ],
   },
   {
-    title: "Co-Founder & Software Engineer",
+    title: "Co-Founder & Marketing Engineer",
     company: "SeaForth Strategies",
     location: "California (Remote)",
     period: "March 2020 - Present",
     periodShort: "2020 - Present",
-    intro: "Building digital products and the brands, funnels, and growth systems behind them.",
+    intro: "Building digital products and the brands, funnels, automation, and growth systems behind them.",
     bullets: [
       "Lead product development and growth work from concept through launch",
       "Build and ship full-stack digital products while shaping brand, UX, content, and go-to-market strategy",
@@ -49,12 +49,12 @@ export const EXPERIENCE_ROLES: ExperienceRole[] = [
     ],
   },
   {
-    title: "Software & Digital Marketing Lead (Campaign)",
+    title: "Marketing Engineer Lead (Campaign)",
     company: "John Franklin for Supervisor 2026",
     location: "San Diego, CA",
     period: "October 2025 - April 2026",
     periodShort: "2025 - 2026",
-    intro: "Six-month campaign contract covering web, social, events, and digital communications.",
+    intro: "Six-month campaign contract covering web development, digital marketing, social, events, analytics, and outreach.",
     bullets: [
       "Led digital outreach that contributed to a 47% increase in online voter engagement",
       "Designed, developed, and optimized the campaign website, scaling traffic to 25,000 monthly visitors with an 8% conversion rate",

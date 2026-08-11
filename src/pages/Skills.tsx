@@ -8,7 +8,7 @@ const Skills = () => (
   <div className="min-h-screen bg-background relative overflow-x-hidden">
     <PageMeta
       title="Stack"
-      description="Growth strategy, web development, analytics, automation, content, events, and communication tools."
+      description="Marketing engineering stack across growth strategy, GTM, web development, analytics, automation, SEO/AEO, AI workflows, content, and events."
     />
     <Navbar />
     <main id="main-content" className="pt-20">

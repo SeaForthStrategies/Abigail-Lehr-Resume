@@ -11,7 +11,7 @@ const Portfolio = () => {
 
   return (
     <div className="min-h-screen bg-background overflow-x-hidden">
-      <PageMeta title="Builds" description="Selected builds and systems across software, AI, growth, SEO/AEO, analytics, and product strategy." />
+      <PageMeta title="Builds" description="Selected marketing engineering builds across web, GTM, SEO/AEO, analytics, automation, AI workflows, and growth systems." />
       <Navbar />
       <main id="main-content" className="pt-20">
         {/* Page header with tab switcher */}
@@ -20,7 +20,7 @@ const Portfolio = () => {
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 py-5">
               <div>
                 <p className="text-cyan-400/80 text-xs font-medium uppercase tracking-wider mb-0.5">Work</p>
-                <h1 className="text-xl md:text-2xl font-bold text-white">Digital products and growth systems</h1>
+                <h1 className="text-xl md:text-2xl font-bold text-white">Marketing engineering builds</h1>
               </div>
               <div className="flex gap-1 p-1 rounded-xl bg-zinc-900/60 border border-zinc-800/80 w-fit shrink-0">
                 <button

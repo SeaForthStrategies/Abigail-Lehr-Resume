@@ -48,12 +48,12 @@ const About = () => {
         >
           <div className="min-w-0">
             <p className="text-cyan-400/80 text-sm font-medium uppercase tracking-wider mb-2">About</p>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-white mb-4">Marketing, product, and shipped work</h2>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-white mb-4">Marketing engineer for growth systems</h2>
             <p className="text-zinc-400 max-w-2xl text-lg mb-2">
-              I am a full-stack marketer and AI software engineer with experience turning strategy into live campaigns, websites, automations, and measurable growth systems.
+              I work across growth strategy, GTM, brand, content, SEO/AEO, analytics, automation, AI workflows, and full-stack digital builds.
             </p>
             <p className="text-zinc-500 text-sm">
-              <strong className="text-zinc-400">Plain version:</strong> I plan the work, build the assets, ship the site, watch the data, and keep improving what performs.
+              <strong className="text-zinc-400">Plain version:</strong> I plan the system, build the assets and web experience, connect the data, and keep improving what performs.
             </p>
           </div>
         </motion.div>

@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const HERO_LINE =
-  "I turn messy goals into clean websites, AI workflows, analytics, content systems, and growth infrastructure that people can actually use.";
+  "I connect growth strategy, web builds, SEO/AEO, analytics, automation, and AI workflows into systems that ship and improve.";
 
 const systemSteps = [
   "strategy.input",
@@ -98,7 +98,7 @@ const Hero = () => {
               className="mb-6 inline-flex items-center gap-2 rounded-full border border-cyan-400/20 bg-cyan-400/10 px-3 py-1.5 text-sm font-medium text-cyan-200"
             >
               <Radio className="h-4 w-4" />
-              Abigail Lehr / builder mode
+              Abigail Lehr / Marketing Engineer
             </motion.div>
 
             <motion.h1

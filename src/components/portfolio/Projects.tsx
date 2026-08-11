@@ -29,8 +29,8 @@ const PROJECTS: Project[] = [
     title: "NDSES Website Platform",
     status: "Production",
     period: "2026",
-    summary: "A full-stack web and business-systems platform using a custom Next.js frontend with WordPress/ACF as the CMS.",
-    group: "Software & AI",
+    summary: "A marketing engineering platform connecting a custom Next.js frontend, WordPress/ACF CMS, SEO/AEO structure, analytics, and lead-generation UX.",
+    group: "Marketing Engineering",
     categories: ["Software", "Web Development", "SEO/AEO", "Analytics", "Marketing Technology"],
     challenge: "The project needed to work as more than a redesign: it had to support service-area structure, CMS usability, lead generation, technical SEO, analytics, deployment, and future payment integration.",
     role: "Worked across requirements translation, technical architecture, frontend development, CMS structure, SEO/AEO planning, analytics, QA, hosting/staging decisions, and PayEngine integration planning.",
@@ -80,7 +80,7 @@ const PROJECTS: Project[] = [
     status: "Production",
     period: "2026",
     summary: "A Next.js-powered time-tracking system with automated hour calculations, bot-protected authentication, and email distribution workflows.",
-    group: "Software & AI",
+    group: "Marketing Engineering",
     categories: ["Software", "Product", "Web Development"],
     challenge: "The product needed to make time entry and hour visibility simple while protecting access and reducing manual calculation work.",
     role: "Built a minimalist web application around task-level transparency, automated hour calculations, authentication, and email distribution.",
@@ -105,7 +105,7 @@ const PROJECTS: Project[] = [
     status: "Experiment",
     period: "2026",
     summary: "A lightweight getting-started project for an analytics API concept that explains why product metrics changed in plain language.",
-    group: "Software & AI",
+    group: "Marketing Engineering",
     categories: ["Software", "AI", "Analytics", "Product"],
     challenge: "Product teams often wait on dashboards or data support to understand why metrics moved. This concept explores a simpler API-driven explanation layer.",
     role: "Created a public getting-started project and product framing for an analytics API concept.",
@@ -184,7 +184,7 @@ const PROJECTS: Project[] = [
     status: "Experiment",
     period: "2026",
     summary: "Claude-based AI agents for SEO/AEO strategy, comparing generic web-informed output with an agent grounded in my own frameworks and process.",
-    group: "Software & AI",
+    group: "Marketing Engineering",
     categories: ["AI", "SEO/AEO", "Product", "Marketing Technology"],
     challenge: "Generic SEO/AEO agents often produce broad advice. The experiment tested whether expert-grounded context could produce more useful strategic output.",
     role: "Created, prompted, grounded, evaluated, and iterated on multiple Claude-based AI agents for SEO/AEO workflows.",
@@ -230,11 +230,11 @@ const PROJECTS: Project[] = [
     title: "SeaForth Strategies Venture Studio",
     status: "Internal",
     period: "2020 - Present",
-    summary: "A consumer venture studio and product-development company spanning software, AI-assisted development, product strategy, brand, GTM, and growth.",
+    summary: "A consumer venture studio and product-development company spanning marketing engineering, AI-assisted development, product strategy, brand, GTM, and growth.",
     group: "Product & Brand",
     categories: ["Software", "Product", "AI", "Growth", "GTM"],
     challenge: "Early-stage ideas need more than code: they need positioning, UX, technical decisions, acquisition thinking, launch strategy, and iteration.",
-    role: "Co-founder and builder across full-stack product development, AI-assisted software development, product strategy, UX, brand, SEO/AEO, analytics, conversion optimization, and community development.",
+    role: "Co-founder and marketing engineer across product development, AI-assisted building, UX, brand, SEO/AEO, analytics, conversion optimization, GTM, and community development.",
     strategy: "Operate across the full lifecycle - idea, strategy, UX, development, integrations, analytics, launch, marketing, and optimization - so projects move without waiting on separate handoffs.",
     execution: [
       "Developed consumer product concepts, prototypes, brand systems, and launch plans",
@@ -256,7 +256,7 @@ const PROJECTS: Project[] = [
     status: "Internal",
     period: "2026",
     summary: "A kid-friendly SaaS startup browser game where players dodge bugs, collect boosts, grow startup value, buy upgrades, and sign sponsor contracts.",
-    group: "Software & AI",
+    group: "Marketing Engineering",
     categories: ["Software", "Product", "Web Development"],
     challenge: "The project needed to turn an abstract startup-building concept into a playable browser experience with progression, controls, state, and a clear loop.",
     role: "Built the browser app experience across gameplay flow, UI, progression systems, local persistence, and deployment.",
@@ -475,7 +475,7 @@ const PROJECTS: Project[] = [
     status: "Production",
     period: "2026",
     summary: "A modern Next.js 16 website for an air-traffic-control training, consulting, and quality-assurance company.",
-    group: "Software & AI",
+    group: "Marketing Engineering",
     categories: ["Software", "Web Development", "Brand"],
     challenge: "The site needed a clear professional structure for a specialized aviation-services business, including public pages and a protected employee portal surface.",
     role: "Built a modern Next.js website with centralized content, reusable sections, SEO metadata patterns, responsive UI, and Vercel deployment readiness.",
@@ -498,7 +498,7 @@ const PROJECTS: Project[] = [
   },
 ];
 
-const FILTERS = ["All", "Software & AI", "Growth Systems", "SEO & Analytics", "Product & Brand"];
+const FILTERS = ["All", "Marketing Engineering", "Growth Systems", "SEO & Analytics", "Product & Brand"];
 
 const STATUS_STYLES: Record<ProjectStatus, string> = {
   Production: "bg-emerald-500/15 text-emerald-300 border-emerald-500/30",
@@ -527,9 +527,9 @@ const Projects = () => {
         <div className="max-w-6xl mx-auto">
           <div className="mb-8">
             <p className="text-cyan-400/80 text-sm font-medium uppercase tracking-wider mb-2">Selected Work</p>
-            <h2 className="font-display text-2xl md:text-3xl font-bold text-white mb-3">I build digital products and the growth systems behind them.</h2>
+            <h2 className="font-display text-2xl md:text-3xl font-bold text-white mb-3">Marketing engineering, from strategy to shipped systems.</h2>
             <p className="text-zinc-400 max-w-3xl leading-relaxed">
-              These case studies show the work I do across software, AI-assisted development, product strategy, SEO/AEO, analytics, marketing technology, and growth. Public GitHub repos and Vercel deployments are linked where available.
+              These case studies show how I connect web development, GTM, SEO/AEO, analytics, automation, AI workflows, content, and product thinking into systems that launch and improve. Public GitHub repos and Vercel deployments are linked where available.
             </p>
           </div>
 
