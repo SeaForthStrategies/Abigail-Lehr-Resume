@@ -113,7 +113,7 @@ const Contact = () => {
             </motion.form>
           )}
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-start">
+          <div className="space-y-8">
             <motion.div
               className="space-y-8"
               initial={{ opacity: 0, x: -20 }}
@@ -125,11 +125,11 @@ const Contact = () => {
                 I work across marketing, software, content, and operations. I like roles where strategy has to become something real: a shipped site, a working funnel, a stronger campaign, or a cleaner system.
               </p>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {contactInfo.map((info, index) => (
                   <motion.div
                     key={index}
-                    className="flex items-center gap-4 p-5 rounded-2xl bg-zinc-900/60 border border-zinc-800/80 backdrop-blur-sm hover:border-zinc-700/80 transition-colors min-w-0"
+                    className="flex h-full items-center gap-4 p-5 rounded-2xl bg-zinc-900/60 border border-zinc-800/80 backdrop-blur-sm hover:border-zinc-700/80 transition-colors min-w-0"
                     initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -157,10 +157,10 @@ const Contact = () => {
                 ))}
               </div>
 
-              <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
+              <div className="grid gap-3 sm:grid-cols-3">
                 <Button
                   size="lg"
-                  className="flex-1 rounded-lg bg-cyan-500 text-zinc-950 hover:bg-cyan-400"
+                  className="w-full rounded-lg bg-cyan-500 text-zinc-950 hover:bg-cyan-400"
                   onClick={() => window.open("mailto:ajlehr123@gmail.com")}
                 >
                   <Mail className="w-5 h-5 mr-2" />
@@ -169,7 +169,7 @@ const Contact = () => {
                 <Button
                   variant="outline"
                   size="lg"
-                  className="w-full sm:flex-1 rounded-lg border-zinc-600 text-zinc-300 hover:bg-zinc-800"
+                  className="w-full rounded-lg border-zinc-600 text-zinc-300 hover:bg-zinc-800"
                   onClick={() => window.open("https://linkedin.com/in/abigaillehr", "_blank")}
                 >
                   <Linkedin className="w-5 h-5 mr-2" />
@@ -178,7 +178,7 @@ const Contact = () => {
                 <Button
                   variant="outline"
                   size="lg"
-                  className="w-full sm:flex-1 rounded-lg border-zinc-600 text-zinc-300 hover:bg-zinc-800"
+                  className="w-full rounded-lg border-zinc-600 text-zinc-300 hover:bg-zinc-800"
                   onClick={() => window.open("https://x.com/abbyjlehr", "_blank")}
                 >
                   <XIcon className="w-5 h-5 mr-2" />
@@ -194,18 +194,8 @@ const Contact = () => {
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.5 }}
             >
-              <div className="flex flex-col items-center text-center space-y-6">
-                <div className="w-full overflow-hidden rounded-xl border border-zinc-800/80 bg-zinc-950">
-                  <img
-                    src="/site-visuals/oceanside-beach-portrait.jpg"
-                    alt=""
-                    aria-hidden="true"
-                    className="h-56 w-full object-cover object-[48%_center] opacity-90"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </div>
-                <div>
+              <div className="space-y-6">
+                <div className="text-center">
                   <h3 className="font-semibold text-white mb-3">
                     Interested in Collaboration?
                   </h3>
@@ -213,7 +203,7 @@ const Contact = () => {
                     Open to marketing, software, growth, content, and strategy roles where hands-on execution matters.
                   </p>
                 </div>
-                <div className="w-full space-y-3 text-left">
+                <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
                   {["Growth Strategy", "Full-Stack Web", "Content & Social", "Marketing Automation", "Analytics & CRO", "AI-Augmented Workflows"].map((item, i) => (
                     <div key={i} className="flex items-center gap-3 px-3 py-2 rounded-lg bg-zinc-800">
                       <div className="w-1.5 h-1.5 rounded-full bg-cyan-400 shrink-0" />

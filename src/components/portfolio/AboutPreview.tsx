@@ -15,8 +15,7 @@ const AboutPreview = () => (
           transition={{ duration: 0.5, type: "spring", stiffness: 80 }}
           whileHover={{ y: -4, transition: { duration: 0.2 } }}
         >
-          <div className="flex flex-col gap-6 lg:flex-row lg:items-start">
-            <div className="min-w-0 lg:flex-1">
+          <div className="min-w-0">
               <div className="flex items-center gap-3 mb-4">
                 <motion.div
                   className="w-11 h-11 rounded-xl bg-gradient-to-br from-cyan-500/20 to-cyan-600/5 flex items-center justify-center text-cyan-400 shrink-0 ring-1 ring-cyan-500/10"
@@ -33,11 +32,11 @@ const AboutPreview = () => (
               </div>
 
               <p className="text-zinc-500 text-xs font-medium uppercase tracking-wider mb-3">Work history · Most recent first</p>
-              <ul className="space-y-4 mb-6">
+              <ul className="grid gap-4 md:grid-cols-2 mb-6">
                 {EXPERIENCE_ROLES.map((role, i) => (
                   <motion.li
                     key={i}
-                    className="pb-4 border-b border-zinc-800/60 last:border-0 last:pb-0"
+                    className="rounded-xl border border-zinc-800/70 bg-zinc-950/35 p-4 min-w-0"
                     initial={{ opacity: 0, x: -8 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
@@ -83,18 +82,6 @@ const AboutPreview = () => (
                   <ArrowRight className="w-4 h-4" />
                 </motion.span>
               </span>
-            </div>
-
-            <div className="hidden lg:block lg:w-[260px] lg:shrink-0 overflow-hidden rounded-2xl border border-zinc-800/80 bg-zinc-950">
-              <img
-                src="/site-visuals/camera-coffee-portrait.jpg"
-                alt=""
-                aria-hidden="true"
-                className="h-[360px] w-full object-cover object-[42%_center] opacity-90"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
           </div>
         </motion.div>
       </Link>

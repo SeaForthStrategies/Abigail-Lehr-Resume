@@ -43,7 +43,7 @@ const MyWork = () => {
     <section className="py-12 md:py-16 overflow-x-hidden">
       <div className="container mx-auto px-4 sm:px-6 md:px-10">
         <div className="max-w-6xl mx-auto">
-          <div className="mb-8 grid lg:grid-cols-[1fr,320px] gap-6 items-end">
+          <div className="mb-8 space-y-6">
             <div>
               <p className="text-cyan-400/80 text-sm font-medium uppercase tracking-wider mb-2">Work Samples</p>
               <h2 className="font-display text-2xl md:text-3xl font-bold text-white mb-3">A cleaner look at the actual pieces.</h2>
@@ -52,8 +52,14 @@ const MyWork = () => {
               </p>
             </div>
             <div className="rounded-2xl border border-zinc-800/80 bg-zinc-900/50 p-4">
-              <p className="text-xs font-medium text-zinc-500 uppercase tracking-wider mb-3">Selected Examples</p>
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid gap-4 lg:grid-cols-[1fr,2fr] lg:items-center">
+                <div>
+                  <p className="text-xs font-medium text-zinc-500 uppercase tracking-wider mb-2">Selected Examples</p>
+                  <p className="text-xs leading-relaxed text-zinc-500">
+                    These numbers reflect the samples shown here, not the full scope of projects, campaigns, assets, and systems I have built.
+                  </p>
+                </div>
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
                 {folders.map((folder) => (
                   <div key={folder} className="min-w-0">
                     <p className="text-xl font-semibold text-white">{counts[folder] ?? 0}</p>
@@ -61,9 +67,7 @@ const MyWork = () => {
                   </div>
                 ))}
               </div>
-              <p className="mt-4 text-xs leading-relaxed text-zinc-500">
-                These numbers reflect the samples shown here, not the full scope of projects, campaigns, assets, and systems I have built.
-              </p>
+              </div>
             </div>
           </div>
 
@@ -86,7 +90,7 @@ const MyWork = () => {
               No items in this category.
             </div>
           ) : (
-            <div className={logoView ? "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" : "columns-1 sm:columns-2 lg:columns-3 gap-4 [column-fill:_balance]"}>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {visible.map((item) => (
                 item.category === "client logos" ? (
                   <LogoSampleCard key={item.id} item={item} label={label} />
@@ -159,20 +163,20 @@ function getLogoSizingClass(item: WorkItem) {
 
 function WorkSampleCard({ item, label }: { item: WorkItem; label: (category: string) => string }) {
   return (
-    <article className="group mb-4 break-inside-avoid overflow-hidden rounded-2xl border border-zinc-800/80 bg-zinc-900/60 backdrop-blur-sm hover:border-cyan-500/25 hover:shadow-[0_0_24px_-8px_rgba(34,211,238,0.16)] transition-all duration-300 min-w-0">
+    <article className="group overflow-hidden rounded-2xl border border-zinc-800/80 bg-zinc-900/60 backdrop-blur-sm hover:border-cyan-500/25 hover:shadow-[0_0_24px_-8px_rgba(34,211,238,0.16)] transition-all duration-300 min-w-0 h-full">
       <Dialog>
         <DialogTrigger asChild>
-          <button className="w-full text-left block" aria-label={`Open ${item.title} preview`}>
-            <div className="min-h-36 p-3 bg-zinc-950/70 overflow-hidden flex items-center justify-center">
+          <button className="w-full h-full text-left flex flex-col" aria-label={`Open ${item.title} preview`}>
+            <div className="h-[260px] p-4 bg-zinc-950/70 overflow-hidden flex items-center justify-center">
               <img
                 src={encodeURI(item.thumb ?? item.src)}
                 alt={item.title}
-                className="max-h-[360px] w-auto max-w-full h-auto object-contain rounded-xl transition-transform duration-300 group-hover:scale-[1.015]"
+                className="max-h-full w-auto max-w-full h-auto object-contain rounded-xl transition-transform duration-300 group-hover:scale-[1.015]"
                 loading="lazy"
                 decoding="async"
               />
             </div>
-            <div className="p-4 min-w-0">
+            <div className="p-4 min-w-0 flex-1">
               <div className="flex items-start justify-between gap-3">
                 <div className="min-w-0">
                   <p className="text-sm font-medium text-white leading-snug break-words" title={item.title}>{item.title}</p>

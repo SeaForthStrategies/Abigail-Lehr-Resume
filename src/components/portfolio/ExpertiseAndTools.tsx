@@ -79,14 +79,14 @@ const ExpertiseAndTools = () => {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-[1fr,320px] gap-6 md:gap-8 items-start">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
+        <div className="space-y-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 md:gap-6">
             {CAPABILITIES.map((capability, index) => {
               const Icon = capability.icon;
               return (
                 <motion.article
                   key={capability.title}
-                  className="rounded-2xl border border-zinc-800/80 bg-zinc-900/50 backdrop-blur-sm p-5 md:p-6 transition-all duration-300 hover:border-cyan-500/30 hover:shadow-[0_0_30px_-10px_rgba(34,211,238,0.16)] min-w-0"
+                  className="h-full rounded-2xl border border-zinc-800/80 bg-zinc-900/50 backdrop-blur-sm p-5 md:p-6 transition-all duration-300 hover:border-cyan-500/30 hover:shadow-[0_0_30px_-10px_rgba(34,211,238,0.16)] min-w-0"
                   initial={{ opacity: 0, y: 18 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.15 }}
@@ -125,26 +125,18 @@ const ExpertiseAndTools = () => {
           </div>
 
           <motion.aside
-            className="rounded-2xl border border-zinc-800/80 bg-zinc-900/60 backdrop-blur-sm p-5 md:p-6 lg:sticky lg:top-28"
+            className="rounded-2xl border border-zinc-800/80 bg-zinc-900/60 backdrop-blur-sm p-5 md:p-6"
             initial={{ opacity: 0, x: 16 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.2 }}
           >
-            <div className="mb-5 overflow-hidden rounded-xl border border-zinc-800/80 bg-zinc-950">
-              <img
-                src="/site-visuals/mirror-phone-portrait.jpg"
-                alt=""
-                aria-hidden="true"
-                className="h-48 w-full object-cover object-[54%_center] opacity-90"
-                loading="lazy"
-                decoding="async"
-              />
+            <div className="mb-5">
+              <p className="text-cyan-400/80 text-xs font-medium uppercase tracking-wider mb-2">How I Work</p>
+              <h2 className="font-display text-xl font-bold text-white">Lifecycle I cover</h2>
             </div>
-            <p className="text-cyan-400/80 text-xs font-medium uppercase tracking-wider mb-2">How I Work</p>
-            <h2 className="font-display text-xl font-bold text-white mb-4">Lifecycle I cover</h2>
-            <ol className="space-y-2.5">
+            <ol className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
               {PROCESS.map((step, index) => (
-                <li key={step} className="flex gap-3 text-sm text-zinc-400">
+                <li key={step} className="flex gap-3 rounded-xl border border-zinc-800/70 bg-zinc-950/35 p-3 text-sm text-zinc-400">
                   <span className="w-6 h-6 rounded-full bg-cyan-500/10 text-cyan-400 flex items-center justify-center text-xs font-semibold shrink-0">
                     {index + 1}
                   </span>
